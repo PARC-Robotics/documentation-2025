@@ -132,8 +132,8 @@ plugins:
           Resources and Support: Ressources et soutien
           "Phase 1: Simulation": "Phase 1: Simulation"
           "Phase 2: Physical Robot": "Phase 2: Robot physique"
-          "Task 1: Autonomous Field Navigation": "Tâche 1: Naviguer dans une ferme"
-          "Task 2: Crop Yield Estimation": "Tâche 2 : Estimation du rendement des cultures"
+          "Autonomy Track": "Volet Autonomie"
+          "Design Track": "Volet Conception"
           # "Task 3: Seed Planting": "Tâche 3: Plantation des graines"
           "Objectives and goals": "Objectifs et objectifs"
           "Prizes and rewards": "Prix et récompenses"
