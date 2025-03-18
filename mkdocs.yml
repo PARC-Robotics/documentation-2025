@@ -1,0 +1,151 @@
+site_name: Pan African Robotics Competition 2025
+site_url: https://parc-robotics.github.io/documentation-2025/
+
+theme:
+  language: en
+  custom_dir: overrides
+  logo: assets/logo.png
+  features:
+    # - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.path
+    - navigation.expand
+    # - toc.integrate
+    - navigation.top
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.footer
+    - content.code.copy
+  name: material
+  palette: 
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      # accent: blue
+      # primary: deep orange
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      # accent: blue
+      # primary: deep orange
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      # accent: blue
+      # primary: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+# extra:
+#   alternate:
+#     - name: English
+#       link: /documentation-2023/en/
+#       lang: en
+#     - name: Français
+#       link: /documentation-2023/fr/
+#       lang: fr
+  
+markdown_extensions: 
+  - admonition
+  - codehilite
+  - smarty
+  - meta
+  - toc:
+      permalink: True
+  - abbr
+  - attr_list
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+      - name: mermaid
+        class: mermaid
+        format: !!python/name:pymdownx.superfences.fence_code_format ''
+  - pymdownx.tabbed:
+      alternate_style: true
+  - md_in_html
+  # - content.code.copy
+  # - content.tabs.link
+
+nav:
+  - Introduction:
+      - Competition Overview: introduction/index.md
+      # - How to register: introduction/how-to-register.md
+      - Important dates: introduction/important-dates.md
+  - Getting Started Tutorials:
+    - Getting Started:
+      - Setting up your PC: getting-started-tutorials/setting-up-your-pc.md
+      # - Setting up your PC with Docker: getting-started-tutorials/setting-up-with-docker.md
+      - Getting started with ROS: getting-started-tutorials/getting-started-with-ros.md
+      - Setting up your workspace: getting-started-tutorials/setting-up-your-workspace.md
+      - Writing your first ROS 2 Package: getting-started-tutorials/writing-your-first-ros2-package.md
+    - Competition Instructions:
+      - "Phase 1: Simulation":
+        - Introduction: competition-instructions/phase-1/introduction.md
+        - "Autonomy Track": competition-instructions/phase-1/autonomy-track.md
+        - "Design Track": competition-instructions/phase-1/design-track.md
+        # - "Task 3: Seed Planting": competition-instructions/phase-1/task-3-seed-planting.md
+        - How to Submit: competition-instructions/phase-1/how-to-submit.md
+      - "Phase 2: Physical Robot": competition-instructions/phase-2/introduction.md
+      # - Team Naming Conventions: competition-instructions/team-naming-conventions.md
+      # - What to submit: competition-instructions/what-to-submit.md
+  - Frequently Asked Questions: faq.md
+  - Rules and Regulations: rules-and-regulations.md
+  - Resources and Support:
+    - Virtual Meeting Recordings: resources-and-support/additional-resources.md
+    # - Additional Transform Resources: resources-and-support/additional-transform-resources.md
+
+plugins:
+  - i18n:
+      default_language: en
+      languages:
+        en:
+          name: English
+          build: true
+        fr:
+          name: Français
+          build: true
+      material_alternate: true
+      nav_translations:
+        fr:
+          Introduction: Introduction
+          Competition Overview: Aperçu de la compétition
+          "Getting Started Tutorials": Tutoriels pour commencer
+          Getting Started: Commencer
+          Competition Instructions: Instructions de la compétition
+          Frequently Asked Questions: Questions fréquemment posées
+          Rules and Regulations: Règles et réglementations
+          Resources and Support: Ressources et soutien
+          "Phase 1: Simulation": "Phase 1: Simulation"
+          "Phase 2: Physical Robot": "Phase 2: Robot physique"
+          "Task 1: Autonomous Field Navigation": "Tâche 1: Naviguer dans une ferme"
+          "Task 2: Crop Yield Estimation": "Tâche 2 : Estimation du rendement des cultures"
+          # "Task 3: Seed Planting": "Tâche 3: Plantation des graines"
+          "Objectives and goals": "Objectifs et objectifs"
+          "Prizes and rewards": "Prix et récompenses"
+          "How to register": "Comment s'inscrire"
+          "Important dates": "Dates importantes"
+          "Setting up your PC": "Configurer votre PC"
+          "Getting started with ROS": "Commencer avec ROS"
+          "Setting up your workspace": "Configurer votre espace de travail"
+          "Writing your first ROS2 Package": "Écrire votre premier package ROS 2"
+          # "Setting up your PC with Docker": "Configurer votre PC avec Docker"
+          "Team Naming Conventions": "Conventions de nommage des équipes"
+          "What to submit": "Ce qu'il faut soumettre"
+          "Virtual Meeting Recordings": "Enregistrements de réunions virtuelles"
+          "How to Submit": "Comment soumettre"
+
