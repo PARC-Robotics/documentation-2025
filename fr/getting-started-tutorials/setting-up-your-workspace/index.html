@@ -1,0 +1,1090 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://parc-robotics.github.io/documentation-2025/fr/getting-started-tutorials/setting-up-your-workspace/">
+      
+      
+        <link rel="prev" href="../getting-started-with-ros/">
+      
+      
+        <link rel="next" href="../writing-your-first-ros2-package/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
+    
+    
+      
+        <title>Configurer votre espace de travail - Pan African Robotics Competition 2025</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.c4a75a56.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#comment-configurer-votre-espace-de-travail" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../.." title="Pan African Robotics Competition 2025" class="md-header__button md-logo" aria-label="Pan African Robotics Competition 2025" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Pan African Robotics Competition 2025
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configurer votre espace de travail
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_3">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Sélectionner la langue">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="../../../getting-started-tutorials/setting-up-your-workspace/" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="./" hreflang="fr" class="md-select__link">
+                    Français
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../introduction/" class="md-tabs__link">
+        Introduction
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../setting-up-your-pc/" class="md-tabs__link md-tabs__link--active">
+        Tutoriels pour commencer
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../faq/" class="md-tabs__link">
+      Questions fréquemment posées
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../rules-and-regulations/" class="md-tabs__link">
+      Règles et réglementations
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../resources-and-support/additional-resources/" class="md-tabs__link">
+        Ressources et soutien
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Pan African Robotics Competition 2025" class="md-nav__button md-logo" aria-label="Pan African Robotics Competition 2025" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    Pan African Robotics Competition 2025
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          Introduction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Introduction
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/" class="md-nav__link">
+        Aperçu de la compétition
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/important-dates/" class="md-nav__link">
+        Dates importantes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Tutoriels pour commencer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutoriels pour commencer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          Commencer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Commencer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setting-up-your-pc/" class="md-nav__link">
+        Configurer votre PC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started-with-ros/" class="md-nav__link">
+        Commencer avec ROS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Configurer votre espace de travail
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Configurer votre espace de travail
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#etape-1-configurer-lespace-de-travail-ros-2" class="md-nav__link">
+    Étape 1: Configurer l'espace de travail ROS 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-2-cloner-le-depot" class="md-nav__link">
+    Étape 2: Cloner le dépôt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-3-installer-les-dependances" class="md-nav__link">
+    Étape 3: Installer les dépendances
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-4-configurer-lenvironnement-ros-2" class="md-nav__link">
+    Étape 4: Configurer l'environnement ROS 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-5-compiler-les-packages" class="md-nav__link">
+    Étape 5: Compiler les packages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-6-installation-et-configuration-de-gazebo-classic" class="md-nav__link">
+    Étape 6: Installation et configuration de Gazebo Classic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-7-testez-linstallation" class="md-nav__link">
+    Étape 7: testez l'installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-8-controler-le-robot-a-laide-du-clavier" class="md-nav__link">
+    Étape 8: Contrôler le robot à l'aide du clavier
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../writing-your-first-ros2-package/" class="md-nav__link">
+        Writing your first ROS 2 Package
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          Instructions de la compétition
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Instructions de la compétition
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_1" id="__nav_2_2_1_label" tabindex="0">
+          Phase 1: Simulation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Phase 1: Simulation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../competition-instructions/phase-1/introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../competition-instructions/phase-1/autonomy-track/" class="md-nav__link">
+        Autonomy Track
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../competition-instructions/phase-1/design-track/" class="md-nav__link">
+        Design Track
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../competition-instructions/phase-1/how-to-submit/" class="md-nav__link">
+        Comment soumettre
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../competition-instructions/phase-2/introduction/" class="md-nav__link">
+        Phase 2: Robot physique
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        Questions fréquemment posées
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules-and-regulations/" class="md-nav__link">
+        Règles et réglementations
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Ressources et soutien
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Ressources et soutien
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources-and-support/additional-resources/" class="md-nav__link">
+        Enregistrements de réunions virtuelles
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#etape-1-configurer-lespace-de-travail-ros-2" class="md-nav__link">
+    Étape 1: Configurer l'espace de travail ROS 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-2-cloner-le-depot" class="md-nav__link">
+    Étape 2: Cloner le dépôt
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-3-installer-les-dependances" class="md-nav__link">
+    Étape 3: Installer les dépendances
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-4-configurer-lenvironnement-ros-2" class="md-nav__link">
+    Étape 4: Configurer l'environnement ROS 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-5-compiler-les-packages" class="md-nav__link">
+    Étape 5: Compiler les packages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-6-installation-et-configuration-de-gazebo-classic" class="md-nav__link">
+    Étape 6: Installation et configuration de Gazebo Classic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-7-testez-linstallation" class="md-nav__link">
+    Étape 7: testez l'installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-8-controler-le-robot-a-laide-du-clavier" class="md-nav__link">
+    Étape 8: Contrôler le robot à l'aide du clavier
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="comment-configurer-votre-espace-de-travail">Comment configurer votre espace de travail<a class="headerlink" href="#comment-configurer-votre-espace-de-travail" title="Permanent link">&para;</a></h1>
+<p>Dans ce didacticiel, vous allez configurer un répertoire sur votre PC compatible <abbr title="Robot Operating System">ROS</abbr> 2 comme espace de travail pour le développement et installer les packages <abbr title="Robot Operating System">ROS</abbr> 2 de la compétition. Veuillez suivre attentivement les instructions ci-dessous.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ceci peut être effectué UNIQUEMENT après avoir configuré votre PC (en suivant le tutoriel ici : <a href="../setting-up-your-pc/">Configuration de votre PC</a>).</p>
+</div>
+<!-- uncommment once we have docker setup -->
+<!-- !!! note -->
+<!--      Si vous utilisez un conteneur Docker, vous pouvez ignorer ce didacticiel et suivre les instructions de [Configuration de votre PC à l'aide de Docker](../getting-started-tutorials/setting-up-with-docker.md) à la place. -->
+
+<h3 id="etape-1-configurer-lespace-de-travail-ros-2">Étape 1: Configurer l&rsquo;espace de travail <abbr title="Robot Operating System">ROS</abbr> 2<a class="headerlink" href="#etape-1-configurer-lespace-de-travail-ros-2" title="Permanent link">&para;</a></h3>
+<!-- Premièrement, nous créons un nouveau répertoire dans votre répertoire personnel appelé `catkin_ws` avec un sous-répertoire `src`. Ensuite, nous initialisons le répertoire en tant qu'espace de travail catkin. -->
+
+<p>Ouvrez un nouveau terminal sur votre PC, puis copiez et collez les lignes suivantes une par une:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>~/ros2_ws/src
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>~/ros2_ws/src
+</code></pre></div></p>
+<h3 id="etape-2-cloner-le-depot">Étape 2: Cloner le dépôt<a class="headerlink" href="#etape-2-cloner-le-depot" title="Permanent link">&para;</a></h3>
+<p>Dans le même terminal (ou dans un nouveau), copiez et collez ce qui suit:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>~/ros2_ws/src
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/PARC-Robotics/PARC2024-Engineers-League.git<span class="w"> </span>.
+</code></pre></div></p>
+<h3 id="etape-3-installer-les-dependances">Étape 3: Installer les dépendances<a class="headerlink" href="#etape-3-installer-les-dependances" title="Permanent link">&para;</a></h3>
+<p>Le référentiel de projet cloné contient des packages <abbr title="Robot Operating System">ROS</abbr> qui nécessitent certaines dépendances avant de pouvoir être utilisés. Ces dépendances sont spécifiées dans le fichier <code>package.xml</code> 
+respectif de chaque package et sont installées à l&rsquo;aide de <a href="https://docs.ros.org/en/humble/Tutorials/Intermediate/Rosdep.html" taget="_blank">rosdep</a>, un utilitaire de ligne de commande permettant d&rsquo;identifier et d&rsquo;installer les dépendances pour créer ou installer un package.</p>
+<p>Pour installer les dépendances du projet, dans le même terminal (ou dans un nouveau), copiez et collez ce qui suit:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">cd</span><span class="w"> </span>~/ros2_ws
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>sudo<span class="w"> </span>rosdep<span class="w"> </span>init
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>rosdep<span class="w"> </span>update
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>rosdep<span class="w"> </span>install<span class="w"> </span>--from-paths<span class="w"> </span>src<span class="w"> </span>--ignore-src<span class="w"> </span>--rosdistro<span class="w"> </span>humble<span class="w"> </span>-r<span class="w"> </span>-y
+</code></pre></div></p>
+<h3 id="etape-4-configurer-lenvironnement-ros-2">Étape 4: Configurer l&rsquo;environnement <abbr title="Robot Operating System">ROS</abbr> 2<a class="headerlink" href="#etape-4-configurer-lenvironnement-ros-2" title="Permanent link">&para;</a></h3>
+<p>La commande suivante doit être exécutée dans chaque nouveau terminal que vous ouvrez pour accéder aux commandes <abbr title="Robot Operating System">ROS</abbr> 2:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">source</span><span class="w"> </span>/opt/ros/humble/setup.bash
+</code></pre></div>
+<p>Pour éviter de rechercher le fichier d&rsquo;installation de <abbr title="Robot Operating System">ROS</abbr> à chaque fois que vous lancez un nouveau terminal, vous pouvez ajouter la commande à votre script de démarrage shell en exécutant ces lignes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;source /opt/ros/humble/setup.bash&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">source</span><span class="w"> </span>~/.bashrc
+</code></pre></div>
+<p>L&rsquo;espace de travail <code>ros2_ws</code> est une <strong>superposition</strong> au-dessus de l&rsquo;installation de <abbr title="Robot Operating System">ROS</abbr>, connue sous le nom de <strong>sous-couche</strong>, et de la même manière, pour utiliser les exécutables ou les bibliothèques du package dans <code>ros2_ws</code>, l&rsquo;espace de travail devra provenir de chaque nouveau terminal ouvert avec cette commande:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">source</span><span class="w"> </span>~/ros2_ws/install/setup.bash
+</code></pre></div>
+<p>De même, pour éviter de rechercher manuellement l&rsquo;espace de travail dans chaque terminal nouvellement lancé, la commande peut également être ajoutée au script de démarrage du shell:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;source ~/ros2_ws/install/setup.bash&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nb">source</span><span class="w"> </span>~/.bashrc
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Au fur et à mesure que vous développez, il est bon de définir les variables d&rsquo;environnement chaque fois que vous exécutez une commande <code>colcon build</code> pour compiler les modifications apportées à vos packages. Vous pouvez le faire en:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">source</span><span class="w"> </span>~/ros2_ws/install/setup.bash
+</code></pre></div></p>
+</div>
+<h3 id="etape-5-compiler-les-packages">Étape 5: Compiler les packages<a class="headerlink" href="#etape-5-compiler-les-packages" title="Permanent link">&para;</a></h3>
+<p>L&rsquo;étape suivante consiste à compiler les packages installés en utilisant <code>colcon build</code>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">cd</span><span class="w"> </span>~/ros2_ws
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>colcon<span class="w"> </span>build
+</code></pre></div></p>
+<h3 id="etape-6-installation-et-configuration-de-gazebo-classic">Étape 6: Installation et configuration de Gazebo Classic<a class="headerlink" href="#etape-6-installation-et-configuration-de-gazebo-classic" title="Permanent link">&para;</a></h3>
+<p>Gazebo Classic, version 11, est le simulateur de robot utilisé lors de la compétition et peut être installé <a href="https://classic.gazebosim.org/tutorials?tut=install_ubuntu&amp;cat=install" target="_blank">ici</a>.</p>
+<p>Le champ de tomates est composé de modèles personnalisés, les plants de tomates par exemple, qui ne sont pas disponibles dans Gazebo. 
+Ces modèles sont présents dans le dossier <code>models</code> du package <code>parc_robot_bringup</code>. Pour visualiser complètement le champ de tomates dans Gazebo, le chemin vers le dossier 
+<code>models</code> se fait vers Gazebo en exécutant les commandes suivantes l&rsquo;une après l&rsquo;autre:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;export GAZEBO_MODEL_PATH=:</span><span class="nv">$HOME</span><span class="s2">/ros2_ws/src/parc_robot_bringup/models&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nb">source</span><span class="w"> </span>~/.bashrc
+</code></pre></div>
+<p>Assurez-vous que le répertoire de l&rsquo;espace de travail est correctement saisi en supposant qu&rsquo;un espace de travail différent de <code>ros2_ws</code> est utilisé.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Le visualiseur 3D pour <abbr title="Robot Operating System">ROS</abbr>, <a href="https://docs.ros.org/en/humble/Tutorials/Intermediate/RViz/RViz-User-Guide/RViz-User-Guide.html" target="_blank"><code>RViz</code></a>, est automatiquement installé lorsque <abbr title="Robot Operating System">ROS</abbr> 2 Humble a été installé sur votre PC lors du <a href="../setting-up-your-pc/">didacticiel de configuration de votre PC</a>.</p>
+</div>
+<h3 id="etape-7-testez-linstallation">Étape 7: testez l&rsquo;installation<a class="headerlink" href="#etape-7-testez-linstallation" title="Permanent link">&para;</a></h3>
+<p>Si vous avez terminé les tâches précédentes avec succès, vous devriez pouvoir exécuter cette commande de lancement de <abbr title="Robot Operating System">ROS</abbr> 2 et voir le simulateur Gazebo Classic et le simulateur RViz s&rsquo;ouvrir avec l&rsquo;affichage suivant:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py
+</code></pre></div>
+<img alt="Fenêtre Gazebo Simulator" src="../assets/gazebo.png" />
+Gazebo Classic fenêtre du simulateur</p>
+<p><img alt="Fenêtre RViz" src="../assets/rviz.png" />
+Fenêtre RViz</p>
+<p>Vous devez publier/écrire dans le <code>sujet</code> <code>/robot_base_controller/cmd_vel_unstamped</code> pour déplacer le robot.
+Le guide suivant vous aidera à contrôler le robot à l&rsquo;aide du clavier. Une fois que vous avez testé cela, vous pouvez suivre le guide <a href="../getting-started-with-ros/">commencer-avec-ros</a> pour écrire un programme python pour contrôler le robot.</p>
+<h3 id="etape-8-controler-le-robot-a-laide-du-clavier">Étape 8: Contrôler le robot à l&rsquo;aide du clavier<a class="headerlink" href="#etape-8-controler-le-robot-a-laide-du-clavier" title="Permanent link">&para;</a></h3>
+<p>Tout d&rsquo;abord, le package <code>teleop_twist_keyboard</code> <abbr title="Robot Operating System">ROS</abbr> 2 est installé qui nous permettra d&rsquo;utiliser le clavier pour contrôler le robot dans un terminal comme suit,</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-humble-teleop-twist-keyboard
+</code></pre></div>
+Exécutez ensuite la commande suivante dans un nouveau terminal,</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>ros2<span class="w"> </span>run<span class="w"> </span>teleop_twist_keyboard<span class="w"> </span>teleop_twist_keyboard<span class="w"> </span>--ros-args<span class="w"> </span>--remap<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>/cmd_vel:<span class="o">=</span>/robot_base_controller/cmd_vel_unstamped
+</code></pre></div>
+<p>Maintenant, en gardant ce deuxième terminal actif (ou en haut), appuyez sur, <code>i</code> pour faire avancer le robot, vous pouvez voir le robot bouger dans les fenêtres &ldquo;RViz&rdquo; et &ldquo;Gazebo&rdquo;. 
+Vous pouvez utiliser les touches ci-dessous pour déplacer le robot et la touche <code>k</code> pour arrêter le mouvement.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Se<span class="w"> </span>déplacer<span class="w"> </span>:
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">   </span>u<span class="w">    </span>i<span class="w">    </span>o
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">   </span>j<span class="w">    </span>k<span class="w">    </span>l
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">   </span>m<span class="w">    </span>,<span class="w">    </span>.
+</code></pre></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Retour en haut de la page
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="../getting-started-with-ros/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Commencer avec ROS" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Précédent
+                </span>
+                Commencer avec ROS
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../writing-your-first-ros2-package/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Writing your first ROS 2 Package" rel="next">
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Suivant
+                </span>
+                Writing your first ROS 2 Package
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.sections", "navigation.path", "navigation.expand", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.footer", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.efa0ade1.min.js"></script>
+      
+    
+  </body>
+</html>

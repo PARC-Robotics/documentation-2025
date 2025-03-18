@@ -1,0 +1,1003 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://parc-robotics.github.io/documentation-2025/fr/getting-started-tutorials/setting-up-with-docker/">
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
+    
+    
+      
+        <title>Configurer votre PC avec Docker sous Windows - Pan African Robotics Competition 2025</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.c4a75a56.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configurer-votre-pc-avec-docker-sous-windows" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../.." title="Pan African Robotics Competition 2025" class="md-header__button md-logo" aria-label="Pan African Robotics Competition 2025" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Pan African Robotics Competition 2025
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configurer votre PC avec Docker sous Windows
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_3">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Sélectionner la langue">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="../../../getting-started-tutorials/setting-up-with-docker/" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="./" hreflang="fr" class="md-select__link">
+                    Français
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../introduction/" class="md-tabs__link">
+        Introduction
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../setting-up-your-pc/" class="md-tabs__link">
+        Tutoriels pour commencer
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../faq/" class="md-tabs__link">
+      Questions fréquemment posées
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../rules-and-regulations/" class="md-tabs__link">
+      Règles et réglementations
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../resources-and-support/additional-resources/" class="md-tabs__link">
+        Ressources et soutien
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Pan African Robotics Competition 2025" class="md-nav__button md-logo" aria-label="Pan African Robotics Competition 2025" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    Pan African Robotics Competition 2025
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          Introduction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Introduction
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/" class="md-nav__link">
+        Aperçu de la compétition
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/important-dates/" class="md-nav__link">
+        Dates importantes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Tutoriels pour commencer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutoriels pour commencer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          Commencer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Commencer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setting-up-your-pc/" class="md-nav__link">
+        Configurer votre PC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started-with-ros/" class="md-nav__link">
+        Commencer avec ROS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setting-up-your-workspace/" class="md-nav__link">
+        Configurer votre espace de travail
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../writing-your-first-ros2-package/" class="md-nav__link">
+        Writing your first ROS 2 Package
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          Instructions de la compétition
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Instructions de la compétition
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_1" id="__nav_2_2_1_label" tabindex="0">
+          Phase 1: Simulation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Phase 1: Simulation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../competition-instructions/phase-1/introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../competition-instructions/phase-1/autonomy-track/" class="md-nav__link">
+        Autonomy Track
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../competition-instructions/phase-1/design-track/" class="md-nav__link">
+        Design Track
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../competition-instructions/phase-1/how-to-submit/" class="md-nav__link">
+        Comment soumettre
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../competition-instructions/phase-2/introduction/" class="md-nav__link">
+        Phase 2: Robot physique
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        Questions fréquemment posées
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rules-and-regulations/" class="md-nav__link">
+        Règles et réglementations
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Ressources et soutien
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Ressources et soutien
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources-and-support/additional-resources/" class="md-nav__link">
+        Enregistrements de réunions virtuelles
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conditions-prealables" class="md-nav__link">
+    Conditions préalables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-1-installez-vcxsrv" class="md-nav__link">
+    Étape 1 : Installez VcXsrv
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-2-creation-du-dossier-principal-et-de-docker-composeyml" class="md-nav__link">
+    Étape 2 : Création du dossier principal et de docker-compose.yml
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-4-construire-le-conteneur-docker" class="md-nav__link">
+    Étape 4 : Construire le conteneur Docker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-5-ouvrir-un-terminal-dans-le-conteneur-docker" class="md-nav__link">
+    Étape 5 : Ouvrir un terminal dans le conteneur Docker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-6-tester-linstallation" class="md-nav__link">
+    Étape 6 : Tester l'installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-7-controler-le-robot-a-laide-du-clavier" class="md-nav__link">
+    Étape 7 : Contrôler le robot à l'aide du clavier
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etape-8-developper-a-linterieur-du-conteneur-avec-vscode" class="md-nav__link">
+    Étape 8 : Développer à l'intérieur du conteneur avec VSCode
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="configurer-votre-pc-avec-docker-sous-windows">Configurer votre PC avec Docker sous Windows<a class="headerlink" href="#configurer-votre-pc-avec-docker-sous-windows" title="Permanent link">&para;</a></h1>
+<p>Ce guide vous guidera tout au long du processus de configuration d&rsquo;un environnement Ubuntu et d&rsquo;un espace de travail <abbr title="Robot Operating System">ROS</abbr> sur votre PC Windows à l&rsquo;aide de Docker, ce qui vous permettra de développer et de tester facilement vos projets <abbr title="Robot Operating System">ROS</abbr> dans un environnement conteneurisé. Nous expliquerons également comment connecter VS Code au conteneur Docker et comment utiliser X11 pour exécuter des applications GUI Docker.</p>
+<div class="admonition avertissement">
+<p class="admonition-title">Remarque</p>
+<p>Ce guide est conçu pour les personnes qui envisagent d&rsquo;utiliser l&rsquo;image Docker. Si vous souhaitez configurer votre PC et votre espace de travail sur une machine hôte, veuillez consulter les instructions fournies dans <a href="../setting-up-your-workspace/">Configurer votre espace de travail</a>.</p>
+</div>
+<h2 id="conditions-prealables">Conditions préalables<a class="headerlink" href="#conditions-prealables" title="Permanent link">&para;</a></h2>
+<p>Avant de commencer les étapes ci-dessous, assurez-vous que vous disposez des éléments suivants :</p>
+<ul>
+<li><a href="https://docs.docker.com/desktop/install/windows-install/#install-docker-desktop-on-windows" target="_blank">Docker Desktop</a> pour Windows installé et en cours d&rsquo;exécution</li>
+<li><a href="https://code.visualstudio.com/download" target="_blank">Code Visual Studio</a> (Code VS) installé</li>
+<li><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank">Git</a> installé</li>
+</ul>
+<h2 id="etape-1-installez-vcxsrv">Étape 1 : Installez VcXsrv<a class="headerlink" href="#etape-1-installez-vcxsrv" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Téléchargez et installez <a href="https://sourceforge.net/projects/vcxsrv/" target="_blank">VcXsrv</a> sur votre ordinateur.</li>
+<li>Installez VcXsrv en exécutant le programme d&rsquo;installation et en suivant les invites.</li>
+<li>Une fois l&rsquo;installation terminée, ouvrez le VcXsrv en cliquant sur le menu Démarrer et en tapant &ldquo;XLaunch&rdquo;.</li>
+<li>Dans la fenêtre XLaunch, sélectionnez l&rsquo;option <code>Plusieurs fenêtres</code> et cliquez sur <code>Suivant</code>.
+     <img alt="XLaunch étape 1" src="../assets/vcxsrv-install-1.png" /></li>
+<li>
+<p>Dans la fenêtre suivante, sélectionnez l&rsquo;option <code>Démarrer aucun client</code> et cliquez sur <code>Suivant</code>.</p>
+<p><img alt="XLaunch étape 2" src="../assets/vcxsrv-install-2.png" /></p>
+</li>
+<li>
+<p>Dans la fenêtre suivante, sélectionnez l&rsquo;option &ldquo;Presse-papiers&rdquo; et cliquez sur &ldquo;Suivant&rdquo;. Désélectionnez l&rsquo;option <code>Native opengl</code> et sélectionnez l&rsquo;option <code>Disable access control</code>.
+     <img alt="XLaunch étape 3" src="../assets/vcxsrv-install-3.png" /></p>
+</li>
+<li>Dans la fenêtre suivante, cliquez sur &ldquo;Terminer&rdquo;.
+     <img alt="XLaunch étape 4" src="../assets/vcxsrv-install-4.png" /></li>
+</ol>
+<h2 id="etape-2-creation-du-dossier-principal-et-de-docker-composeyml">Étape 2 : Création du dossier principal et de <code>docker-compose.yml</code><a class="headerlink" href="#etape-2-creation-du-dossier-principal-et-de-docker-composeyml" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Créez un nouveau dossier à votre emplacement préféré et nommez-le comme vous le souhaitez.</li>
+<li>
+<p>Dans le dossier nouvellement créé, créez un espace de travail <abbr title="Robot Operating System">ROS</abbr> en exécutant la commande suivante dans powershell :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdir catkin_ws/src
+</code></pre></div>
+</li>
+<li>
+<p>Ensuite, créez un fichier <code>docker-compose.yml</code> dans le dossier principal. Ce fichier contiendra la configuration de notre conteneur <abbr title="Robot Operating System">ROS</abbr> Docker. Ouvrez le fichier dans votre éditeur préféré et ajoutez les lignes suivantes :</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">version </span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.8&#39;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">prestations de service</span><span class="p">:</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">rose </span><span class="p">:</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">image </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">parcengineersleague/parc-2023</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nt">environnement</span><span class="p">:</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AFFICHAGE=host.docker.internal:0.0</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ROS_HOSTNAME=ros</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ROS_MASTER_URI=http://ros:11311</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="nt">tomes </span><span class="p">:</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./catkin_ws:/catkin_ws</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="nt">ports </span><span class="p">:</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;11311:11311&quot;</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="nt">commande </span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">roscore</span>
+</code></pre></div>
+ Cette configuration extraira l&rsquo;image officielle de PARC 2023, si elle n&rsquo;existe pas déjà, et la configurera pour la prise en charge du serveur X11. Il montera également le dossier <code>catkin_ws</code> à l&rsquo;intérieur du conteneur et lancera la commande <code>roscore</code> au démarrage du conteneur.</p>
+</li>
+<li>
+<p>Enregistrez le fichier <code>docker-compose.yml</code> et fermez votre éditeur.</p>
+</li>
+</ol>
+<h2 id="etape-4-construire-le-conteneur-docker">Étape 4 : Construire le conteneur Docker<a class="headerlink" href="#etape-4-construire-le-conteneur-docker" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Ouvrez une nouvelle fenêtre de terminal et accédez au dossier principal que vous avez créé précédemment.</p>
+</li>
+<li>
+<p>Exécutez la commande suivante pour créer le conteneur Docker :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>docker composer -d
+</code></pre></div>
+</li>
+<li>
+<p>Une fois le conteneur créé, vous pouvez vérifier qu&rsquo;il est en cours d&rsquo;exécution en exécutant la commande suivante :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker ps
+</code></pre></div>
+<p>Vous devriez voir la sortie suivante :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>CONTAINER<span class="w"> </span>ID<span class="w">   </span>IMAGE<span class="w">                          </span>COMMAND<span class="w">                  </span>CREATED<span class="w">          </span>STATUS<span class="w">          </span>PORTS<span class="w">                    </span>NAMES
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>db7df0798d9b<span class="w">   </span>osrf/ros:noetic-desktop-full<span class="w">   </span><span class="s2">&quot;/ros_entrypoint.sh …&quot;</span><span class="w">   </span><span class="m">20</span><span class="w"> </span>seconds<span class="w"> </span>ago<span class="w">   </span>Up<span class="w"> </span><span class="m">19</span><span class="w"> </span>seconds<span class="w">    </span><span class="m">0</span>.0.0.0:11311-&gt;11311/tcp<span class="w">   </span>parc-ros-docker-ros-1
+</code></pre></div>
+</li>
+</ol>
+<h2 id="etape-5-ouvrir-un-terminal-dans-le-conteneur-docker">Étape 5 : Ouvrir un terminal dans le conteneur Docker<a class="headerlink" href="#etape-5-ouvrir-un-terminal-dans-le-conteneur-docker" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Pour ouvrir un terminal dans le conteneur Docker, exécutez la commande suivante :</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>parc-ros-docker-ros-1<span class="w"> </span>bash
+</code></pre></div>
+ où <code>parc-ros-docker-ros-1</code> est le nom du conteneur. Vous pouvez trouver le nom du conteneur en exécutant la commande <code>docker ps</code>.</p>
+</li>
+<li>
+<p>Une fois le terminal ouvert, vous pouvez vérifier que vous êtes dans le conteneur en exécutant la commande suivante :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">echo</span><span class="w"> </span><span class="nv">$ROS_DISTRO</span>
+</code></pre></div>
+<p>Vous devriez voir la sortie suivante :</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>noetic
+</code></pre></div>
+ Cela signifie que vous êtes dans le conteneur et que la distribution <abbr title="Robot Operating System">ROS</abbr> est définie sur Noetic.</p>
+</li>
+</ol>
+<h2 id="etape-6-tester-linstallation">Étape 6 : Tester l&rsquo;installation<a class="headerlink" href="#etape-6-tester-linstallation" title="Permanent link">&para;</a></h2>
+<p>Si vous avez terminé les tâches précédentes avec succès, vous devriez pouvoir exécuter cette commande de lancement <abbr title="Robot Operating System">ROS</abbr> et voir le simulateur Gazebo et le simulateur RViz s&rsquo;ouvrir avec l&rsquo;affichage suivant :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>roslaunch<span class="w"> </span>parc_robot<span class="w"> </span>task2.launch
+</code></pre></div>
+<img alt="Fenêtre Gazebo Simulator" src="../assets/gazebo.png" />
+Fenêtre du simulateur de belvédère</p>
+<p><img alt="Fenêtre RViz" src="../assets/rviz.png" />
+Fenêtre RViz</p>
+<p>Vous devez <code>publier</code>/écrire dans le <code>sujet</code> <code>/cmd_vel</code> pour déplacer le robot.
+Dans l&rsquo;étape suivante, vous apprendrez à contrôler le robot manuellement à l&rsquo;aide de votre clavier. Une fois que vous avez testé cela, vous pouvez suivre le guide <a href="../getting-started-with-ros">Commencer avec <abbr title="Robot Operating System">ROS</abbr></a> pour apprendre à écrire un programme pour contrôler le robot.</p>
+<h2 id="etape-7-controler-le-robot-a-laide-du-clavier">Étape 7 : Contrôler le robot à l&rsquo;aide du clavier<a class="headerlink" href="#etape-7-controler-le-robot-a-laide-du-clavier" title="Permanent link">&para;</a></h2>
+<p>Exécutez la commande suivante dans un nouveau terminal
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">source</span><span class="w"> </span>~/catkin_ws/devel/setup.bash
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>roslaunch<span class="w"> </span>parc_robot<span class="w"> </span>teleop.launch
+</code></pre></div></p>
+<p>Maintenant, en gardant le deuxième terminal en haut (teleop.launch), appuyez sur <code>i</code> pour faire avancer le robot, vous pouvez voir le robot se déplacer dans les fenêtres &ldquo;RViz&rdquo; et &ldquo;Gazebo&rdquo;.
+vous pouvez utiliser les touches ci-dessous pour déplacer le robot et la touche &ldquo;k&rdquo; pour arrêter le mouvement.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Se<span class="w"> </span>déplacer<span class="w"> </span>:
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">   </span>u<span class="w">    </span>i<span class="w">    </span>o
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">   </span>j<span class="w">    </span>k<span class="w">    </span>l
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">   </span>m<span class="w">    </span>,<span class="w">    </span>.
+</code></pre></div></p>
+<h2 id="etape-8-developper-a-linterieur-du-conteneur-avec-vscode">Étape 8 : Développer à l&rsquo;intérieur du conteneur avec VSCode<a class="headerlink" href="#etape-8-developper-a-linterieur-du-conteneur-avec-vscode" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Installez l&rsquo;extension <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers">Dev Containers</a> dans VSCode.</p>
+</li>
+<li>
+<p>Cliquez sur l&rsquo;icône verte dans le coin inférieur gauche de la fenêtre VSCode et sélectionnez &ldquo;Ouvrir le dossier dans le conteneur&hellip;&rdquo;.</p>
+</li>
+<li>
+<p>Sélectionnez le dossier <code>catkin_ws</code>.</p>
+</li>
+<li>
+<p>VSCode va maintenant ouvrir le dossier <code>catkin_ws</code> à l&rsquo;intérieur du conteneur.</p>
+</li>
+<li>
+<p>Vous pouvez maintenant utiliser VSCode pour modifier les fichiers dans le dossier <code>catkin_ws</code>.</p>
+</li>
+</ol>
+<p>Alternativement, puisque nous avons déjà créé un volume pour le dossier <code>catkin_ws</code>, vous pouvez également utiliser votre éditeur préféré pour modifier les fichiers dans le dossier <code>catkin_ws</code> sur votre machine hôte. Les modifications seront reflétées à l&rsquo;intérieur du conteneur. L&rsquo;avantage d&rsquo;utiliser VSCode dans le conteneur est que vous pouvez utiliser le terminal intégré pour exécuter des commandes à l&rsquo;intérieur du conteneur.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Retour en haut de la page
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.sections", "navigation.path", "navigation.expand", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.footer", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.efa0ade1.min.js"></script>
+      
+    
+  </body>
+</html>

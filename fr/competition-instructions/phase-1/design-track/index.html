@@ -1,0 +1,1176 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://parc-robotics.github.io/documentation-2025/fr/competition-instructions/phase-1/design-track/">
+      
+      
+        <link rel="prev" href="../autonomy-track/">
+      
+      
+        <link rel="next" href="../how-to-submit/">
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
+    
+    
+      
+        <title>Design Track - Pan African Robotics Competition 2025</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.c4a75a56.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tache-2-estimation-du-rendement-des-cultures" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../../.." title="Pan African Robotics Competition 2025" class="md-header__button md-logo" aria-label="Pan African Robotics Competition 2025" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Pan African Robotics Competition 2025
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Design Track
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_3" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_3">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+      <div class="md-header__option">
+        <div class="md-select">
+          
+          <button class="md-header__button md-icon" aria-label="Sélectionner la langue">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+          </button>
+          <div class="md-select__inner">
+            <ul class="md-select__list">
+              
+                <li class="md-select__item">
+                  <a href="../../../../competition-instructions/phase-1/design-track/" hreflang="en" class="md-select__link">
+                    English
+                  </a>
+                </li>
+              
+                <li class="md-select__item">
+                  <a href="./" hreflang="fr" class="md-select__link">
+                    Français
+                  </a>
+                </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../introduction/" class="md-tabs__link">
+        Introduction
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../getting-started-tutorials/setting-up-your-pc/" class="md-tabs__link md-tabs__link--active">
+        Tutoriels pour commencer
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../faq/" class="md-tabs__link">
+      Questions fréquemment posées
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../rules-and-regulations/" class="md-tabs__link">
+      Règles et réglementations
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../resources-and-support/additional-resources/" class="md-tabs__link">
+        Ressources et soutien
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Pan African Robotics Competition 2025" class="md-nav__button md-logo" aria-label="Pan African Robotics Competition 2025" data-md-component="logo">
+      
+  <img src="../../../../assets/logo.png" alt="logo">
+
+    </a>
+    Pan African Robotics Competition 2025
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          Introduction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Introduction
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduction/" class="md-nav__link">
+        Aperçu de la compétition
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../introduction/important-dates/" class="md-nav__link">
+        Dates importantes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Tutoriels pour commencer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tutoriels pour commencer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          Commencer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Commencer
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started-tutorials/setting-up-your-pc/" class="md-nav__link">
+        Configurer votre PC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started-tutorials/getting-started-with-ros/" class="md-nav__link">
+        Commencer avec ROS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started-tutorials/setting-up-your-workspace/" class="md-nav__link">
+        Configurer votre espace de travail
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started-tutorials/writing-your-first-ros2-package/" class="md-nav__link">
+        Writing your first ROS 2 Package
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          Instructions de la compétition
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Instructions de la compétition
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_1" id="__nav_2_2_1_label" tabindex="0">
+          Phase 1: Simulation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Phase 1: Simulation
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introduction/" class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autonomy-track/" class="md-nav__link">
+        Autonomy Track
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Design Track
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Design Track
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description-generale" class="md-nav__link">
+    Description générale
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lignes-directrices-sur-les-taches" class="md-nav__link">
+    Lignes directrices sur les tâches
+  </a>
+  
+    <nav class="md-nav" aria-label="Lignes directrices sur les tâches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lancer-la-tache" class="md-nav__link">
+    Lancer la tâche
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installer-opencv" class="md-nav__link">
+    Installer OpenCV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#se-deplacer-a-des-vitesses-differentes" class="md-nav__link">
+    Se déplacer à des vitesses différentes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attentes-de-la-tache" class="md-nav__link">
+    Attentes de la tâche
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preparer-votre-solution" class="md-nav__link">
+    Préparer votre Solution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regles-de-tache" class="md-nav__link">
+    Règles de Tâche
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation-des-taches" class="md-nav__link">
+    Évaluation des Tâches
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-submit/" class="md-nav__link">
+        Comment soumettre
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../phase-2/introduction/" class="md-nav__link">
+        Phase 2: Robot physique
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faq/" class="md-nav__link">
+        Questions fréquemment posées
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../rules-and-regulations/" class="md-nav__link">
+        Règles et réglementations
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Ressources et soutien
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Ressources et soutien
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../resources-and-support/additional-resources/" class="md-nav__link">
+        Enregistrements de réunions virtuelles
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description-generale" class="md-nav__link">
+    Description générale
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lignes-directrices-sur-les-taches" class="md-nav__link">
+    Lignes directrices sur les tâches
+  </a>
+  
+    <nav class="md-nav" aria-label="Lignes directrices sur les tâches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lancer-la-tache" class="md-nav__link">
+    Lancer la tâche
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installer-opencv" class="md-nav__link">
+    Installer OpenCV
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#se-deplacer-a-des-vitesses-differentes" class="md-nav__link">
+    Se déplacer à des vitesses différentes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attentes-de-la-tache" class="md-nav__link">
+    Attentes de la tâche
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preparer-votre-solution" class="md-nav__link">
+    Préparer votre Solution
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regles-de-tache" class="md-nav__link">
+    Règles de Tâche
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evaluation-des-taches" class="md-nav__link">
+    Évaluation des Tâches
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="tache-2-estimation-du-rendement-des-cultures">Tâche 2: Estimation du rendement des cultures<a class="headerlink" href="#tache-2-estimation-du-rendement-des-cultures" title="Permanent link">&para;</a></h1>
+<p><img alt="Task 2 Demo" src="../../assets/task2.gif" /></p>
+<h2 id="description-generale">Description générale<a class="headerlink" href="#description-generale" title="Permanent link">&para;</a></h2>
+<p>Selon les Nations Unies, la population mondiale devrait atteindre 8,5 milliards d’habitants d’ici 2030, l’Afrique étant le continent à la croissance la plus rapide. Cette croissance démographique projetée rend nécessaire l’urgence d’assurer la sécurité alimentaire. L&rsquo;estimation précise des rendements des cultures est un aspect essentiel de la quête de la sécurité alimentaire et des robots agricoles autonomes sont utilisés dans cette entreprise.</p>
+<p>Pour cette tâche, le robot PARC est conduit de manière autonome à travers deux rangées de plants de tomates et les équipes doivent développer un logiciel permettant d&rsquo;estimer le rendement du champ de tomates en utilisant les caméras RVB et la vision par ordinateur du robot.</p>
+<h2 id="lignes-directrices-sur-les-taches">Lignes directrices sur les tâches<a class="headerlink" href="#lignes-directrices-sur-les-taches" title="Permanent link">&para;</a></h2>
+<h3 id="lancer-la-tache">Lancer la tâche<a class="headerlink" href="#lancer-la-tache" title="Permanent link">&para;</a></h3>
+<p>Dans un nouveau terminal, exécutez le fichier de lancement suivant pour faire apparaître le robot dans Gazebo et RViz:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task2_launch.py
+</code></pre></div>
+<p>Vous devriez voir l&rsquo;affichage ci-dessous dans Gazebo et RViz respectivement.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Gazebo</label><label for="__tabbed_1_2">RViz</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="task2_world" src="../../assets/gazebo_on_start.png" /></p>
+</div>
+<div class="tabbed-block">
+<p><img alt="task2_rviz" src="../assets/task2rviz.png" /></p>
+</div>
+</div>
+</div>
+<p>Il existe trois mondes pour cette tâche, chaque monde variant en termes de nombre de plants de tomates produisant des fruits. Le monde par défaut est <code>world1</code> et similaire à la tâche 1, les options du deuxième et du troisième monde, <code>world2</code> et <code>world3</code>, peuvent être sélectionnées en passant l&rsquo;argument dans la commande de <code>ros2 launch</code> ci-dessous:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">## world2</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task2_launch.py<span class="w"> </span>world:<span class="o">=</span>world2
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">## world3</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task2_launch.py<span class="w"> </span>world:<span class="o">=</span>world3
+</code></pre></div>
+<p>Le robot commence à se déplacer une fois que les nœuds appelés par le fichier de lancement ont été chargés avec succès.</p>
+<p>Pour publier le nombre de fruits dans un monde choisi, vous devez utiliser le sujet <code>/parc_robot/crop_yield</code> qui utilise le message personnalisé 
+<code>parc_robot_interfaces/msg/CropYield</code> du package <code>parc_robot_interfaces</code>.</p>
+<p>L&rsquo;extrait de code ci-dessous montre comment un simple éditeur du sujet et du message personnalisé est créé et utilisé:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="ch">#!/usr/bin/env python3</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kn">import</span> <span class="nn">rclpy</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="kn">from</span> <span class="nn">parc_robot_interfaces.msg</span> <span class="kn">import</span> <span class="n">CropYield</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="k">class</span> <span class="nc">YieldTest</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s2">&quot;yield_test&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">yield_pub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">CropYield</span><span class="p">,</span> <span class="s2">&quot;/parc_robot/crop_yield&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        <span class="n">timer_period</span> <span class="o">=</span> <span class="mf">0.5</span>  <span class="c1"># secondes</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">timer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_timer</span><span class="p">(</span><span class="n">timer_period</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">timer_callback</span><span class="p">)</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    <span class="k">def</span> <span class="nf">timer_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>        <span class="n">msg</span> <span class="o">=</span> <span class="n">CropYield</span><span class="p">()</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>        <span class="c1"># Attribuer la variable de compteur i aux données du message de rendement des cultures</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>        <span class="n">msg</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">i</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>        <span class="c1"># Publier un message</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">yield_pub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>        <span class="c1"># Enregistrer les informations sur la console</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Current crop yield is: </span><span class="si">%d</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">msg</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>        <span class="c1"># Variable du compteur d&#39;incréments</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>
+<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>    <span class="n">yield_test</span> <span class="o">=</span> <span class="n">YieldTest</span><span class="p">()</span>
+<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">yield_test</span><span class="p">)</span>
+<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>
+<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>    <span class="n">yield_test</span><span class="o">.</span><span class="n">destroy_node</span><span class="p">()</span>
+<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
+<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>
+<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>
+<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>    <span class="n">main</span><span class="p">()</span>
+</code></pre></div>
+Cette ligne importe le message dans le nœud:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">from</span> <span class="nn">parc_robot_interfaces.msg</span> <span class="kn">import</span> <span class="n">CropYield</span>
+</code></pre></div>
+<p>Un nouveau sujet appelé <code>/parc_robot/robot_status</code> a été ajouté pour publier l&rsquo;état actuel du robot. Le type de message pour cette rubrique est <code>std_msgs/String</code>, 
+qui indique si le robot a commencé à se déplacer le long de l&rsquo;itinéraire ou a terminé l&rsquo;itinéraire désigné. L&rsquo;état du robot a deux valeurs possibles: <strong>&ldquo;started&rdquo;</strong> et <strong>&ldquo;finished&rdquo;</strong>.</p>
+<p>Nous vous recommandons de jouer avec les différents mondes des champs de tomates pour vous assurer que votre solution est robuste dans différents mondes.</p>
+<h3 id="installer-opencv">Installer OpenCV<a class="headerlink" href="#installer-opencv" title="Permanent link">&para;</a></h3>
+<p>Pour cette tâche, il est recommandé d&rsquo;utiliser <a href="https://opencv.org/" target="_blank">OpenCV</a> pour la vision par ordinateur. Ce package peut être installé en exécutant cette commande dans une fenêtre de terminal:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-opencv
+</code></pre></div>
+<h3 id="se-deplacer-a-des-vitesses-differentes">Se déplacer à des vitesses différentes<a class="headerlink" href="#se-deplacer-a-des-vitesses-differentes" title="Permanent link">&para;</a></h3>
+<p>Le robot peut se déplacer à différentes vitesses. La vitesse par défaut est de <code>0.1 m/s</code>, mais vous pouvez modifier la vitesse en passant l&rsquo;argument dans la commande <code>ros2 launch</code> comme suit:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">## 0.25 m/s</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task2_launch.py<span class="w"> </span>speed:<span class="o">=</span><span class="m">0</span>.25
+</code></pre></div>
+De même, nous vous recommandons de jouer avec cette plage de vitesses: <code>[0.25, 0.5, 0.75, 1.0]</code>, pour garantir que votre solution est robuste à différentes vitesses.</p>
+<h3 id="attentes-de-la-tache">Attentes de la tâche<a class="headerlink" href="#attentes-de-la-tache" title="Permanent link">&para;</a></h3>
+<p>L&rsquo;objectif de la tâche est de compter le nombre de tomates rouges lorsque le robot se déplace entre les deux rangées de plants de tomates. Lorsque le robot atteint la fin 
+de la rangée, il s&rsquo;arrêtera et vous devrez publier le nombre total de tomates rouges dans le sujet <code>/parc_robot/crop_yield</code>.</p>
+<p>Il est important de noter que la publication en temps réel des tomates comptées n’est pas nécessaire. Vous pouvez publier le nombre de 
+tomates après l&rsquo;arrêt du robot, que vous pouvez surveiller via la rubrique <code>`parc_robot/robot_status</code>.</p>
+<h3 id="preparer-votre-solution">Préparer votre Solution<a class="headerlink" href="#preparer-votre-solution" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Votre solution doit être préparée sous forme de packages <abbr title="Robot Operating System">ROS</abbr> à enregistrer dans votre dossier de solution. Créez un fichier exécutable de nœud dans votre 
+    package <abbr title="Robot Operating System">ROS</abbr> qui exécute TOUT le code dont vous avez besoin dans votre solution. Nommez ce fichier de nœud : <code>task2_solution.py</code>.</p>
+</li>
+<li>
+<p>Afin d&rsquo;utiliser le message personnalisé CropYield dans votre solution, la dépendance <code>parc_robot_interfaces</code> est ajoutée dans le fichier <code>package.xml</code> de votre package de solution:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">&lt;depend&gt;</span>parc_robot_interfaces<span class="nt">&lt;/depend&gt;</span>
+</code></pre></div>
+* Par conséquent, votre solution à la tâche 2 doit être exécutée en appelant les commandes suivantes:</p>
+<p>Dans un terminal:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task2_launch.py
+</code></pre></div>
+<p>Ou </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task2_launch.py<span class="w"> </span>world:<span class="o">=</span>world2
+</code></pre></div>
+<p>Ou</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task2_launch.py<span class="w"> </span>world:<span class="o">=</span>world3
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please wait until both the world and robot models have finished spawning. This process may take longer than usual, especially when running the program for the first time.</p>
+</div>
+<p>Dans un autre terminal:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>ros2<span class="w"> </span>run<span class="w"> </span>&lt;your-package-name&gt;<span class="w"> </span>task2_solution.py<span class="w"> </span>
+</code></pre></div>
+</li>
+</ul>
+<h2 id="regles-de-tache">Règles de Tâche<a class="headerlink" href="#regles-de-tache" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Assurez-vous de publier UNE SEULE FOIS sur le sujet <code>/parc_robot/crop_yield</code>, ET à la FIN de l&rsquo;exécution. L&rsquo;exécution se termine lorsque le robot envoie terminé sur le sujet <code>/parc_robot/robot_status</code>.</p>
+</li>
+<li>
+<p>Vous n&rsquo;êtes pas autorisé à publier sur le sujet <code>/robot_base_controller/cmd_vel_unstamped</code>. Le robot sera conduit à travers le champ par la simulation Gazebo. 
+    Vous êtes uniquement autorisé à publier sur le sujet <code>/parc_robot/crop_yield</code>.</p>
+</li>
+<li>
+<p>Vous devez publier le nombre de tomates dans le champ dans le sujet <code>/parc_robot/crop_yield</code> au plus tard 5 secondes après l&rsquo;arrêt du robot.</p>
+</li>
+</ul>
+<h2 id="evaluation-des-taches">Évaluation des Tâches<a class="headerlink" href="#evaluation-des-taches" title="Permanent link">&para;</a></h2>
+<p>Votre solution sera testée sur trois nouveaux mondes de champs de tomates et à des vitesses variées. Un score total pour cette tâche sera calculé à l&rsquo;aide de la formule ci-dessous:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="n">total_score</span> <span class="o">=</span> <span class="n">W1</span><span class="o">*</span><span class="n">accuracy</span><span class="p">(</span><span class="n">speed_1</span><span class="p">)</span> <span class="o">+</span> <span class="o">...</span> <span class="o">+</span> <span class="n">Wn</span><span class="o">*</span><span class="n">accuracy</span><span class="p">(</span><span class="n">speed_n</span><span class="p">)</span>
+</code></pre></div>
+où,</p>
+<p><strong><em>speed_n</em></strong> - c&rsquo;est la vitesse à laquelle le robot se déplace <code>m/s</code></p>
+<p><strong><em>accuracy</em></strong> - est calculé comme le pourcentage d&rsquo;erreur moyen des 3 mondes à une vitesse particulière</p>
+<p><strong><em>Wn</em></strong> - est le poids sur le terme de précision qui varie avec la vitesse</p>
+<p>En considérant <code>world1</code> par exemple,</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Nombre réel de tomates rouges = 60
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>Prédit nombre de tomates rouges = 54
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>Erreur absolue = |60 - 54| = 6
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>Pourcentage d&#39;erreur = (Erreur absolue / Nombre réel de tomates rouges) * 100
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>Pourcentage d&#39;erreur = 10%
+</code></pre></div>
+<p>Le pourcentage d’erreur moyen est le pourcentage d’erreur dans les 3 mondes.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Retour en haut de la page
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
+        
+          
+          <a href="../autonomy-track/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Autonomy Track" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Précédent
+                </span>
+                Autonomy Track
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../how-to-submit/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Comment soumettre" rel="next">
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Suivant
+                </span>
+                Comment soumettre
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tracking", "navigation.sections", "navigation.path", "navigation.expand", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.footer", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.efa0ade1.min.js"></script>
+      
+    
+  </body>
+</html>
