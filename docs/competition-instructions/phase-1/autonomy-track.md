@@ -28,13 +28,14 @@ You should see the display below in Gazebo and RViz respectively. To the right, 
 <!-- * We have prepared three pre-defined routes you can use as you develop your solution with each route having different goal location. -->
 
 === "World 1"
-    ![world1](../assets/Task1Route1.jpg)
+    ![world1](../assets/World1.jpg)
 
 === "World 2"
-    ![world2](../assets/Task1Route2.jpg)
+    ![world2](../assets/World2.jpg)
 
 === "World 3"
-    ![world3](../assets/Task1Route3.jpg)
+    ![world3](../assets/World3.jpg)
+
 
 
 The default route is `world1`, but you can select the second and third route option (`world2` and `world3`) by passing the argument in the `ros2 launch` command as follows:
