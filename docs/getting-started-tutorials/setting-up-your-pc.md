@@ -1,13 +1,6 @@
 # Setting up your PC
 
-
 The **first step** in getting started on the competition is to get access to a computer with the right system requirements, and set it up with the right operating system, software and environment to run the competition packages.
-
-
-<!-- This guide helps you setup your computer for running the competition environment locally and developing the code.
-
-You can use local Computer/Laptop or Virtual Machine inside your computer or any cloud platform like [Google GCP](https://cloud.google.com/free){target=_blank}, [Amazon AWS](https://aws.amazon.com/free/){target=_blank}, [Microsoft Azure](https://azure.microsoft.com/en-us/free/){target=_blank}, [Digital Ocean](https://try.digitalocean.com/freetrialoffer/){target=_blank}, etc (All Cloud providers have some free trial plan which you can make use of). -->
-
 
 ## System requirements
 
@@ -17,17 +10,16 @@ You will need a computer that has all (or at least most) of these specifications
     - Nvidia cards tend to work well in Ubuntu
 - A CPU that is at least an Intel i5, or equivalent,
 - At least 4GB of free disk space,
-- At least 8GB of RAM,
+- At least 8GB of RAM
 
 ## Operating System (OS)
 
 We will be using **[Ubuntu Noble Numbat (24.04)](https://releases.ubuntu.com/noble/){target=_blank}** operating system (OS) which is a flavor of [Linux](https://en.wikipedia.org/wiki/Linux){target=_blank}. We know that some participants may have limited or no experience using Ubuntu, so here is a guide on different ways of setting up an operational Ubuntu Noble Numbat instance for this competition.
 
 If you have a Windows PC (or any other operating system different from Ubuntu Noble Numbat 24.04), here are two (2) options to explore:
-<!-- If you have a Windows PC (or any other operating system different from Ubuntu Jammy 22.04), here are three (3) options to explore: -->
 
 - Option 1 (Recommended): **Dual-Boot**: Install **[Ubuntu Noble Numbat (24.04)](https://releases.ubuntu.com/noble/){target=_blank}** in a dual-boot alongside your Windows OS.
-<!-- - Option 2: **Using Docker:** Run **[Ubuntu Jammy (22.04)](https://releases.ubuntu.com/jammy/){target=_blank}** in a Docker container on your native Windows OS. -->
+
 - Option 2: **Using Virtual Machine:** Run **[Ubuntu Noble Numbat (24.04)](https://releases.ubuntu.com/noble/){target=_blank}** in a Virtual Machine (VM) on your native Windows OS.
 
 === "Dual-Boot (Recommended)"

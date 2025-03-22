@@ -4,10 +4,7 @@ We have established the following rules and regulations for the competition to e
 
 ## Eligibility
 
-The competition is open to anyone who meets the following eligibility criteria:
-
-* The participant must be at least 18 years old at the time of registration.
-* The participant must be a resident of an African country.
+The competition is open to participants that must be at least 18 years old at the time of registration.
 
 ## Code of Conduct
 
@@ -25,7 +22,6 @@ Participants must comply with the following guidelines when submitting their wor
 * Participants may only submit work that they have created themselves.
 * All submissions must be made within the given deadline and through the designated submission platform.
 * Participants must provide all required documentation and information with their submission.
-
 
 ## Judging Criteria
 

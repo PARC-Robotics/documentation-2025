@@ -4,10 +4,7 @@ Nous avons établi les règles et règlements suivants pour le concours afin d'a
 
 ## Éligibilité
 
-Le concours est ouvert à tous ceux qui répondent aux critères d'éligibilité suivants:
-
-* Le participant doit avoir au moins 18 ans au moment de l'inscription.
-* Le participant doit être un résident d'un pays africain.
+Le concours est ouvert aux participants qui doivent être âgés d'au moins 18 ans au moment de l'inscription.
 
 ## Code de conduite
 

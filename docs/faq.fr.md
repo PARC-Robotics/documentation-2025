@@ -3,10 +3,10 @@
 ## Général
 
 **Q: Qui peut participer au concours?**  
-R: Le concours est ouvert aux étudiants des universités et des instituts techniques du monde entier.
+R: Le concours est ouvert aux étudiants des universités et des instituts techniques, ainsi qu'aux jeunes professionnels du monde entier. 
 
 **Q: Puis-je participer en tant qu'individu, ou dois-je faire partie d'une équipe?**  
-R: Vous ne pouvez participer qu'en équipe. Chaque équipe doit avoir au moins 2 membres et un maximum de 5 membres.
+R: Vous ne pouvez participer qu'en équipe. Chaque équipe doit avoir au moins 2 membres et un maximum de 6 membres.
 
 **Q: Dois-je avoir une expérience antérieure en robotique ou en programmation pour participer?**  
 R: Bien que l'expérience avec ROS ne soit pas essentielle pour commencer, une expérience de programmation est nécessaire. Vous devrez vous familiariser avec les langages de programmation Python.

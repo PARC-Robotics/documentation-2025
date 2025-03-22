@@ -33,11 +33,11 @@ For the autononmy track, teams will work with the **PARC AgRobot** in simulation
 
 ### Design track
 
-The design track involves designing a fertilizer implement, a sprayer or spreader for instance, using CAD software --- like Fusion 360, SolidWorks, or FreeCAD --- and simulating the implement in motion.
+The design track involves designing a fertilizer implement, a sprayer or spreader for instance, using CAD software --- like Fusion 360, SolidWorks, or FreeCAD --- and simulating the implement in motion. The implement should be designed to be integrated with the **PARC AgRobot**. 
 
 ---
 
-Each team is only allowed to choose **one** track to work on.
+Teams can choose to either work on **one** or **both** tracks.
 
 Detailed instructions for the respective tracks are made available in this documentation. Teams are required to complete and upload their solutions on or before the Phase 1 deadline. Following team evaluations, best performing teams will qualify to compete in Phase 2: **Real World Phase**.
 
@@ -45,14 +45,11 @@ Detailed instructions for the respective tracks are made available in this docum
 
 <!-- ![robot](images/bot.jpg) -->
 
-This phase will take place in-person in Morocco in July 2025. Teams that opt for the autonomy track will compete by integrating their navigation solution on the physical **PARC AgRobot** in a
+This phase will take place in-person in Senegal in July 2025. Teams that opt for the autonomy track will compete by integrating their navigation solution on the physical **PARC AgRobot** in a
 partner farm. Likewise, teams that choose the design track will compete by presenting and demonstrating a prototype of their fertilizer implement solution.
 
 ## Certificates & Awards
 
 All participants who qualify to the real world phase will receive a certificate of participation.
 
----
-Split cash prize?
-1st, 2nd, 3rd prizes for both the autonomoy and design tracks?
----
+The winner of each track will be given a cash reward of **$1000**.

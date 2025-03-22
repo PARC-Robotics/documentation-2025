@@ -142,7 +142,7 @@ plugins:
           "Setting up your PC": "Configurer votre PC"
           "Getting started with ROS": "Commencer avec ROS"
           "Setting up your workspace": "Configurer votre espace de travail"
-          "Writing your first ROS2 Package": "Écrire votre premier package ROS 2"
+          "Writing your first ROS 2 Package": "Écrire votre premier package ROS 2"
           # "Setting up your PC with Docker": "Configurer votre PC avec Docker"
           "Team Naming Conventions": "Conventions de nommage des équipes"
           "What to submit": "Ce qu'il faut soumettre"

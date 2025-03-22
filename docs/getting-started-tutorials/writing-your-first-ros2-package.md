@@ -61,7 +61,7 @@ The `test_publisher` package file structure is as follows,
 
 ## Moving the Robot Programmatically
 
-[Setting up your workspace](../getting-started-tutorials/setting-up-your-workspace.md) guide has already shown how to control the robot with keyboard using `teleop_twist_keyboard`.
+The [setting up your workspace](../getting-started-tutorials/setting-up-your-workspace.md) guide has already shown how to control the robot with keyboard using `teleop_twist_keyboard`.
 
 This guide will help you to move the robot by publishing commands to the `/robot_base_controller/cmd_vel_unstamped` topic programmically using Python.
 
@@ -73,7 +73,7 @@ touch robot_publisher.py
 chmod +x robot_publisher.py
 ```
 
-!!! note "Note"
+!!! note
     You need to change the permission of the file to executable to be able to run (as done in the last command shown above).
 
 Now open the file and copy and paste the following code inside:
@@ -114,8 +114,9 @@ class MoveRobot(Node):
             
         ######## Stop ########
         print("Stopping")
+        # Assigning both to 0.0 stops the robot
         move_cmd.linear.x = 0.0
-        move_cmd.angular.z = 0.0 # Assigning both to 0.0 stops the robot
+        move_cmd.angular.z = 0.0
 
         now = time.time()
         # For the next 5 seconds publish cmd_vel move commands
@@ -158,7 +159,7 @@ if __name__ == "__main__":
     main()
 ```
 
-This code will make the robot move straight for 4 seconds, stop for 5 seconcds, rotate counterclockwise for 15 seconds and then stop.
+This code will make the robot move straight for 4 seconds, stop for 5 seconds, rotate counterclockwise for 15 seconds and then stop.
 
 ## Compile and Run
 

@@ -16,37 +16,37 @@ Le concours se compose de deux phases : la **Phase de Simulation** et la **Phase
 
 La phase de simulation comprend deux volets :
 
-* Volet Autonomie
-* Volet Conception
+* Piste D'autonomie
+* Piste de Conception
 
 <br> 
 
 <p align="center">
-    <img title='Challenge tracks' src=./assets/challenge_tracks.png>
+    <img title='Challenge tracks' src=./assets/challenge_tracks_fr.png>
 </p>
 
 <br>
 
-### Volet Autonomie
+### Piste D'autonomie
 
 Pour la piste d'autonomie, les équipes travailleront avec le **PARC AgRobot** en simulation (en utilisant le simulateur de robot harmonique Gazebo) et utiliseront des outils de pointe (par exemple, ROS, OpenCV, etc.) pour créer une solution logicielle permettant de naviguer de manière autonome dans les champs de maïs avec différentes dispositions de rangées et un terrain accidenté.
 
-### Volet Conception
+### Piste de Conception
 
-La piste de conception consiste à concevoir un outil d'engrais, un pulvérisateur ou un épandeur par exemple, à l'aide d'un logiciel de CAO --- comme Fusion 360, SolidWorks ou FreeCAD --- et à simuler l'outil en mouvement.
+La piste de conception consiste à concevoir un outil d'engrais, un pulvérisateur ou un épandeur par exemple, à l'aide d'un logiciel de CAO --- comme Fusion 360, SolidWorks ou FreeCAD --- et à simuler l'outil en mouvement. L'outil doit être conçu pour être intégré au **PARC AgRobot**.
 
 ---
 
-Chaque équipe ne peut choisir **qu'une seule** piste de travail.
+Les équipes peuvent choisir de travailler sur **une** ou les **deux** pistes.
 
 Les instructions détaillées pour chaque piste sont disponibles dans cette documentation. Les équipes doivent compléter et télécharger leurs solutions au plus tard à la date limite de la phase 1. Suite aux évaluations, les équipes les plus performantes seront qualifiées pour la phase 2 : **Phase du monde Réel**.
 
 ## Phase du monde Réel
 
-Cette phase se déroulera en présentiel au Maroc en juillet 2025. Les équipes qui choisiront le parcours autonomie concourront en intégrant leur solution de navigation sur le **PARC AgRobot** physique d'une exploitation partenaire. De même, les équipes qui choisiront le parcours conception concourront en présentant et en démontrant un prototype de leur solution d'outil de fertilisation.
+Cette phase se déroulera en présentiel au Sénégal en juillet 2025. Les équipes qui choisiront le parcours autonomie concourront en intégrant leur solution de navigation sur le **PARC AgRobot** physique d'une exploitation partenaire. De même, les équipes qui choisiront le parcours conception concourront en présentant et en démontrant un prototype de leur solution d'outil de fertilisation.
 
 ## Prises et récompenses
 
 Tous les participants qualifiés pour la phase du monde réel recevront un certificat de participation.
 
-PRISES?
+Le gagnant de chaque piste recevra une récompense en espèces de **1000$**.
