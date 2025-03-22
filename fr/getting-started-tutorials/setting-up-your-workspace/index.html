@@ -513,36 +513,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#etape-4-configurer-lenvironnement-ros-2" class="md-nav__link">
-    Étape 4: Configurer l'environnement ROS 2
+  <a href="#etape-4-compiler-les-paquets" class="md-nav__link">
+    Étape 4 : Compiler les paquets
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#etape-5-compiler-les-packages" class="md-nav__link">
-    Étape 5: Compiler les packages
+  <a href="#etape-5-configurer-lenvironnement-ros-2" class="md-nav__link">
+    Étape 5 : Configurer l’environnement ROS 2
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#etape-6-installation-et-configuration-de-gazebo-classic" class="md-nav__link">
-    Étape 6: Installation et configuration de Gazebo Classic
+  <a href="#etape-6-installation-de-gazebo-harmonic" class="md-nav__link">
+    Étape 6 : Installation de Gazebo Harmonic
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#etape-7-testez-linstallation" class="md-nav__link">
-    Étape 7: testez l'installation
+  <a href="#etape-7-tester-linstallation" class="md-nav__link">
+    Étape 7 : Tester l'installation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#etape-8-controler-le-robot-a-laide-du-clavier" class="md-nav__link">
-    Étape 8: Contrôler le robot à l'aide du clavier
+  <a href="#etape-8-controler-le-robot-a-laide-dun-clavier" class="md-nav__link">
+    Étape 8 : Contrôler le robot à l'aide d'un clavier
   </a>
   
 </li>
@@ -563,7 +563,7 @@
   
     <li class="md-nav__item">
       <a href="../writing-your-first-ros2-package/" class="md-nav__link">
-        Writing your first ROS 2 Package
+        Écrire votre premier package ROS 2
       </a>
     </li>
   
@@ -856,36 +856,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#etape-4-configurer-lenvironnement-ros-2" class="md-nav__link">
-    Étape 4: Configurer l'environnement ROS 2
+  <a href="#etape-4-compiler-les-paquets" class="md-nav__link">
+    Étape 4 : Compiler les paquets
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#etape-5-compiler-les-packages" class="md-nav__link">
-    Étape 5: Compiler les packages
+  <a href="#etape-5-configurer-lenvironnement-ros-2" class="md-nav__link">
+    Étape 5 : Configurer l’environnement ROS 2
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#etape-6-installation-et-configuration-de-gazebo-classic" class="md-nav__link">
-    Étape 6: Installation et configuration de Gazebo Classic
+  <a href="#etape-6-installation-de-gazebo-harmonic" class="md-nav__link">
+    Étape 6 : Installation de Gazebo Harmonic
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#etape-7-testez-linstallation" class="md-nav__link">
-    Étape 7: testez l'installation
+  <a href="#etape-7-tester-linstallation" class="md-nav__link">
+    Étape 7 : Tester l'installation
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#etape-8-controler-le-robot-a-laide-du-clavier" class="md-nav__link">
-    Étape 8: Contrôler le robot à l'aide du clavier
+  <a href="#etape-8-controler-le-robot-a-laide-dun-clavier" class="md-nav__link">
+    Étape 8 : Contrôler le robot à l'aide d'un clavier
   </a>
   
 </li>
@@ -906,7 +906,7 @@
 
 
 <h1 id="comment-configurer-votre-espace-de-travail">Comment configurer votre espace de travail<a class="headerlink" href="#comment-configurer-votre-espace-de-travail" title="Permanent link">&para;</a></h1>
-<p>Dans ce didacticiel, vous allez configurer un répertoire sur votre PC compatible <abbr title="Robot Operating System">ROS</abbr> 2 comme espace de travail pour le développement et installer les packages <abbr title="Robot Operating System">ROS</abbr> 2 de la compétition. Veuillez suivre attentivement les instructions ci-dessous.</p>
+<p>Dans ce tutoriel, vous allez configurer un répertoire sur votre PC équipé de <abbr title="Robot Operating System">ROS</abbr> 2 comme espace de travail pour le développement et installer les packages <abbr title="Robot Operating System">ROS</abbr> 2 du concours. Veuillez suivre attentivement les instructions ci-dessous.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Ceci peut être effectué UNIQUEMENT après avoir configuré votre PC (en suivant le tutoriel ici : <a href="../setting-up-your-pc/">Configuration de votre PC</a>).</p>
@@ -915,91 +915,81 @@
 <!-- !!! note -->
 <!--      Si vous utilisez un conteneur Docker, vous pouvez ignorer ce didacticiel et suivre les instructions de [Configuration de votre PC à l'aide de Docker](../getting-started-tutorials/setting-up-with-docker.md) à la place. -->
 
-<h3 id="etape-1-configurer-lespace-de-travail-ros-2">Étape 1: Configurer l&rsquo;espace de travail <abbr title="Robot Operating System">ROS</abbr> 2<a class="headerlink" href="#etape-1-configurer-lespace-de-travail-ros-2" title="Permanent link">&para;</a></h3>
-<!-- Premièrement, nous créons un nouveau répertoire dans votre répertoire personnel appelé `catkin_ws` avec un sous-répertoire `src`. Ensuite, nous initialisons le répertoire en tant qu'espace de travail catkin. -->
-
-<p>Ouvrez un nouveau terminal sur votre PC, puis copiez et collez les lignes suivantes une par une:
+<h2 id="etape-1-configurer-lespace-de-travail-ros-2">Étape 1: Configurer l&rsquo;espace de travail <abbr title="Robot Operating System">ROS</abbr> 2<a class="headerlink" href="#etape-1-configurer-lespace-de-travail-ros-2" title="Permanent link">&para;</a></h2>
+<p>Ouvrez un nouveau terminal sur votre PC, puis copiez-collez les lignes suivantes :
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>~/ros2_ws/src
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>~/ros2_ws/src
 </code></pre></div></p>
-<h3 id="etape-2-cloner-le-depot">Étape 2: Cloner le dépôt<a class="headerlink" href="#etape-2-cloner-le-depot" title="Permanent link">&para;</a></h3>
-<p>Dans le même terminal (ou dans un nouveau), copiez et collez ce qui suit:
+<h2 id="etape-2-cloner-le-depot">Étape 2: Cloner le dépôt<a class="headerlink" href="#etape-2-cloner-le-depot" title="Permanent link">&para;</a></h2>
+<p>Dans le même terminal (ou un nouveau), copiez-collez les lignes suivantes :
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>~/ros2_ws/src
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/PARC-Robotics/PARC2024-Engineers-League.git<span class="w"> </span>.
 </code></pre></div></p>
-<h3 id="etape-3-installer-les-dependances">Étape 3: Installer les dépendances<a class="headerlink" href="#etape-3-installer-les-dependances" title="Permanent link">&para;</a></h3>
-<p>Le référentiel de projet cloné contient des packages <abbr title="Robot Operating System">ROS</abbr> qui nécessitent certaines dépendances avant de pouvoir être utilisés. Ces dépendances sont spécifiées dans le fichier <code>package.xml</code> 
-respectif de chaque package et sont installées à l&rsquo;aide de <a href="https://docs.ros.org/en/humble/Tutorials/Intermediate/Rosdep.html" taget="_blank">rosdep</a>, un utilitaire de ligne de commande permettant d&rsquo;identifier et d&rsquo;installer les dépendances pour créer ou installer un package.</p>
-<p>Pour installer les dépendances du projet, dans le même terminal (ou dans un nouveau), copiez et collez ce qui suit:
+<h2 id="etape-3-installer-les-dependances">Étape 3: Installer les dépendances<a class="headerlink" href="#etape-3-installer-les-dependances" title="Permanent link">&para;</a></h2>
+<p>Le dépôt du projet cloné contient des paquets <abbr title="Robot Operating System">ROS</abbr> nécessitant certaines dépendances avant de pouvoir être utilisés. Ces dépendances sont spécifiées dans le fichier « package.xml » de chaque paquet et sont installées à l&rsquo;aide de <a href="https://docs.ros.org/en/jazzy/Tutorials/Intermediate/Rosdep.html" target="_blank">rosdep</a>, un utilitaire en ligne de commande permettant d&rsquo;identifier et d&rsquo;installer les dépendances pour compiler ou installer un paquet.</p>
+<p>Pour installer les dépendances du projet, dans le même terminal (ou un nouveau), copiez-collez ce qui suit :
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">cd</span><span class="w"> </span>~/ros2_ws
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>sudo<span class="w"> </span>rosdep<span class="w"> </span>init
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>rosdep<span class="w"> </span>update
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>rosdep<span class="w"> </span>install<span class="w"> </span>--from-paths<span class="w"> </span>src<span class="w"> </span>--ignore-src<span class="w"> </span>--rosdistro<span class="w"> </span>humble<span class="w"> </span>-r<span class="w"> </span>-y
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>rosdep<span class="w"> </span>install<span class="w"> </span>--from-paths<span class="w"> </span>src<span class="w"> </span>--ignore-src<span class="w"> </span>--rosdistro<span class="w"> </span>jazzy<span class="w"> </span>-r<span class="w"> </span>-y
 </code></pre></div></p>
-<h3 id="etape-4-configurer-lenvironnement-ros-2">Étape 4: Configurer l&rsquo;environnement <abbr title="Robot Operating System">ROS</abbr> 2<a class="headerlink" href="#etape-4-configurer-lenvironnement-ros-2" title="Permanent link">&para;</a></h3>
-<p>La commande suivante doit être exécutée dans chaque nouveau terminal que vous ouvrez pour accéder aux commandes <abbr title="Robot Operating System">ROS</abbr> 2:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">source</span><span class="w"> </span>/opt/ros/humble/setup.bash
+<h2 id="etape-4-compiler-les-paquets">Étape 4 : Compiler les paquets<a class="headerlink" href="#etape-4-compiler-les-paquets" title="Permanent link">&para;</a></h2>
+<p>L&rsquo;étape suivante consiste à compiler les paquets installés à l&rsquo;aide de <code>colcon build</code> :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cd</span><span class="w"> </span>~/ros2_ws
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>colcon<span class="w"> </span>build
+</code></pre></div></p>
+<h2 id="etape-5-configurer-lenvironnement-ros-2">Étape 5 : Configurer l’environnement <abbr title="Robot Operating System">ROS</abbr> 2<a class="headerlink" href="#etape-5-configurer-lenvironnement-ros-2" title="Permanent link">&para;</a></h2>
+<p>La commande suivante doit être exécutée à chaque ouverture de terminal pour accéder aux commandes <abbr title="Robot Operating System">ROS</abbr> 2 :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">source</span><span class="w"> </span>/opt/ros/jazzy/setup.bash
 </code></pre></div>
-<p>Pour éviter de rechercher le fichier d&rsquo;installation de <abbr title="Robot Operating System">ROS</abbr> à chaque fois que vous lancez un nouveau terminal, vous pouvez ajouter la commande à votre script de démarrage shell en exécutant ces lignes:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;source /opt/ros/humble/setup.bash&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nb">source</span><span class="w"> </span>~/.bashrc
+<p>Pour éviter de sourcer le fichier d’installation <abbr title="Robot Operating System">ROS</abbr> à chaque ouverture de terminal, vous pouvez ajouter la commande à votre script de démarrage en exécutant ces lignes :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;source /opt/ros/jazzy/setup.bash&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nb">source</span><span class="w"> </span>~/.bashrc
 </code></pre></div>
-<p>L&rsquo;espace de travail <code>ros2_ws</code> est une <strong>superposition</strong> au-dessus de l&rsquo;installation de <abbr title="Robot Operating System">ROS</abbr>, connue sous le nom de <strong>sous-couche</strong>, et de la même manière, pour utiliser les exécutables ou les bibliothèques du package dans <code>ros2_ws</code>, l&rsquo;espace de travail devra provenir de chaque nouveau terminal ouvert avec cette commande:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">source</span><span class="w"> </span>~/ros2_ws/install/setup.bash
+<p>L’espace de travail <code>ros2_ws</code> est une <strong>superposition</strong> de l’installation <abbr title="Robot Operating System">ROS</abbr>, appelée <strong>sous-couche</strong>. De même, pour utiliser les exécutables ou les bibliothèques de paquets dans <code>ros2_ws</code>, l’espace de travail doit être source à chaque ouverture de terminal avec cette commande :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">source</span><span class="w"> </span>~/ros2_ws/install/setup.bash
 </code></pre></div>
-<p>De même, pour éviter de rechercher manuellement l&rsquo;espace de travail dans chaque terminal nouvellement lancé, la commande peut également être ajoutée au script de démarrage du shell:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;source ~/ros2_ws/install/setup.bash&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nb">source</span><span class="w"> </span>~/.bashrc
+<p>De même, pour éviter de sourcer manuellement l&rsquo;espace de travail à chaque nouveau terminal lancé, la commande peut également être ajoutée au script de démarrage du shell :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;source ~/ros2_ws/install/setup.bash&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nb">source</span><span class="w"> </span>~/.bashrc
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Au fur et à mesure que vous développez, il est bon de définir les variables d&rsquo;environnement chaque fois que vous exécutez une commande <code>colcon build</code> pour compiler les modifications apportées à vos packages. Vous pouvez le faire en:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">source</span><span class="w"> </span>~/ros2_ws/install/setup.bash
+<p>Lors du développement, il est conseillé de définir les variables d&rsquo;environnement à chaque exécution de la commande <code>colcon build</code> pour compiler les modifications apportées à vos paquets. Pour ce faire, procédez comme suit :
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">source</span><span class="w"> </span>~/ros2_ws/install/setup.bash
 </code></pre></div></p>
 </div>
-<h3 id="etape-5-compiler-les-packages">Étape 5: Compiler les packages<a class="headerlink" href="#etape-5-compiler-les-packages" title="Permanent link">&para;</a></h3>
-<p>L&rsquo;étape suivante consiste à compiler les packages installés en utilisant <code>colcon build</code>:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">cd</span><span class="w"> </span>~/ros2_ws
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>colcon<span class="w"> </span>build
-</code></pre></div></p>
-<h3 id="etape-6-installation-et-configuration-de-gazebo-classic">Étape 6: Installation et configuration de Gazebo Classic<a class="headerlink" href="#etape-6-installation-et-configuration-de-gazebo-classic" title="Permanent link">&para;</a></h3>
-<p>Gazebo Classic, version 11, est le simulateur de robot utilisé lors de la compétition et peut être installé <a href="https://classic.gazebosim.org/tutorials?tut=install_ubuntu&amp;cat=install" target="_blank">ici</a>.</p>
-<p>Le champ de tomates est composé de modèles personnalisés, les plants de tomates par exemple, qui ne sont pas disponibles dans Gazebo. 
-Ces modèles sont présents dans le dossier <code>models</code> du package <code>parc_robot_bringup</code>. Pour visualiser complètement le champ de tomates dans Gazebo, le chemin vers le dossier 
-<code>models</code> se fait vers Gazebo en exécutant les commandes suivantes l&rsquo;une après l&rsquo;autre:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;export GAZEBO_MODEL_PATH=:</span><span class="nv">$HOME</span><span class="s2">/ros2_ws/src/parc_robot_bringup/models&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.bashrc
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nb">source</span><span class="w"> </span>~/.bashrc
-</code></pre></div>
-<p>Assurez-vous que le répertoire de l&rsquo;espace de travail est correctement saisi en supposant qu&rsquo;un espace de travail différent de <code>ros2_ws</code> est utilisé.</p>
+<h2 id="etape-6-installation-de-gazebo-harmonic">Étape 6 : Installation de Gazebo Harmonic<a class="headerlink" href="#etape-6-installation-de-gazebo-harmonic" title="Permanent link">&para;</a></h2>
+<p>Gazebo Harmonic est le simulateur de robot utilisé pour le parcours autonomie de la compétition. Il peut être installé <a href="https://gazebosim.org/docs/harmonic/ros_installation/" target="_blank">ici</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Le visualiseur 3D pour <abbr title="Robot Operating System">ROS</abbr>, <a href="https://docs.ros.org/en/humble/Tutorials/Intermediate/RViz/RViz-User-Guide/RViz-User-Guide.html" target="_blank"><code>RViz</code></a>, est automatiquement installé lorsque <abbr title="Robot Operating System">ROS</abbr> 2 Humble a été installé sur votre PC lors du <a href="../setting-up-your-pc/">didacticiel de configuration de votre PC</a>.</p>
+<p>Le visualiseur 3D pour <abbr title="Robot Operating System">ROS</abbr>, <a href="https://docs.ros.org/en/jazzy/Tutorials/Intermediate/RViz/RViz-User-Guide/RViz-User-Guide.html" target="_blank"><code>RViz</code></a>, est automatiquement installé lors de l&rsquo;installation de <abbr title="Robot Operating System">ROS</abbr> 2 Jazzy sur votre PC, comme indiqué dans le tutoriel <a href="../setting-up-your-pc/">Configuration de votre PC</a>.</p>
 </div>
-<h3 id="etape-7-testez-linstallation">Étape 7: testez l&rsquo;installation<a class="headerlink" href="#etape-7-testez-linstallation" title="Permanent link">&para;</a></h3>
-<p>Si vous avez terminé les tâches précédentes avec succès, vous devriez pouvoir exécuter cette commande de lancement de <abbr title="Robot Operating System">ROS</abbr> 2 et voir le simulateur Gazebo Classic et le simulateur RViz s&rsquo;ouvrir avec l&rsquo;affichage suivant:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py
+<h2 id="etape-7-tester-linstallation">Étape 7 : Tester l&rsquo;installation<a class="headerlink" href="#etape-7-tester-linstallation" title="Permanent link">&para;</a></h2>
+<p>Si vous avez réussi les étapes précédentes, vous devriez pouvoir exécuter la commande de lancement de <abbr title="Robot Operating System">ROS</abbr> 2 suivante, qui ouvre également les fenêtres Gazebo Harmonic et RViz :</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py
 </code></pre></div>
-<img alt="Fenêtre Gazebo Simulator" src="../assets/gazebo.png" />
-Gazebo Classic fenêtre du simulateur</p>
+<img alt="Fenêtre Gazebo Harmonic" src="../assets/gazebo.png" />
+Fenêtre Gazebo Harmonic</p>
 <p><img alt="Fenêtre RViz" src="../assets/rviz.png" />
 Fenêtre RViz</p>
-<p>Vous devez publier/écrire dans le <code>sujet</code> <code>/robot_base_controller/cmd_vel_unstamped</code> pour déplacer le robot.
-Le guide suivant vous aidera à contrôler le robot à l&rsquo;aide du clavier. Une fois que vous avez testé cela, vous pouvez suivre le guide <a href="../getting-started-with-ros/">commencer-avec-ros</a> pour écrire un programme python pour contrôler le robot.</p>
-<h3 id="etape-8-controler-le-robot-a-laide-du-clavier">Étape 8: Contrôler le robot à l&rsquo;aide du clavier<a class="headerlink" href="#etape-8-controler-le-robot-a-laide-du-clavier" title="Permanent link">&para;</a></h3>
-<p>Tout d&rsquo;abord, le package <code>teleop_twist_keyboard</code> <abbr title="Robot Operating System">ROS</abbr> 2 est installé qui nous permettra d&rsquo;utiliser le clavier pour contrôler le robot dans un terminal comme suit,</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-humble-teleop-twist-keyboard
+<h2 id="etape-8-controler-le-robot-a-laide-dun-clavier">Étape 8 : Contrôler le robot à l&rsquo;aide d&rsquo;un clavier<a class="headerlink" href="#etape-8-controler-le-robot-a-laide-dun-clavier" title="Permanent link">&para;</a></h2>
+<p>Pour déplacer le PARC AgRobot, vous devez publier/écrire des messages sur le sujet <code>robot_base_controller/cmd_vel_unstamped</code>.</p>
+<p>Tout d&rsquo;abord, le paquet <abbr title="Robot Operating System">ROS</abbr> 2 <code>teleop_twist_keyboard</code> est installé. Il nous permettra d&rsquo;utiliser le clavier pour contrôler le robot dans un terminal, comme suit :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-jazzy-teleop-twist-keyboard
 </code></pre></div>
-Exécutez ensuite la commande suivante dans un nouveau terminal,</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>ros2<span class="w"> </span>run<span class="w"> </span>teleop_twist_keyboard<span class="w"> </span>teleop_twist_keyboard<span class="w"> </span>--ros-args<span class="w"> </span>--remap<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>/cmd_vel:<span class="o">=</span>/robot_base_controller/cmd_vel_unstamped
+<p>Exécutez ensuite la commande suivante dans un nouveau terminal :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>ros2<span class="w"> </span>run<span class="w"> </span>teleop_twist_keyboard<span class="w"> </span>teleop_twist_keyboard<span class="w"> </span>--ros-args<span class="w"> </span>--remap<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>/cmd_vel:<span class="o">=</span>/robot_base_controller/cmd_vel_unstamped
 </code></pre></div>
-<p>Maintenant, en gardant ce deuxième terminal actif (ou en haut), appuyez sur, <code>i</code> pour faire avancer le robot, vous pouvez voir le robot bouger dans les fenêtres &ldquo;RViz&rdquo; et &ldquo;Gazebo&rdquo;. 
-Vous pouvez utiliser les touches ci-dessous pour déplacer le robot et la touche <code>k</code> pour arrêter le mouvement.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Se<span class="w"> </span>déplacer<span class="w"> </span>:
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">   </span>u<span class="w">    </span>i<span class="w">    </span>o
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">   </span>j<span class="w">    </span>k<span class="w">    </span>l
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">   </span>m<span class="w">    </span>,<span class="w">    </span>.
+<p>Maintenant, en gardant ce deuxième terminal actif (ou en haut), appuyez sur <code>i</code> pour faire avancer le robot. Vous pouvez voir le robot se déplacer dans les fenêtres « RViz » et « Gazebo ».
+Vous pouvez utiliser les touches ci-dessous pour déplacer le robot et la touche <code>k</code> pour l&rsquo;arrêter.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Déplacement<span class="w"> </span>:
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">   </span>u<span class="w">    </span>i<span class="w">    </span>o
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">   </span>j<span class="w">    </span>k<span class="w">    </span>l
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">   </span>m<span class="w">    </span>,<span class="w">    </span>.
 </code></pre></div>
+<p>Créons ensuite votre premier package ROS2 avec un nœud <abbr title="Robot Operating System">ROS</abbr> 2 pour contrôler le robot.</p>
 
 
 
@@ -1042,13 +1032,13 @@ Vous pouvez utiliser les touches ci-dessous pour déplacer le robot et la touche
         
         
           
-          <a href="../writing-your-first-ros2-package/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Writing your first ROS 2 Package" rel="next">
+          <a href="../writing-your-first-ros2-package/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Écrire votre premier package ROS 2" rel="next">
             <div class="md-footer__title">
               <div class="md-ellipsis">
                 <span class="md-footer__direction">
                   Suivant
                 </span>
-                Writing your first ROS 2 Package
+                Écrire votre premier package ROS 2
               </div>
             </div>
             <div class="md-footer__button md-icon">

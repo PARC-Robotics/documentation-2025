@@ -915,17 +915,17 @@
 <!-- !!! note -->
 <!--     If you are using a Docker container, you can skip this tutorial and follow the instructions in [Setting up your PC using Docker](../getting-started-tutorials/setting-up-with-docker.md) instead. -->
 
-<h3 id="step-1-setup-ros-2-workspace">Step 1: Setup <abbr title="Robot Operating System">ROS</abbr> 2 workspace<a class="headerlink" href="#step-1-setup-ros-2-workspace" title="Permanent link">&para;</a></h3>
+<h2 id="step-1-setup-ros-2-workspace">Step 1: Setup <abbr title="Robot Operating System">ROS</abbr> 2 workspace<a class="headerlink" href="#step-1-setup-ros-2-workspace" title="Permanent link">&para;</a></h2>
 <p>Open a new terminal on your PC, then copy and paste the following one line at a time:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>~/ros2_ws/src
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nb">cd</span><span class="w"> </span>~/ros2_ws/src
 </code></pre></div></p>
-<h3 id="step-2-clone-the-repository">Step 2: Clone the repository<a class="headerlink" href="#step-2-clone-the-repository" title="Permanent link">&para;</a></h3>
+<h2 id="step-2-clone-the-repository">Step 2: Clone the repository<a class="headerlink" href="#step-2-clone-the-repository" title="Permanent link">&para;</a></h2>
 <p>In the same terminal (or in a new one), copy and paste the following:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>~/ros2_ws/src
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/PARC-Robotics/PARC2025-Engineers-League.git<span class="w"> </span>.
 </code></pre></div></p>
-<h3 id="step-3-install-dependencies">Step 3: Install dependencies<a class="headerlink" href="#step-3-install-dependencies" title="Permanent link">&para;</a></h3>
+<h2 id="step-3-install-dependencies">Step 3: Install dependencies<a class="headerlink" href="#step-3-install-dependencies" title="Permanent link">&para;</a></h2>
 <p>The cloned project repository contains <abbr title="Robot Operating System">ROS</abbr> packages that require certain dependencies before they can be used. These dependencies are specified in the respective <code>package.xml</code> file
 of each package and are installed using <a href="https://docs.ros.org/en/jazzy/Tutorials/Intermediate/Rosdep.html" target="_blank">rosdep</a> a command-line utility for identifying and installing 
 dependencies to build or install a package. </p>
@@ -935,12 +935,12 @@ dependencies to build or install a package. </p>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>rosdep<span class="w"> </span>update
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>rosdep<span class="w"> </span>install<span class="w"> </span>--from-paths<span class="w"> </span>src<span class="w"> </span>--ignore-src<span class="w"> </span>--rosdistro<span class="w"> </span>jazzy<span class="w"> </span>-r<span class="w"> </span>-y
 </code></pre></div></p>
-<h3 id="step-4-compile-packages">Step 4: Compile packages<a class="headerlink" href="#step-4-compile-packages" title="Permanent link">&para;</a></h3>
+<h2 id="step-4-compile-packages">Step 4: Compile packages<a class="headerlink" href="#step-4-compile-packages" title="Permanent link">&para;</a></h2>
 <p>The next step is to compile the installed packages using <code>colcon build</code>:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cd</span><span class="w"> </span>~/ros2_ws
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>colcon<span class="w"> </span>build
 </code></pre></div></p>
-<h3 id="step-5-set-up-ros-2-environment">Step 5: Set up <abbr title="Robot Operating System">ROS</abbr> 2 environment<a class="headerlink" href="#step-5-set-up-ros-2-environment" title="Permanent link">&para;</a></h3>
+<h2 id="step-5-set-up-ros-2-environment">Step 5: Set up <abbr title="Robot Operating System">ROS</abbr> 2 environment<a class="headerlink" href="#step-5-set-up-ros-2-environment" title="Permanent link">&para;</a></h2>
 <p>The following command needs to be run in every new terminal you open to get access to <abbr title="Robot Operating System">ROS</abbr> 2 commands:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">source</span><span class="w"> </span>/opt/ros/jazzy/setup.bash
 </code></pre></div>
@@ -962,13 +962,13 @@ in <code>ros2_ws</code>, the workspace will need to be sourced in every new term
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">source</span><span class="w"> </span>~/ros2_ws/install/setup.bash
 </code></pre></div></p>
 </div>
-<h3 id="step-6-gazebo-harmonic-installation">Step 6: Gazebo Harmonic installation<a class="headerlink" href="#step-6-gazebo-harmonic-installation" title="Permanent link">&para;</a></h3>
+<h2 id="step-6-gazebo-harmonic-installation">Step 6: Gazebo Harmonic installation<a class="headerlink" href="#step-6-gazebo-harmonic-installation" title="Permanent link">&para;</a></h2>
 <p>Gazebo Harmonic is the robot simulator used in the autonomy track of the competition. It can be installed <a href="https://gazebosim.org/docs/harmonic/ros_installation/" target="_blank">here</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The 3D visualizer for <abbr title="Robot Operating System">ROS</abbr>, <a href="https://docs.ros.org/en/jazzy/Tutorials/Intermediate/RViz/RViz-User-Guide/RViz-User-Guide.html" target="_blank"><code>RViz</code></a>, is automatically installed when <abbr title="Robot Operating System">ROS</abbr> 2 Jazzy was installed on your PC in the <a href="../setting-up-your-pc/">setting up your PC</a> tutorial.</p>
 </div>
-<h3 id="step-7-test-installation">Step 7: Test installation<a class="headerlink" href="#step-7-test-installation" title="Permanent link">&para;</a></h3>
+<h2 id="step-7-test-installation">Step 7: Test installation<a class="headerlink" href="#step-7-test-installation" title="Permanent link">&para;</a></h2>
 <p>If you completed the preceding steps successfully, you should be able to run this <abbr title="Robot Operating System">ROS</abbr> 2 launch command which also opens the Gazebo Harmonic and RViz windows:</p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py
 </code></pre></div>
@@ -976,7 +976,7 @@ in <code>ros2_ws</code>, the workspace will need to be sourced in every new term
 Gazebo Harmonic window</p>
 <p><img alt="RViz window" src="../assets/rviz.png" />
 RViz window</p>
-<h3 id="step-8-controlling-the-robot-using-a-keyboard">Step 8: Controlling the robot using a keyboard<a class="headerlink" href="#step-8-controlling-the-robot-using-a-keyboard" title="Permanent link">&para;</a></h3>
+<h2 id="step-8-controlling-the-robot-using-a-keyboard">Step 8: Controlling the robot using a keyboard<a class="headerlink" href="#step-8-controlling-the-robot-using-a-keyboard" title="Permanent link">&para;</a></h2>
 <p>To move the PARC AgRobot, you need to publish/write messages on the <code>robot_base_controller/cmd_vel_unstamped</code> topic.</p>
 <p>First of all, the <code>teleop_twist_keyboard</code> <abbr title="Robot Operating System">ROS</abbr> 2 package is installed which will enable us to use the keyboard to control the robot in a terminal as follows,</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-jazzy-teleop-twist-keyboard

@@ -528,7 +528,7 @@
   
     <li class="md-nav__item">
       <a href="../writing-your-first-ros2-package/" class="md-nav__link">
-        Writing your first ROS 2 Package
+        Écrire votre premier package ROS 2
       </a>
     </li>
   
@@ -836,52 +836,45 @@
 
 
 <h1 id="configuration-de-votre-pc">Configuration de votre PC<a class="headerlink" href="#configuration-de-votre-pc" title="Permanent link">&para;</a></h1>
-<p>La <strong>première étape</strong> pour commencer le concours consiste à accéder à un ordinateur doté de la configuration système requise et à le configurer avec le système d&rsquo;exploitation, les logiciels et l&rsquo;environnement appropriés pour exécuter les packages du concours.</p>
-<!-- Ce guide vous aide à configurer votre ordinateur pour exécuter l'environnement de concurrence localement et développer le code.
-
-Vous pouvez utiliser un ordinateur / ordinateur portable local ou une machine virtuelle dans votre ordinateur ou n'importe quelle plate-forme cloud comme [Google GCP](https://cloud.google.com/free){target=_blank}, [Amazon AWS](https://aws.amazon.com/free/){target=_blank}, [Microsoft Azure](https://azure.microsoft.com/en-us/free/){target=_blank}, [Digital Ocean](https://try.digitalocean.com/freetrialoffer/){target=_blank}, etc. (tous les fournisseurs de cloud ont un plan d'essai gratuit que vous pouvez utiliser). -->
-
+<p>La <strong>première étape</strong> pour démarrer la compétition consiste à accéder à un ordinateur avec la configuration système requise et à le configurer avec le système d&rsquo;exploitation, le logiciel et l&rsquo;environnement appropriés pour exécuter les packages de compétition.</p>
 <h2 id="configuration-requise">Configuration requise<a class="headerlink" href="#configuration-requise" title="Permanent link">&para;</a></h2>
-<p>Vous aurez besoin d’un ordinateur possédant toutes (ou au moins la plupart) de ces spécifications:</p>
+<p>Vous aurez besoin d&rsquo;un ordinateur possédant toutes (ou au moins la plupart) les spécifications suivantes :</p>
 <ul>
-<li>un <a href="https://en.wikipedia.org/wiki/graphics_processing_unit" target="_blank">gpu</a> dédié,<ul>
-<li>Les cartes Nvidia ont tendance à bien fonctionner à Ubuntu</li>
+<li>Un <a href="https://en.wikipedia.org/wiki/Graphics_processing_unit" target="_blank">processeur graphique</a> dédié <ul>
+<li>Les cartes graphiques Nvidia fonctionnent généralement bien sous Ubuntu</li>
 </ul>
 </li>
-<li>un processeur qui est au moins un Intel i5, ou équivalent,</li>
-<li>au moins 4 Go d&rsquo;espace disque libre, </li>
-<li>au moins 8 Go de RAM,</li>
+<li>Un processeur Intel i5 ou équivalent</li>
+<li>Au moins 4 Go d&rsquo;espace disque disponible</li>
+<li>Au moins 8 Go de RAM</li>
 </ul>
 <h2 id="systeme-dexploitation-se">Système d&rsquo;exploitation (SE)<a class="headerlink" href="#systeme-dexploitation-se" title="Permanent link">&para;</a></h2>
-<p>Nous utiliserons le système d&rsquo;exploitation (SE) <strong><a href="https://releases.ubuntu.com/jammy/" target="_blank">Ubuntu Jammy (22.04)</a></strong> qui est une variante de <a href="https: //en.wikipedia.org/wiki/Linux" target="_blank">Linux</a>. Nous savons que certains participants peuvent avoir une expérience limitée ou nulle de l&rsquo;utilisation d&rsquo;Ubuntu. Voici donc un guide sur les différentes manières de configurer une instance Ubuntu Focal opérationnelle pour ce concours.</p>
-<p>Si vous avez un PC Windows (ou tout autre système d&rsquo;exploitation différent d&rsquo;Ubuntu Jammy 22.04), voici deux (2) options à explorer :</p>
+<p>Nous utiliserons le système d&rsquo;exploitation (SE) <strong><a href="https://releases.ubuntu.com/noble/" target="_blank">Ubuntu Noble Numbat (24.04)</a></strong>, une variante de <a href="https://en.wikipedia.org/wiki/Linux" target="_blank">Linux</a>. Nous savons que certains participants peuvent avoir une expérience limitée, voire inexistante, d&rsquo;Ubuntu. Voici donc un guide expliquant comment configurer une instance Ubuntu Noble Numbat opérationnelle pour ce concours.</p>
+<p>Si vous possédez un PC Windows (ou tout autre système d&rsquo;exploitation différent d&rsquo;Ubuntu Noble Numbat 24.04), voici deux (2) options à explorer :</p>
 <ul>
-<li>Option 1 (recommandée) : <strong>Double démarrage</strong> : installez <strong><a href="https://releases.ubuntu.com/jammy/" target="_blank">Ubuntu Jammy (22.04)</a></strong> dans un démarrer à côté de votre système d&rsquo;exploitation Windows.</li>
+<li>
+<p>Option 1 (recommandée) : <strong>Dual-Boot</strong> : Installez <strong><a href="https://releases.ubuntu.com/noble/" target="_blank">Ubuntu Noble Numbat (24.04)</a></strong> en double démarrage parallèlement à votre système d&rsquo;exploitation Windows.</p>
+</li>
+<li>
+<p>Option 2 : <strong>Utilisation d&rsquo;une machine virtuelle</strong> : Exécutez <strong><a href="https://releases.ubuntu.com/noble/" target="_blank">Ubuntu Noble Numbat (24.04)</a></strong> dans une machine virtuelle (VM) sur votre système d&rsquo;exploitation Windows natif.</p>
+</li>
 </ul>
-<!-- - Option 2 : **Utiliser Docker :** Exécuter **[Ubuntu Jammy (22.04)](https://releases.ubuntu.com/jammy/){target=_blank}** dans un conteneur Docker sur votre Windows natif OS. -->
-<ul>
-<li>Option 2 : <strong>Utiliser une machine virtuelle :</strong> Exécuter <strong><a href="https://releases.ubuntu.com/jammy/" target="_blank">Ubuntu Jammy (22.04)</a></strong> dans une machine virtuelle (VM) sur votre système d&rsquo;exploitation Windows natif.</li>
-</ul>
-<!-- !!! note
-     Il est fortement recommandé d'installer [focal (20.04)](https://releases.ubuntu.com/focal/){target=_blank} d'Ubuntu en raison de [ROS (Noetic)](http://wiki.ros.org/noetic){target=_blank} dépendance.
-
-## Installation de ROS
-Vous devez installer ROS NOetic en suivant [ce guide](http://wiki.ros.org/noetic/installation/ubuntu){target=_blank} et installer `ros-nootic-desktop-full` dans l'étape` 1.4 `du guide. -->
-
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Double démarrage (recommandé)</label><label for="__tabbed_1_2">Utiliser une machine virtuelle</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Dual-Boot (recommandé)</label></div>
 <div class="tabbed-content">
-<div class="tabbed-block">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <ul>
-<li>Voici un <a href="https://www.how2shout.com/linux/install-ubuntu-22-04-jammy-alongside-windows-10-dual-boot/" target="_blank">bon guide</a> vous pouvez suivre pour installer <strong><a href="https://releases.ubuntu.com/jammy/" target="_blank">Ubuntu Jammy (22.04)</a></strong> dans un double démarrage avec votre système d&rsquo;exploitation Windows.</li>
+<li>Cette <a href="https://www.youtube.com/watch?v=qq-7X8zLP7g" target="_blank">vidéo</a> explique pas à pas le processus de double démarrage d&rsquo;<strong><a href="https://releases.ubuntu.com/jammy/" target="_blank">Ubuntu Noble Numbat (24.04)</a></strong> avec votre système d&rsquo;exploitation Windows. Ce <a href="https://linuxconfig.org/how-to-install-ubuntu-alongside-windows-11-dual-boot" target="_blank">guide</a> permet également d&rsquo;obtenir la même configuration de double démarrage.</li>
 </ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Utilisation d&rsquo;une machine virtuelle</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
 </div>
-<div class="tabbed-block">
+</div>
 <ul>
-<li>Voici un <a href="https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview" target="_blank">bon guide</a> vous pouvez suivre pour installer VirtualBox sur votre PC et exécuter Ubuntu.</li>
+<li>L&rsquo;installation de VirtualBox sur votre PC pour exécuter Ubuntu est décrite dans cette <a href="https://www.youtube.com/watch?v=kSy3NX3Pe-c" target="_blank">vidéo</a>. Vous pouvez également suivre ce <a href="https://ubuntu.com/tutorials/how-to-run-ubuntu-desktop-on-a-virtual-machine-using-virtualbox#1-overview" target="_blank">guide</a> pour installer VirtualBox et exécuter Ubuntu.</li>
 </ul>
-</div>
-</div>
-</div>
 <!-- === "Utiliser Docker" -->
 <!--      - Nous avons fourni un [guide détaillé](../getting-started-tutorials/setting-up-with-docker.md) sur l'installation de Docker sur votre PC et la configuration du bon conteneur Docker pour exécuter toute la compétition. -->
 <!--      - Si vous êtes préoccupé par l'option de double démarrage, nous vous recommandons d'envisager cette option. -->
@@ -896,12 +889,8 @@ Vous devez installer ROS NOetic en suivant [ce guide](http://wiki.ros.org/noetic
 <!--      Si vous avez suivi l'option **Utiliser Docker** ci-dessus, veuillez IGNORER cette étape. -->
 <!-- Une fois que vous avez une nouvelle installation **[d'Ubuntu Jammy (22.04)](https://releases.ubuntu.com/jammy/){target=_blank}**, l'étape suivante consiste à installer ROS. Nous utilisons la distribution ROS2 Humble pour ce concours. Vous pouvez installer ROS2 Humble en suivant ce guide, installez la version Desktop, -->
 
-<p>Une fois que vous avez une nouvelle installation <strong><a href="https://releases.ubuntu.com/jammy/" target="_blank">Ubuntu Jammy (22.04)</a></strong>, l&rsquo;étape suivante consiste à installer <abbr title="Robot Operating System">ROS</abbr>. Nous utilisons la distribution ROS2 Humble pour ce concours. Vous pouvez installer ROS2 Humble en suivant ce guide, installez la version Desktop,
-<code>ros-humble-desktop</code>, et suivez le reste du guide de configuration. </p>
-<p>Si vous préférez les instructions vidéo, vous pouvez suivre cette vidéo :</p>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=0aPbWsyENA8" target="_blank">Installer et configurer <abbr title="Robot Operating System">ROS</abbr> 2 Humble</a></li>
-</ul>
+<p>Une fois votre installation d&rsquo;<strong><a href="https://releases.ubuntu.com/noble/" target="_blank">Ubuntu Noble Numbat (24.04)</a></strong> terminée, l&rsquo;étape suivante consiste à installer <abbr title="Robot Operating System">ROS</abbr>. Nous utilisons la distribution <a href="https://docs.ros.org/en/jazzy">ROS2 Jazzy</a> pour ce concours. Vous pouvez installer ROS2 Jazzy en suivant <a href="https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debians.html" target="_blank">ce guide</a>, installer la version Desktop, <code>ros-jazzy-desktop</code>, et suivre le reste du guide d&rsquo;installation.</p>
+<p>Si vous préférez les instructions vidéo, vous pouvez regarder cette <a href="https://www.youtube.com/watch?v=oTp2UtHZLH0" target="_blank">vidéo YouTube</a> (un article de blog est inclus dans la description de la vidéo).</p>
 
 
 

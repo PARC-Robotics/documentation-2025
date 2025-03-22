@@ -934,7 +934,7 @@
 <h1 id="autonomy-track">Autonomy Track<a class="headerlink" href="#autonomy-track" title="Permanent link">&para;</a></h1>
 <h2 id="general-description">General Description<a class="headerlink" href="#general-description" title="Permanent link">&para;</a></h2>
 <p><img alt="task1_simulation" src="../../assets/task1_sim.gif" />
-Agricultural robots must be able to navigate through crops and farmland, which includes autonomously moving through rows of maize plants on rough terrain. This task involves reaching the end of a row, making a turn, and returning in adjacent rows until the goal location is reached. Teams must develop software to guide the robot through a <a href="#exploring-multiple-routes">pre-defined path</a> within the crop rows, from its starting position to the goal location.</p>
+Agricultural robots must be able to navigate through crops and farmland, which includes autonomously moving through rows of maize plants on rough terrain. This task involves reaching the end of a row, making a turn, and returning in adjacent rows until the goal location is reached. Teams must develop software to guide the robot through a <a href="#exploring-multiple-worlds">pre-defined path</a> within the crop rows, from its starting position to the goal location.</p>
 <h2 id="task-guidelines">Task Guidelines<a class="headerlink" href="#task-guidelines" title="Permanent link">&para;</a></h2>
 <h3 id="launching-the-task">Launching the Task<a class="headerlink" href="#launching-the-task" title="Permanent link">&para;</a></h3>
 <p>In a new terminal, run the following launch file to bring up the robot in Gazebo and RViz:</p>
@@ -953,11 +953,7 @@ Agricultural robots must be able to navigate through crops and farmland, which i
 </div>
 </div>
 <h3 id="exploring-multiple-worlds">Exploring Multiple Worlds<a class="headerlink" href="#exploring-multiple-worlds" title="Permanent link">&para;</a></h3>
-<ul>
-<li>We have prepared three worlds you can use as you develop your solution with each world having different row layouts and row lengths.</li>
-</ul>
-<!-- * We have prepared three pre-defined routes you can use as you develop your solution with each route having different goal location. -->
-
+<p>We have prepared three worlds you can use as you develop your solution with each world having different row layouts and row lengths.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">World 1</label><label for="__tabbed_2_2">World 2</label><label for="__tabbed_2_3">World 3</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -978,8 +974,6 @@ Agricultural robots must be able to navigate through crops and farmland, which i
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">## route3</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py<span class="w"> </span>world:<span class="o">=</span>world3
 </code></pre></div>
-<!-- We recommend you play around with at least these three routes to ensure your solution is robust to different start locations. -->
-
 <h3 id="getting-the-gps-goal-location">Getting the GPS goal location<a class="headerlink" href="#getting-the-gps-goal-location" title="Permanent link">&para;</a></h3>
 <p>To obtain the GPS goal location for this task, regardless of the route option, you use <abbr title="Robot Operating System">ROS</abbr> <a href="https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters.html" target="_blank">parameters</a> in a node. 
     Here is an example of how to obtain the goal location as a <abbr title="Robot Operating System">ROS</abbr> parameter:</p>
@@ -1141,7 +1135,7 @@ if the command is called inside the <code>config</code> directory where the coor
 <tr>
 <td>1</td>
 <td><strong>Pre-defined path</strong></td>
-<td>Every route launched has a pre-defined path that <strong>must</strong> be followed as explained at <a href="#exploring-multiple-routes">Route Description</a>.</td>
+<td>Every route launched has a pre-defined path that <strong>must</strong> be followed as explained at <a href="#exploring-multiple-worlds">World Description</a>.</td>
 </tr>
 <tr>
 <td>2</td>
