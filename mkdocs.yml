@@ -132,8 +132,8 @@ plugins:
           Resources and Support: Ressources et soutien
           "Phase 1: Simulation": "Phase 1: Simulation"
           "Phase 2: Physical Robot": "Phase 2: Robot physique"
-          "Autonomy Track": "Volet Autonomie"
-          "Design Track": "Volet Conception"
+          "Autonomy Track": "Piste D'autonomie"
+          "Design Track": "Piste de Conception"
           # "Task 3: Seed Planting": "Tâche 3: Plantation des graines"
           "Objectives and goals": "Objectifs et objectifs"
           "Prizes and rewards": "Prix et récompenses"

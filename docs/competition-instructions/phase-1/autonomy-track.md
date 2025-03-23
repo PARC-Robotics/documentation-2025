@@ -3,6 +3,7 @@
 ## General Description
 
 ![task1_simulation](../assets/task1_sim.gif)
+
 Agricultural robots must be able to navigate through crops and farmland, which includes autonomously moving through rows of maize plants on rough terrain. This task involves reaching the end of a row, making a turn, and returning in adjacent rows until the goal location is reached. Teams must develop software to guide the robot through a [pre-defined path](#exploring-multiple-worlds) within the crop rows, from its starting position to the goal location.
 
 ## Task Guidelines
@@ -39,10 +40,10 @@ We have prepared three worlds you can use as you develop your solution with each
 The default route is `world1`, but you can select the second and third route option (`world2` and `world3`) by passing the argument in the `ros2 launch` command as follows:
 
 ```sh
-## route2
+## world2
 ros2 launch parc_robot_bringup task1_launch.py world:=world2
 
-## route3
+## world3
 ros2 launch parc_robot_bringup task1_launch.py world:=world3
 ```
 
@@ -208,13 +209,13 @@ ros2 run <your-package-name> task1_solution.py --ros-args --params-file <absolut
 !!! note "Note"
     Ensure you DO NOT provide a solution with hard-coded positions for the robot to move to because in evaluation, the robot's initial position would be randomized. 
 
-## Task Evaluation
+## Autonomy Evaluation
 
 Scoring for this task would be based on the following criteria:
 
 | S/N      | Criteria/Metric | Description |
 | ----------- | ----------- | ------- |
-| 1  | **Pre-defined path** | Every route launched has a pre-defined path that **must** be followed as explained at [World Description](#exploring-multiple-worlds). |
-| 2  | **Plant and peg avoidance**  | The robot should avoid making contact with the tomato plants and/or pegs. **(Less contact is better)** |
+| 1  | **Pre-defined path** | Follow the path as explained in [World Description](#exploring-multiple-worlds). |
+| 2  | **Plant avoidance**  | The robot should avoid making contact with the maize plants. **(Less contact is better)** |
 | 3 | **Final travel distance to goal** | Shortest travel distance from robot (measured from robot center) through the crop rows to the goal which is calculated at the time limit [8 minutes] **(Smaller is better)**
 | 4  | **Completion time** | Time from launching the solution to task completion **(Smaller is better)** |

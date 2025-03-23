@@ -1,16 +1,19 @@
 # Design Track
 
-<!-- ![Task 2 Demo](../assets/task2.gif) -->
-
 ## General Description
 
 Applying fertilizers to crops enhance their nutrient intake, providing essential nutrients like nitrogen, phosphorus, and potassium that are crucial for plant growth. By improving crop health and yield, fertilizers play a vital role in boosting agricultural productivity and contributing to global food security by ensuring a stable supply of food for an expanding population.
 
-With precision agriculture in mind, teams are to design a fertilizer implement --- a sprayer or spreader for instance --- for precise and sustainabile fertilizer application. The implement should be adaptable to different terrains and crop types. The solution should demonstrate the potential autonomous technology to transform agriculture and boost productivity.
+With precision agriculture in mind, teams are to design a fertilizer implement (a sprayer or spreader for instance) for precise and sustainabile fertilizer application. The implement should be adaptable to different terrains and crop types. The solution should demonstrate the potential autonomous technology to transform agriculture and boost productivity.
 
 <!-- Review last two sentences  -->
 
-## Task Guidelines
+<!-- ## Design Specifications
+
+
+scout 2.0 specs https://global.agilex.ai/products/scout-2-0 -->
+
+## Design Guidelines
 
 * Teams are to use CAD software --- like Fusion 360, SolidWorks, or FreeCAD --- to design the fertilizer implement.
 * Designs can be inspired by existing fertilizer machinery but optimized for precision and adaptability. 
@@ -21,9 +24,9 @@ With precision agriculture in mind, teams are to design a fertilizer implement -
 
 The objective of the track -->
 
-## Task Evaluation
+## Design Evaluation
 
-Scoring for this task would be based on the following criteria:
+The design track will be evaluated based on the following criteria:
 
 | S/N      | Criteria/Metric | Description |
 | ----------- | ----------- | ------- |
@@ -45,6 +48,6 @@ Scoring for this task would be based on the following criteria:
 
 <!-- Any more information we can add? -->
 
-!!! note "Note"
+!!! note
     Teams that qualify for Real World Phase of the competition will have to present and demonstrate a prototype of their final design. Therefore, it is encouraged that teams
     also work on their prototypes during the Simulation phase.

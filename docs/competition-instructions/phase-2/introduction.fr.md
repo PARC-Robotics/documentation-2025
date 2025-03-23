@@ -1,11 +1,13 @@
 # Introduction
 
-**Remarque: cette page n'est pas encore disponible**
+Les équipes qualifiées pour la Phase du monde Réel s'affronteront au Sénégal en juillet 2025.
 
-Nous travaillons actuellement sur la préparation des instructions et des directives pour la deuxième phase de la compétition, qui implique le robot physique. Les informations sur cette page seront mises à jour dès que possible.
+## Piste D'autonomie
 
-Si vous avez des questions ou des préoccupations concernant cette phase de la compétition, n'hésitez pas à nous contacter via nos canaux de soutien.
+Les équipes qualifiées pour ce parcours intégreront leur solution autonome sur le **PARC AgRobot** physique d'une ferme partenaire. Elles devront piloter le robot de manière autonome à travers la ferme, à différents points de départ et d'arrivée, afin de tester la robustesse de leur solution.
 
-En attendant, nous vous recommandons de continuer à préparer le concours en examinant les ressources et le matériel disponibles sur le site Web, tels que les [Tutoriels de démarrage](//documentation-2024/getting-started-tutorials/setting-up-your-pc/) et les instructions pour [Phase 1: Simulation](/documentation-2024/competition-instructions/phase-1/introduction/).
+Les équipes se verront attribuer des créneaux horaires pour travailler sur leurs solutions quelques jours avant le jour J (à confirmer). L'agencement de la ferme sera également dévoilé une fois la confirmation reçue.
 
-Merci pour votre patience et votre compréhension. Nous sommes impatients de partager plus d'informations avec vous bientôt.
+## Piste de Conception
+
+Les équipes qualifiées pour la piste de conception s'affronteront en présentant un prototype de leur solution d'engrais. Des points supplémentaires seront attribués à toute équipe qui intégrera sa solution avec le **PARC AgRobot**.

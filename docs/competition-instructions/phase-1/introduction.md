@@ -35,6 +35,6 @@ The simulation environment used in this phase is modeled as a realistic farmland
 
 ## Design Track
 
+Teams are to design a fertilizer implement to be integrated with the **PARC AgRobot**. The design specifications for the implement are provided on [this page](../phase-1/design-track.md).
 
----
 <!-- This phase will evaluate the teams' capabilities to successfully complete these fundamental tasks required to compete in phase 2 (on the physical robot). -->

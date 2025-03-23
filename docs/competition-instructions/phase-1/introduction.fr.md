@@ -35,5 +35,4 @@ L'environnement de simulation utilisé dans cette phase est modélisé comme une
 
 ## Piste de Conception
 
-
----
+Les équipes doivent concevoir un outil de fertilisation à intégrer au **PARC AgRobot**. Les spécifications de conception de l'outil sont disponibles sur [cette page](../phase-1/design-track.fr.md).

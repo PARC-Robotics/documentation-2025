@@ -1,51 +1,51 @@
-# Tâche 1: Navigation autonome sur le terrain
+# Piste D'autonomie
 
 ## Description Générale
 
 ![task1_simulation](../assets/task1_sim.gif)
 
-Les robots agricoles doivent être capables de se déplacer à travers les cultures et les terres agricoles, ce qui implique de se déplacer de manière autonome à travers des rangées de plants de tomates sur un terrain accidenté. Cette tâche consiste à atteindre la fin d'une rangée, à faire un tour et à revenir dans les rangées adjacentes jusqu'à ce que l'emplacement de l'objectif soit atteint. Les équipes doivent développer un logiciel pour guider le robot sur un [chemin prédéfini](#explorer-plusieurs-itinéraires) dans les rangs de culture, depuis sa position de départ jusqu'à l'emplacement cible.
+Les robots agricoles doivent être capables de se déplacer à travers les cultures et les terres agricoles, notamment en se déplaçant de manière autonome dans les rangs de maïs sur terrain accidenté. Cette tâche consiste à atteindre l'extrémité d'un rang, à effectuer un virage et à revenir dans les rangs adjacents jusqu'à l'objectif. Les équipes doivent développer un logiciel pour guider le robot le long d'un [chemin prédéfini](#explorer-plusieurs-mondes) au sein des rangs, de sa position de départ à son objectif.
 
-## Lignes directrices sur les tâches
+## Instructions pour la tâche
 
-### Lancer la tâche
-Dans un nouveau terminal, exécutez le fichier de lancement suivant pour faire apparaître le robot dans Gazebo et RViz:
+### Lancement de la tâche
+Dans un nouveau terminal, exécutez le fichier de lancement suivant pour lancer le robot dans Gazebo et RViz :
 
 ```sh
 ros2 launch parc_robot_bringup task1_launch.py
 ```
 
-Vous devriez voir l'affichage ci-dessous dans Gazebo et RViz respectivement. À droite, il y a le robot et à gauche se trouve le cercle vert qui représente l'emplacement du but.
+Vous devriez voir l'affichage ci-dessous dans Gazebo et RViz respectivement. À droite, le robot et à gauche, le cercle vert qui représente l'emplacement cible.
 
 === "Gazebo"
-    ![task1_gazebo](../assets/task1_gazebo.jpg)
+    ![task1_gazebo](../assets/gazebo.png)
 
 === "RViz"
-    ![task1_rviz](../assets/task1_rviz.png)
+    ![task1_rviz](../../getting-started-tutorials/assets/rviz.png)
 
-### Explorer Plusieurs Itinéraires
-* Nous avons préparé trois itinéraires prédéfinis que vous pouvez utiliser lors du développement de votre solution, chaque itinéraire ayant un emplacement d'objectif différent.
+### Explorer Plusieurs Mondes
 
-=== "Route 1"
-    ![task1_route1](../assets/Task1Route1.jpg)
+Nous avons préparé trois mondes que vous pouvez utiliser pour développer votre solution, chacun ayant une disposition et une longueur de ligne différentes.
 
-=== "Route 2"
-    ![task1_route2](../assets/Task1Route2.jpg)
+=== "Monde 1"
+    ![world1](../assets/World1.jpg)
 
-=== "Route 3"
-    ![task1_route3](../assets/Task1Route3.jpg)
+=== "Monde 2"
+    ![world2](../assets/World2.jpg)
 
-La route par défaut est `route1`, mais vous pouvez sélectionner les deuxième et troisième options de route (`route2` et `route3`) en passant l'argument dans la commande de `ros2 launch` comme suit:
+=== "Monde 3"
+    ![world3](../assets/World3.jpg)
+
+
+La route par défaut est `world1`, mais vous pouvez sélectionner les deuxième et troisième options de route (`world2` et `world3`) en passant l'argument dans la commande `ros2 launch` comme suit :
 
 ```sh
-## route2
-ros2 launch parc_robot_bringup task1_launch.py route:=route2
+## monde2
+ros2 launch parc_robot_bringup task1_launch.py ​​world:=world2
 
-## route3
-ros2 launch parc_robot_bringup task1_launch.py route:=route3
+## monde3
+ros2 launch parc_robot_bringup task1_launch.py ​​world:=world3
 ```
-
-Nous vous recommandons de jouer avec au moins ces trois itinéraires pour vous assurer que votre solution est robuste aux différents emplacements de départ.
 
 ### Obtenir la position de l'objectif GPS
 
@@ -170,30 +170,31 @@ if __name__ == "__main__":
 ```
 
 ### Préparer votre Solution
-* Votre solution doit être préparée sous forme de packages ROS à enregistrer dans votre dossier de solution. Créez un fichier exécutable de nœud dans votre package ROS qui exécute TOUT le code dont vous avez besoin dans votre solution. Nommez ce fichier de nœud: `task1_solution.py`.
 
-* Par conséquent, votre solution à la tâche 1 doit être exécutée en appelant les commandes suivantes:
+* Votre solution doit être préparée sous forme de packages ROS à enregistrer dans votre dossier de solutions. Créez un fichier exécutable de nœud dans votre package ROS qui exécute TOUT le code nécessaire à votre solution. Nommez ce fichier : `task1_solution.py`.
 
-Dans un terminal:
+* Ainsi, votre solution à la tâche 1 doit être exécutée en appelant les commandes suivantes :
+
+Dans un terminal :
 
 ```sh
 ros2 launch parc_robot_bringup task1_launch.py
 ```
 
-Ou 
+Ou
 
 ```sh
-ros2 launch parc_robot_bringup task1_launch.py route:=route2
+ros2 launch parc_robot_bringup task1_launch.py ​​world:=world2
 ```
 
 Ou
 
 ```sh
-ros2 launch parc_robot_bringup task1_launch.py route:=route3
+ros2 launch parc_robot_bringup task1_launch.py ​​world:=world3
 ```
 
-!!! note "Note"
-    Veuillez attendre que les modèles du monde et du robot aient fini d'apparaître. Ce processus peut prendre plus de temps que d'habitude, surtout lors de la première exécution du programme.
+!!! note
+    Veuillez patienter jusqu'à ce que les modèles du monde et du robot soient générés. Ce processus peut prendre plus de temps que d'habitude, surtout lors de la première exécution du programme.
 
 Dans un autre terminal:
 
@@ -210,13 +211,13 @@ ros2 run <le-nom-de-votre-colis> task1_solution.py --ros-args --params-file <che
 !!! note "Note"
     Assurez-vous de NE PAS fournir de solution avec des positions codées en dur vers lesquelles le robot doit se déplacer, car lors de l'évaluation, la position initiale du robot serait randomisée.
 
-## Évaluation des Tâches
+## Évaluation de l'autonomie
 
-La notation de cette tâche serait basée sur les critères suivants:
+La notation de cette tâche repose sur les critères suivants :
 
-| S/N      | Critère/Métrique | Descriptif|
+| S/N | Critères/Indicateurs | Description |
 | ----------- | ----------- | ------- |
-| 1  | **Chemin prédéfini** | Chaque route lancée a un chemin prédéfini qui **doit** être suivi comme expliqué dans [Description de la route](#explorer-plusieurs-itinéraires). |
-| 2  | **Évitement des plantes et des piquets**  | Le robot doit éviter tout contact avec les plants de tomates et/ou les piquets. **(Moins de contact, c’est mieux)** |
-| 3 | **Distance finale parcourue jusqu’au but** | Distance de déplacement la plus courte du robot (mesurée à partir du centre du robot) à travers les rangées de cultures jusqu’à l’objectif, calculée à la limite de temps [8 minutes] **(Plus petit est préférable)**
-| 4  | **Délai de réalisation** |  	Délai entre le lancement de la solution et l’achèvement de la tâche **(Plus petit est préférable)** |
+| 1 | **Chemin prédéfini** | Suivez le chemin comme expliqué dans [Description du monde](#explorer-plusieurs-mondes). |
+| 2 | **Évitement des plantes** | Le robot doit éviter tout contact avec les plants de maïs. **(Moins de contact, c'est mieux)** |
+| 3 | **Distance finale jusqu'à l'objectif** | Distance la plus courte entre le robot (mesurée depuis son centre) et l'objectif à travers les rangs de culture, calculée à la limite de temps [8 minutes] **(Plus petite, mieux c'est)**
+| 4 | **Temps de réalisation** | Temps écoulé entre le lancement de la solution et la réalisation de la tâche **(Plus petite, mieux c'est)** |
