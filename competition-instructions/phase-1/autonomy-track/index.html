@@ -663,8 +663,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#task-evaluation" class="md-nav__link">
-    Task Evaluation
+  <a href="#autonomy-evaluation" class="md-nav__link">
+    Autonomy Evaluation
   </a>
   
 </li>
@@ -910,8 +910,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#task-evaluation" class="md-nav__link">
-    Task Evaluation
+  <a href="#autonomy-evaluation" class="md-nav__link">
+    Autonomy Evaluation
   </a>
   
 </li>
@@ -933,8 +933,8 @@
 
 <h1 id="autonomy-track">Autonomy Track<a class="headerlink" href="#autonomy-track" title="Permanent link">&para;</a></h1>
 <h2 id="general-description">General Description<a class="headerlink" href="#general-description" title="Permanent link">&para;</a></h2>
-<p><img alt="task1_simulation" src="../../assets/task1_sim.gif" />
-Agricultural robots must be able to navigate through crops and farmland, which includes autonomously moving through rows of maize plants on rough terrain. This task involves reaching the end of a row, making a turn, and returning in adjacent rows until the goal location is reached. Teams must develop software to guide the robot through a <a href="#exploring-multiple-worlds">pre-defined path</a> within the crop rows, from its starting position to the goal location.</p>
+<p><img alt="task1_simulation" src="../../assets/task1_sim.gif" /></p>
+<p>Agricultural robots must be able to navigate through crops and farmland, which includes autonomously moving through rows of maize plants on rough terrain. This task involves reaching the end of a row, making a turn, and returning in adjacent rows until the goal location is reached. Teams must develop software to guide the robot through a <a href="#exploring-multiple-worlds">pre-defined path</a> within the crop rows, from its starting position to the goal location.</p>
 <h2 id="task-guidelines">Task Guidelines<a class="headerlink" href="#task-guidelines" title="Permanent link">&para;</a></h2>
 <h3 id="launching-the-task">Launching the Task<a class="headerlink" href="#launching-the-task" title="Permanent link">&para;</a></h3>
 <p>In a new terminal, run the following launch file to bring up the robot in Gazebo and RViz:</p>
@@ -968,10 +968,10 @@ Agricultural robots must be able to navigate through crops and farmland, which i
 </div>
 </div>
 <p>The default route is <code>world1</code>, but you can select the second and third route option (<code>world2</code> and <code>world3</code>) by passing the argument in the <code>ros2 launch</code> command as follows:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">## route2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">## world2</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py<span class="w"> </span>world:<span class="o">=</span>world2
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">## route3</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">## world3</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py<span class="w"> </span>world:<span class="o">=</span>world3
 </code></pre></div>
 <h3 id="getting-the-gps-goal-location">Getting the GPS goal location<a class="headerlink" href="#getting-the-gps-goal-location" title="Permanent link">&para;</a></h3>
@@ -1121,7 +1121,7 @@ if the command is called inside the <code>config</code> directory where the coor
 <p class="admonition-title">Note</p>
 <p>Ensure you DO NOT provide a solution with hard-coded positions for the robot to move to because in evaluation, the robot&rsquo;s initial position would be randomized. </p>
 </div>
-<h2 id="task-evaluation">Task Evaluation<a class="headerlink" href="#task-evaluation" title="Permanent link">&para;</a></h2>
+<h2 id="autonomy-evaluation">Autonomy Evaluation<a class="headerlink" href="#autonomy-evaluation" title="Permanent link">&para;</a></h2>
 <p>Scoring for this task would be based on the following criteria:</p>
 <table>
 <thead>
@@ -1135,12 +1135,12 @@ if the command is called inside the <code>config</code> directory where the coor
 <tr>
 <td>1</td>
 <td><strong>Pre-defined path</strong></td>
-<td>Every route launched has a pre-defined path that <strong>must</strong> be followed as explained at <a href="#exploring-multiple-worlds">World Description</a>.</td>
+<td>Follow the path as explained in <a href="#exploring-multiple-worlds">World Description</a>.</td>
 </tr>
 <tr>
 <td>2</td>
-<td><strong>Plant and peg avoidance</strong></td>
-<td>The robot should avoid making contact with the tomato plants and/or pegs. <strong>(Less contact is better)</strong></td>
+<td><strong>Plant avoidance</strong></td>
+<td>The robot should avoid making contact with the maize plants. <strong>(Less contact is better)</strong></td>
 </tr>
 <tr>
 <td>3</td>

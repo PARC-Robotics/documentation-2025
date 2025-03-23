@@ -21,7 +21,7 @@
     
     
       
-        <title>Volet Autonomie - Pan African Robotics Competition 2025</title>
+        <title>Piste D'autonomie - Pan African Robotics Competition 2025</title>
       
     
     
@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tache-1-navigation-autonome-sur-le-terrain" class="md-skip">
+        <a href="#piste-dautonomie" class="md-skip">
           Aller au contenu
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Volet Autonomie
+              Piste D'autonomie
             
           </span>
         </div>
@@ -577,12 +577,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Volet Autonomie
+          Piste D'autonomie
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Volet Autonomie
+        Piste D'autonomie
       </a>
       
         
@@ -608,23 +608,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lignes-directrices-sur-les-taches" class="md-nav__link">
-    Lignes directrices sur les tâches
+  <a href="#instructions-pour-la-tache" class="md-nav__link">
+    Instructions pour la tâche
   </a>
   
-    <nav class="md-nav" aria-label="Lignes directrices sur les tâches">
+    <nav class="md-nav" aria-label="Instructions pour la tâche">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#lancer-la-tache" class="md-nav__link">
-    Lancer la tâche
+  <a href="#lancement-de-la-tache" class="md-nav__link">
+    Lancement de la tâche
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#explorer-plusieurs-itineraires" class="md-nav__link">
-    Explorer Plusieurs Itinéraires
+  <a href="#explorer-plusieurs-mondes" class="md-nav__link">
+    Explorer Plusieurs Mondes
   </a>
   
 </li>
@@ -663,8 +663,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#evaluation-des-taches" class="md-nav__link">
-    Évaluation des Tâches
+  <a href="#evaluation-de-lautonomie" class="md-nav__link">
+    Évaluation de l'autonomie
   </a>
   
 </li>
@@ -685,7 +685,7 @@
   
     <li class="md-nav__item">
       <a href="../design-track/" class="md-nav__link">
-        Volet Conception
+        Piste de Conception
       </a>
     </li>
   
@@ -855,23 +855,23 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lignes-directrices-sur-les-taches" class="md-nav__link">
-    Lignes directrices sur les tâches
+  <a href="#instructions-pour-la-tache" class="md-nav__link">
+    Instructions pour la tâche
   </a>
   
-    <nav class="md-nav" aria-label="Lignes directrices sur les tâches">
+    <nav class="md-nav" aria-label="Instructions pour la tâche">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#lancer-la-tache" class="md-nav__link">
-    Lancer la tâche
+  <a href="#lancement-de-la-tache" class="md-nav__link">
+    Lancement de la tâche
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#explorer-plusieurs-itineraires" class="md-nav__link">
-    Explorer Plusieurs Itinéraires
+  <a href="#explorer-plusieurs-mondes" class="md-nav__link">
+    Explorer Plusieurs Mondes
   </a>
   
 </li>
@@ -910,8 +910,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#evaluation-des-taches" class="md-nav__link">
-    Évaluation des Tâches
+  <a href="#evaluation-de-lautonomie" class="md-nav__link">
+    Évaluation de l'autonomie
   </a>
   
 </li>
@@ -931,51 +931,48 @@
                   
 
 
-<h1 id="tache-1-navigation-autonome-sur-le-terrain">Tâche 1: Navigation autonome sur le terrain<a class="headerlink" href="#tache-1-navigation-autonome-sur-le-terrain" title="Permanent link">&para;</a></h1>
+<h1 id="piste-dautonomie">Piste D&rsquo;autonomie<a class="headerlink" href="#piste-dautonomie" title="Permanent link">&para;</a></h1>
 <h2 id="description-generale">Description Générale<a class="headerlink" href="#description-generale" title="Permanent link">&para;</a></h2>
 <p><img alt="task1_simulation" src="../../assets/task1_sim.gif" /></p>
-<p>Les robots agricoles doivent être capables de se déplacer à travers les cultures et les terres agricoles, ce qui implique de se déplacer de manière autonome à travers des rangées de plants de tomates sur un terrain accidenté. Cette tâche consiste à atteindre la fin d&rsquo;une rangée, à faire un tour et à revenir dans les rangées adjacentes jusqu&rsquo;à ce que l&rsquo;emplacement de l&rsquo;objectif soit atteint. Les équipes doivent développer un logiciel pour guider le robot sur un <a href="#explorer-plusieurs-itinéraires">chemin prédéfini</a> dans les rangs de culture, depuis sa position de départ jusqu&rsquo;à l&rsquo;emplacement cible.</p>
-<h2 id="lignes-directrices-sur-les-taches">Lignes directrices sur les tâches<a class="headerlink" href="#lignes-directrices-sur-les-taches" title="Permanent link">&para;</a></h2>
-<h3 id="lancer-la-tache">Lancer la tâche<a class="headerlink" href="#lancer-la-tache" title="Permanent link">&para;</a></h3>
-<p>Dans un nouveau terminal, exécutez le fichier de lancement suivant pour faire apparaître le robot dans Gazebo et RViz:</p>
+<p>Les robots agricoles doivent être capables de se déplacer à travers les cultures et les terres agricoles, notamment en se déplaçant de manière autonome dans les rangs de maïs sur terrain accidenté. Cette tâche consiste à atteindre l&rsquo;extrémité d&rsquo;un rang, à effectuer un virage et à revenir dans les rangs adjacents jusqu&rsquo;à l&rsquo;objectif. Les équipes doivent développer un logiciel pour guider le robot le long d&rsquo;un <a href="#explorer-plusieurs-mondes">chemin prédéfini</a> au sein des rangs, de sa position de départ à son objectif.</p>
+<h2 id="instructions-pour-la-tache">Instructions pour la tâche<a class="headerlink" href="#instructions-pour-la-tache" title="Permanent link">&para;</a></h2>
+<h3 id="lancement-de-la-tache">Lancement de la tâche<a class="headerlink" href="#lancement-de-la-tache" title="Permanent link">&para;</a></h3>
+<p>Dans un nouveau terminal, exécutez le fichier de lancement suivant pour lancer le robot dans Gazebo et RViz :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py
 </code></pre></div>
-<p>Vous devriez voir l&rsquo;affichage ci-dessous dans Gazebo et RViz respectivement. À droite, il y a le robot et à gauche se trouve le cercle vert qui représente l&rsquo;emplacement du but.</p>
+<p>Vous devriez voir l&rsquo;affichage ci-dessous dans Gazebo et RViz respectivement. À droite, le robot et à gauche, le cercle vert qui représente l&rsquo;emplacement cible.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Gazebo</label><label for="__tabbed_1_2">RViz</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="task1_gazebo" src="../assets/task1_gazebo.jpg" /></p>
+<p><img alt="task1_gazebo" src="../../assets/gazebo.png" /></p>
 </div>
 <div class="tabbed-block">
-<p><img alt="task1_rviz" src="../../assets/task1_rviz.png" /></p>
+<p><img alt="task1_rviz" src="../../../getting-started-tutorials/assets/rviz.png" /></p>
 </div>
 </div>
 </div>
-<h3 id="explorer-plusieurs-itineraires">Explorer Plusieurs Itinéraires<a class="headerlink" href="#explorer-plusieurs-itineraires" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Nous avons préparé trois itinéraires prédéfinis que vous pouvez utiliser lors du développement de votre solution, chaque itinéraire ayant un emplacement d&rsquo;objectif différent.</li>
-</ul>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Route 1</label><label for="__tabbed_2_2">Route 2</label><label for="__tabbed_2_3">Route 3</label></div>
+<h3 id="explorer-plusieurs-mondes">Explorer Plusieurs Mondes<a class="headerlink" href="#explorer-plusieurs-mondes" title="Permanent link">&para;</a></h3>
+<p>Nous avons préparé trois mondes que vous pouvez utiliser pour développer votre solution, chacun ayant une disposition et une longueur de ligne différentes.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Monde 1</label><label for="__tabbed_2_2">Monde 2</label><label for="__tabbed_2_3">Monde 3</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="task1_route1" src="../assets/Task1Route1.jpg" /></p>
+<p><img alt="world1" src="../../assets/World1.jpg" /></p>
 </div>
 <div class="tabbed-block">
-<p><img alt="task1_route2" src="../assets/Task1Route2.jpg" /></p>
+<p><img alt="world2" src="../../assets/World2.jpg" /></p>
 </div>
 <div class="tabbed-block">
-<p><img alt="task1_route3" src="../assets/Task1Route3.jpg" /></p>
+<p><img alt="world3" src="../../assets/World3.jpg" /></p>
 </div>
 </div>
 </div>
-<p>La route par défaut est <code>route1</code>, mais vous pouvez sélectionner les deuxième et troisième options de route (<code>route2</code> et <code>route3</code>) en passant l&rsquo;argument dans la commande de <code>ros2 launch</code> comme suit:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">## route2</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py<span class="w"> </span>route:<span class="o">=</span>route2
+<p>La route par défaut est <code>world1</code>, mais vous pouvez sélectionner les deuxième et troisième options de route (<code>world2</code> et <code>world3</code>) en passant l&rsquo;argument dans la commande <code>ros2 launch</code> comme suit :</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">## monde2</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py<span class="w"> </span>​​world:<span class="o">=</span>world2
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">## route3</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py<span class="w"> </span>route:<span class="o">=</span>route3
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">## monde3</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py<span class="w"> </span>​​world:<span class="o">=</span>world3
 </code></pre></div>
-<p>Nous vous recommandons de jouer avec au moins ces trois itinéraires pour vous assurer que votre solution est robuste aux différents emplacements de départ.</p>
 <h3 id="obtenir-la-position-de-lobjectif-gps">Obtenir la position de l&rsquo;objectif GPS<a class="headerlink" href="#obtenir-la-position-de-lobjectif-gps" title="Permanent link">&para;</a></h3>
 <p>Pour obtenir l&rsquo;emplacement de l&rsquo;objectif GPS pour cette tâche, quelle que soit l&rsquo;option d&rsquo;itinéraire, vous utilisez les <a href="https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters.html" target="_blank">paramètres</a> <abbr title="Robot Operating System">ROS</abbr> dans un nœud.
    Voici un exemple de la façon d&rsquo;obtenir l&rsquo;emplacement de l&rsquo;objectif en tant que paramètre <abbr title="Robot Operating System">ROS</abbr>:</p>
@@ -1088,24 +1085,24 @@ Pour obtenir les coordonnées du piquet A, par exemple, les paramètres <code>go
 <h3 id="preparer-votre-solution">Préparer votre Solution<a class="headerlink" href="#preparer-votre-solution" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p>Votre solution doit être préparée sous forme de packages <abbr title="Robot Operating System">ROS</abbr> à enregistrer dans votre dossier de solution. Créez un fichier exécutable de nœud dans votre package <abbr title="Robot Operating System">ROS</abbr> qui exécute TOUT le code dont vous avez besoin dans votre solution. Nommez ce fichier de nœud: <code>task1_solution.py</code>.</p>
+<p>Votre solution doit être préparée sous forme de packages <abbr title="Robot Operating System">ROS</abbr> à enregistrer dans votre dossier de solutions. Créez un fichier exécutable de nœud dans votre package <abbr title="Robot Operating System">ROS</abbr> qui exécute TOUT le code nécessaire à votre solution. Nommez ce fichier : <code>task1_solution.py</code>.</p>
 </li>
 <li>
-<p>Par conséquent, votre solution à la tâche 1 doit être exécutée en appelant les commandes suivantes:</p>
+<p>Ainsi, votre solution à la tâche 1 doit être exécutée en appelant les commandes suivantes :</p>
 </li>
 </ul>
-<p>Dans un terminal:</p>
+<p>Dans un terminal :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py
 </code></pre></div>
-<p>Ou </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py<span class="w"> </span>route:<span class="o">=</span>route2
+<p>Ou</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py<span class="w"> </span>​​world:<span class="o">=</span>world2
 </code></pre></div>
 <p>Ou</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py<span class="w"> </span>route:<span class="o">=</span>route3
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py<span class="w"> </span>​​world:<span class="o">=</span>world3
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Veuillez attendre que les modèles du monde et du robot aient fini d&rsquo;apparaître. Ce processus peut prendre plus de temps que d&rsquo;habitude, surtout lors de la première exécution du programme.</p>
+<p>Veuillez patienter jusqu&rsquo;à ce que les modèles du monde et du robot soient générés. Ce processus peut prendre plus de temps que d&rsquo;habitude, surtout lors de la première exécution du programme.</p>
 </div>
 <p>Dans un autre terminal:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ros2<span class="w"> </span>run<span class="w"> </span>&lt;le-nom-de-votre-colis&gt;<span class="w"> </span>task1_solution.py<span class="w"> </span>--ros-args<span class="w"> </span>--params-file<span class="w"> </span>&lt;chemin-absolu-vers-la-route-coordonnées-mondiales-fichier-yaml&gt;
@@ -1123,36 +1120,36 @@ Pour obtenir les coordonnées du piquet A, par exemple, les paramètres <code>go
 <p class="admonition-title">Note</p>
 <p>Assurez-vous de NE PAS fournir de solution avec des positions codées en dur vers lesquelles le robot doit se déplacer, car lors de l&rsquo;évaluation, la position initiale du robot serait randomisée.</p>
 </div>
-<h2 id="evaluation-des-taches">Évaluation des Tâches<a class="headerlink" href="#evaluation-des-taches" title="Permanent link">&para;</a></h2>
-<p>La notation de cette tâche serait basée sur les critères suivants:</p>
+<h2 id="evaluation-de-lautonomie">Évaluation de l&rsquo;autonomie<a class="headerlink" href="#evaluation-de-lautonomie" title="Permanent link">&para;</a></h2>
+<p>La notation de cette tâche repose sur les critères suivants :</p>
 <table>
 <thead>
 <tr>
 <th>S/N</th>
-<th>Critère/Métrique</th>
-<th>Descriptif</th>
+<th>Critères/Indicateurs</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
 <td><strong>Chemin prédéfini</strong></td>
-<td>Chaque route lancée a un chemin prédéfini qui <strong>doit</strong> être suivi comme expliqué dans <a href="#explorer-plusieurs-itinéraires">Description de la route</a>.</td>
+<td>Suivez le chemin comme expliqué dans <a href="#explorer-plusieurs-mondes">Description du monde</a>.</td>
 </tr>
 <tr>
 <td>2</td>
-<td><strong>Évitement des plantes et des piquets</strong></td>
-<td>Le robot doit éviter tout contact avec les plants de tomates et/ou les piquets. <strong>(Moins de contact, c’est mieux)</strong></td>
+<td><strong>Évitement des plantes</strong></td>
+<td>Le robot doit éviter tout contact avec les plants de maïs. <strong>(Moins de contact, c&rsquo;est mieux)</strong></td>
 </tr>
 <tr>
 <td>3</td>
-<td><strong>Distance finale parcourue jusqu’au but</strong></td>
-<td>Distance de déplacement la plus courte du robot (mesurée à partir du centre du robot) à travers les rangées de cultures jusqu’à l’objectif, calculée à la limite de temps [8 minutes] <strong>(Plus petit est préférable)</strong></td>
+<td><strong>Distance finale jusqu&rsquo;à l&rsquo;objectif</strong></td>
+<td>Distance la plus courte entre le robot (mesurée depuis son centre) et l&rsquo;objectif à travers les rangs de culture, calculée à la limite de temps [8 minutes] <strong>(Plus petite, mieux c&rsquo;est)</strong></td>
 </tr>
 <tr>
 <td>4</td>
-<td><strong>Délai de réalisation</strong></td>
-<td>Délai entre le lancement de la solution et l’achèvement de la tâche <strong>(Plus petit est préférable)</strong></td>
+<td><strong>Temps de réalisation</strong></td>
+<td>Temps écoulé entre le lancement de la solution et la réalisation de la tâche <strong>(Plus petite, mieux c&rsquo;est)</strong></td>
 </tr>
 </tbody>
 </table>
@@ -1198,13 +1195,13 @@ Pour obtenir les coordonnées du piquet A, par exemple, les paramètres <code>go
         
         
           
-          <a href="../design-track/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Volet Conception" rel="next">
+          <a href="../design-track/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Piste de Conception" rel="next">
             <div class="md-footer__title">
               <div class="md-ellipsis">
                 <span class="md-footer__direction">
                   Suivant
                 </span>
-                Volet Conception
+                Piste de Conception
               </div>
             </div>
             <div class="md-footer__button md-icon">

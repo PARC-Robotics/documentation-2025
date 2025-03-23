@@ -568,7 +568,7 @@
   
     <li class="md-nav__item">
       <a href="../autonomy-track/" class="md-nav__link">
-        Volet Autonomie
+        Piste D'autonomie
       </a>
     </li>
   
@@ -582,7 +582,7 @@
   
     <li class="md-nav__item">
       <a href="../design-track/" class="md-nav__link">
-        Volet Conception
+        Piste de Conception
       </a>
     </li>
   
@@ -604,9 +604,47 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Comment soumettre
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Comment soumettre
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#piste-dautonomie" class="md-nav__link">
+    Piste D'autonomie
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#piste-de-conception" class="md-nav__link">
+    Piste de Conception
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -748,6 +786,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#piste-dautonomie" class="md-nav__link">
+    Piste D'autonomie
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#piste-de-conception" class="md-nav__link">
+    Piste de Conception
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -762,9 +822,10 @@
 
 
 <h1 id="comment-soumettre">Comment soumettre<a class="headerlink" href="#comment-soumettre" title="Permanent link">&para;</a></h1>
-<p>Les équipes devraient développer leurs solutions (packages <abbr title="Robot Operating System">ROS</abbr>) dans un dossier &lsquo;solutions&rsquo; à l&rsquo;intérieur du répertoire <code>~/catkin_ws/src</code>. Vous pouvez avoir un ou plusieurs packages <abbr title="Robot Operating System">ROS</abbr> dans ce dossier pour toutes vos tâches.</p>
-<p>Voir la figure ci-dessous de la structure du répertoire attendu:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>~/ros2_ws/src
+<h2 id="piste-dautonomie">Piste D&rsquo;autonomie<a class="headerlink" href="#piste-dautonomie" title="Permanent link">&para;</a></h2>
+<p>Les équipes doivent développer leurs solutions (packages <abbr title="Robot Operating System">ROS</abbr>) dans un dossier « solutions » du répertoire <code>~/ros2_ws/src</code>. Ce dossier peut contenir un ou plusieurs packages <abbr title="Robot Operating System">ROS</abbr>.</p>
+<p>La structure de répertoire attendue est la suivante :</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>~/ros2_ws/src
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>.
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── parc_robot
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│   ├── CMakeLists.txt
@@ -774,9 +835,9 @@
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│   ├── .
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>│   ├── CMakeLists.txt
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>│   └── package.xml
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>├── parc_robot_interfaces
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>│   ├── msg
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>│   │   └── CropYield.msg
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>├── parc_robot_description
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>│   ├── .
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>│   ├── .
 <a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>│   ├── CMakeLists.txt
 <a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>│   └── package.xml
 <a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>├── .
@@ -796,27 +857,47 @@
 <a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>    ├── .
 <a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>    └── README.md                   # Requis
 </code></pre></div>
+Suivez ces étapes de soumission :</p>
 <ol>
 <li>
 <p>Préparez un fichier README.md en suivant ce format et stockez-le dans le dossier de la solution (voir <a href="https://github.com/PARC-Robotics/PARC2024-Engineers-League/blob/main/resources/sample-submission-readme.md">l&rsquo;exemple</a>):</p>
 <ul>
 <li>Section d&rsquo;introduction : Décrivez brièvement votre approche</li>
 <li>Dépendances : répertoriez tous les packages installés et utilisés dans votre solution</li>
-<li>Description de la tâche 1 - 2 et commande(s) d&rsquo;exécution</li>
+<li>Description de la tâche et commande(s) d&rsquo;exécution</li>
 <li>Défis rencontrés</li>
 </ul>
 </li>
 <li>
-<p>Incluez tous les packages (dépendances) utilisés dans votre solution dans le fichier &ldquo;package.xml&rdquo; de votre package (<a href="https://docs.ros.org/en/humble/Tutorials/Intermediate/Rosdep.html" target="_blank">voir guide</a>)</p>
+<p>Incluez tous les packages (dépendances) utilisés dans votre solution dans le fichier &ldquo;package.xml&rdquo; de votre package (<a href="https://docs.ros.org/en/jazzy/Tutorials/Intermediate/Rosdep.html" target="_blank">voir guide</a>)</p>
 </li>
 <li>
-<p>Créez de courtes démos vidéo simples de vos solutions pour les tâches 1 et 2. Cela peut être fait en prenant un enregistrement d&rsquo;écran de votre solution en cours d&rsquo;exécution dans Gazebo. Veuillez vous assurer que les vidéos ont une taille inférieure à 200 Mo.</p>
+<p>Créez de courtes vidéos de démonstration de votre solution. Vous pouvez le faire en enregistrant votre solution en cours d&rsquo;exécution dans Gazebo. Assurez-vous que la taille des vidéos est inférieure à 200 Mo.</p>
+</li>
+<li>
+<p>Compressez votre dossier de solution et téléchargez le dossier et les vidéos sur le formulaire de soumission de solution (À FOURNIR)</p>
 </li>
 </ol>
 <!-- 4. Compressez votre dossier de solution et téléchargez le dossier et les vidéos sur le [formulaire de soumission de solution](https://forms.gle/GwE7Tzm9FpYzUVQX9). -->
-<ol>
-<li>Compressez votre dossier de solution et téléchargez le dossier et les vidéos sur le formulaire de soumission de solution (À FOURNIR)</li>
-</ol>
+
+<h2 id="piste-de-conception">Piste de Conception<a class="headerlink" href="#piste-de-conception" title="Permanent link">&para;</a></h2>
+<p>Les équipes qui choisissent la voie de la conception doivent suivre les étapes suivantes pour soumettre leur travail :</p>
+<ul>
+<li>
+<p>Créez un dossier et incluez les fichiers suivants :</p>
+<ul>
+<li>3 dessins de chaque pièce de votre outil de fertilisation avec leurs dimensions.</li>
+<li>Des rendus 3D de la conception finale de l&rsquo;outil. Exportez-les au format <strong>.stp</strong> ou <strong>.step</strong> (fichier STEP).</li>
+<li>Des plans d&rsquo;assemblage 3D des pièces de l&rsquo;outil.</li>
+<li>Une nomenclature des pièces d&rsquo;assemblage de l&rsquo;outil.</li>
+<li>Une vidéo de simulation de mouvement montrant l&rsquo;outil en fonctionnement. Veuillez vous assurer que la vidéo ne dépasse pas 1 minute et ne pèse pas plus de 50 Mo.</li>
+<li>Un rapport de conception expliquant votre approche de conception, les considérations prises en compte, les composants de l&rsquo;outil et son principe de fonctionnement.</li>
+</ul>
+</li>
+<li>
+<p>Compressez le dossier contenant les fichiers listés ci-dessus et téléchargez-le sur le formulaire de soumission de solution (À FOURNIR).</p>
+</li>
+</ul>
 
 
 
@@ -843,7 +924,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Pied de page" >
         
           
-          <a href="../design-track/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Volet Conception" rel="prev">
+          <a href="../design-track/" class="md-footer__link md-footer__link--prev" aria-label="Précédent: Piste de Conception" rel="prev">
             <div class="md-footer__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
@@ -852,7 +933,7 @@
                 <span class="md-footer__direction">
                   Précédent
                 </span>
-                Volet Conception
+                Piste de Conception
               </div>
             </div>
           </a>
