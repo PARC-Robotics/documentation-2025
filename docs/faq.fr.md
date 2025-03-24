@@ -11,10 +11,16 @@ R: Vous ne pouvez participer qu'en équipe. Chaque équipe doit avoir au moins 2
 **Q: Dois-je avoir une expérience antérieure en robotique ou en programmation pour participer?**  
 R: Bien que l'expérience avec ROS ne soit pas essentielle pour commencer, une expérience de programmation est nécessaire. Vous devrez vous familiariser avec les langages de programmation Python.
 
-**Q: Y a-t-il des frais d'inscription pour le concours?**  
-R: Non, il n'y a pas de frais d'inscription pour le concours.
+**Q : Quel est le montant des frais d’inscription et que couvrent-ils ?**
+R : La participation à la phase de simulation est gratuite, mais les meilleures équipes participant au Sénégal doivent payer des frais. Le montant de 250 USD est un paiement unique par équipe qui couvre l’hébergement, les repas quotidiens (petit-déjeuner, déjeuner et dîner), le transport aéroportuaire et les déplacements entre le dortoir et le stade de compétition.
 
-## phase de simulation
+**Q : Quels frais supplémentaires les équipes doivent-elles prendre en charge ?**
+R : Les équipes doivent payer leurs propres frais de passeport et de visa, leur voyage au Sénégal et tout article optionnel comme des t-shirts personnalisés ou un drapeau national.
+
+**Q : Quand le paiement doit-il être effectué et que se passe-t-il en cas de dépassement de la date limite ?**
+R : Les frais doivent être réglés avant le 9 juin 2025. Les équipes qui ne paient pas avant la date limite perdront leur place définitive pour la compétition.
+
+## Phase de simulation
 
 **Q: De quel logiciel ai-je besoin pour la phase de simulation?**  
 R: Vous devrez installer un environnement de simulation ROS et Gazebo.

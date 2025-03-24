@@ -45,8 +45,11 @@ Detailed instructions for the respective tracks are made available in this docum
 
 <!-- ![robot](images/bot.jpg) -->
 
-This phase will take place in-person in Senegal in July 2025. Teams that opt for the autonomy track will compete by integrating their navigation solution on the physical **PARC AgRobot** in a
-partner farm. Likewise, teams that choose the design track will compete by presenting and demonstrating a prototype of their fertilizer implement solution.
+This phase will take place in-person in Senegal in July 2025. The **top 10 teams** that chose the autonomy track will compete by integrating their navigation solution on the physical **PARC AgRobot** in a partner farm. 
+
+Likewise, the **top 10 teams** that opted for the design track will compete by presenting and demonstrating a prototype of their fertilizer implement solution. More marks will be awarded to teams that are able to successfully integrate their prototype with the **PARC AgRobot**.
+
+The top finalists must submit their **$250 USD** team registration fee to PARC by **June 9, 2025** to secure their spot. This is a one-time payment covering the entire team's registration. In return, PARC will provide each team with lodging, daily meals (breakfast, lunch and dinner), transportation to and from the airport, and transportation between the dormitory and competition arena.
 
 ## Certificates & Awards
 

@@ -43,7 +43,11 @@ Les instructions détaillées pour chaque piste sont disponibles dans cette docu
 
 ## Phase du monde Réel
 
-Cette phase se déroulera en présentiel au Sénégal en juillet 2025. Les équipes qui choisiront le parcours autonomie concourront en intégrant leur solution de navigation sur le **PARC AgRobot** physique d'une exploitation partenaire. De même, les équipes qui choisiront le parcours conception concourront en présentant et en démontrant un prototype de leur solution d'outil de fertilisation.
+Cette phase se déroulera en présentiel au Sénégal en juillet 2025. Les **10 meilleures équipes** ayant choisi la voie autonome s'affronteront en intégrant leur solution de navigation sur le **PARC AgRobot** physique dans une exploitation partenaire.
+
+De même, les **10 meilleures équipes** ayant choisi la voie de la conception s'affronteront en présentant et en démontrant un prototype de leur solution de fertilisation. Des points supplémentaires seront attribués aux équipes qui parviendront à intégrer leur prototype au **PARC AgRobot**.
+
+Les finalistes doivent verser leurs frais d'inscription d'équipe de **250 $ US** à PARC avant le **9 juin 2025** pour garantir leur place. Ce paiement unique couvre l'intégralité de l'inscription de l'équipe. En contrepartie, PARC fournira à chaque équipe l'hébergement, les repas quotidiens (petit-déjeuner, déjeuner et dîner), le transport aller-retour depuis l'aéroport et le transport entre le dortoir et le stade de compétition.
 
 ## Prises et récompenses
 

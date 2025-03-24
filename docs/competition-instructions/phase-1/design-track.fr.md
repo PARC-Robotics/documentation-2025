@@ -8,7 +8,7 @@ Dans une optique d'agriculture de précision, les équipes doivent concevoir un 
 
 <!-- Review last two sentences -->
 
-## Spécifications de Conception
+<!-- ## Spécifications de Conception -->
 
 ## Consignes de Conception
 
