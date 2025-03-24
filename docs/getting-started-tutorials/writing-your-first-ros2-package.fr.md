@@ -170,7 +170,7 @@ Ce code fera bouger le robot en ligne droite pendant 4 secondes, s'arrêtera pen
 ## Compiler et exécuter
 
 !!! note 
-    Nous devons mettre à jour le fichier « setup.py » du package ROS 2 pour inclure notre nouveau programme. Ajoutez la ligne suivante dans la section `console_scripts` du fichier `setup.py` :
+    Nous devons mettre à jour le fichier `setup.py` du package ROS 2 pour inclure notre nouveau programme. Ajoutez la ligne suivante dans la section `console_scripts` du fichier `setup.py` :
 
     ```python
     entry_points={
@@ -179,6 +179,7 @@ Ce code fera bouger le robot en ligne droite pendant 4 secondes, s'arrêtera pen
             ],
     },
     ```
+    `move_robot` est le nœud exécutable ROS 2, `test_publisher` est le nom du package Python ROS 2 créé, `robot_publisher` est le fichier Python que nous venons de créer et `main` est la fonction appelée à partir du fichier Python.
 
 Exécutez les commandes suivantes pour compiler le code :
 
@@ -191,14 +192,14 @@ Pour voir le fonctionnement, exécutez d'abord le robot en simulation en exécut
 
 ```shell
 source ~/ros2_ws/install/setup.bash
-ros2 launch parc_robot_bringup task1_launch.py
+ros2 launch parc_robot_bringup task_launch.py
 ```
 
 Et exécutez les commandes suivantes dans un autre terminal pour exécuter ce nouveau programme :
 
 ```shell
 source ~/ros2_ws/install/setup.bash
-ros2 run test_publisher robot_publisher.py
+ros2 run test_publisher move_robot
 ```
 
 Si vous avez bien configuré tout, vous devriez voir le robot se déplacer dans Gazebo comme ci-dessous.

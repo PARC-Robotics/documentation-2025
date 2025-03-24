@@ -173,6 +173,7 @@ This code will make the robot move straight for 4 seconds, stop for 5 seconds, r
             ],
     },
     ```
+    `move_robot`is the ROS 2 executable node, `test_publisher` is the name of the created Python ROS 2 package, `robot_publisher` is the Python file we just created and `main` is the function called from the Python file.
 
 Run the following commands to compile the code,
 
@@ -185,14 +186,14 @@ To see it working, first run the robot in simulation by running the following co
 
 ```shell
 source ~/ros2_ws/install/setup.bash
-ros2 launch parc_robot_bringup task1_launch.py
+ros2 launch parc_robot_bringup task_launch.py
 ```
 
 And run the following commands in another terminal to run this new program,
 
 ```shell
 source ~/ros2_ws/install/setup.bash
-ros2 run test_publisher robot_publisher.py
+ros2 run test_publisher move_robot
 ```
 
 If you have set up everything well, you should see the robot moving in Gazebo as below,

@@ -95,7 +95,7 @@ Gazebo Harmonic is the robot simulator used in the autonomy track of the competi
 If you completed the preceding steps successfully, you should be able to run this ROS 2 launch command which also opens the Gazebo Harmonic and RViz windows:
 
 ```sh
-ros2 launch parc_robot_bringup task1_launch.py
+ros2 launch parc_robot_bringup task_launch.py
 ```
 ![Gazebo Harmonic window](assets/gazebo.png)
 Gazebo Harmonic window

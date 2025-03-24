@@ -41,7 +41,7 @@ La structure de répertoire attendue est la suivante :
 ```
 Suivez ces étapes de soumission :
 
-1. Préparez un fichier README.md en suivant ce format et stockez-le dans le dossier de la solution (voir [l'exemple](https://github.com/PARC-Robotics/PARC2024-Engineers-League/blob/main/resources/sample-submission-readme.md)):
+1. Préparez un fichier README.md en suivant ce format et stockez-le dans le dossier de la solution (voir [l'exemple](https://github.com/PARC-Robotics/PARC2025-Engineers-League/blob/main/resources/sample-submission-readme.md)):
      * Section d'introduction : Décrivez brièvement votre approche
      * Dépendances : répertoriez tous les packages installés et utilisés dans votre solution
      * Description de la tâche et commande(s) d'exécution
@@ -65,6 +65,6 @@ Les équipes qui choisissent la voie de la conception doivent suivre les étapes
     * Des plans d'assemblage 3D des pièces de l'outil.
     * Une nomenclature des pièces d'assemblage de l'outil.
     * Une vidéo de simulation de mouvement montrant l'outil en fonctionnement. Veuillez vous assurer que la vidéo ne dépasse pas 1 minute et ne pèse pas plus de 50 Mo.
-    * Un rapport de conception expliquant votre approche de conception, les considérations prises en compte, les composants de l'outil et son principe de fonctionnement.
+    * Un rapport de conception expliquant votre approche de conception, les considérations prises en compte, les composants de l'outil et son principe de fonctionnement. Le rapport de conception doit inclure le pays de l'équipe et les noms des membres de l'équipe, en commençant par le chef d'équipe.
 
 * Compressez le dossier contenant les fichiers listés ci-dessus et téléchargez-le sur le formulaire de soumission de solution (À FOURNIR).

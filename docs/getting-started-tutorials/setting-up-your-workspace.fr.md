@@ -90,7 +90,7 @@ Gazebo Harmonic est le simulateur de robot utilisé pour le parcours autonomie d
 Si vous avez réussi les étapes précédentes, vous devriez pouvoir exécuter la commande de lancement de ROS 2 suivante, qui ouvre également les fenêtres Gazebo Harmonic et RViz :
 
 ```sh
-ros2 launch parc_robot_bringup task1_launch.py
+ros2 launch parc_robot_bringup task_launch.py
 ```
 ![Fenêtre Gazebo Harmonic](assets/gazebo.png)
 Fenêtre Gazebo Harmonic
