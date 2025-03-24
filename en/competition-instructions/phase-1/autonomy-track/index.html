@@ -630,20 +630,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#getting-the-gps-goal-location" class="md-nav__link">
-    Getting the GPS goal location
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#converting-gps-to-cartesian" class="md-nav__link">
-    Converting GPS to Cartesian
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#preparing-your-solution" class="md-nav__link">
     Preparing your Solution
   </a>
@@ -877,20 +863,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#getting-the-gps-goal-location" class="md-nav__link">
-    Getting the GPS goal location
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#converting-gps-to-cartesian" class="md-nav__link">
-    Converting GPS to Cartesian
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#preparing-your-solution" class="md-nav__link">
     Preparing your Solution
   </a>
@@ -933,12 +905,12 @@
 
 <h1 id="autonomy-track">Autonomy Track<a class="headerlink" href="#autonomy-track" title="Permanent link">&para;</a></h1>
 <h2 id="general-description">General Description<a class="headerlink" href="#general-description" title="Permanent link">&para;</a></h2>
-<p><img alt="task1_simulation" src="../../assets/task1_sim.gif" /></p>
+<p><img alt="task1_simulation" src="../../assets/task_sim.gif" /></p>
 <p>Agricultural robots must be able to navigate through crops and farmland, which includes autonomously moving through rows of maize plants on rough terrain. This task involves reaching the end of a row, making a turn, and returning in adjacent rows until the goal location is reached. Teams must develop software to guide the robot through a <a href="#exploring-multiple-worlds">pre-defined path</a> within the crop rows, from its starting position to the goal location.</p>
 <h2 id="task-guidelines">Task Guidelines<a class="headerlink" href="#task-guidelines" title="Permanent link">&para;</a></h2>
 <h3 id="launching-the-task">Launching the Task<a class="headerlink" href="#launching-the-task" title="Permanent link">&para;</a></h3>
 <p>In a new terminal, run the following launch file to bring up the robot in Gazebo and RViz:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task_launch.py
 </code></pre></div>
 <p>You should see the display below in Gazebo and RViz respectively. To the right, there&rsquo;s the robot and to the left is the green circle which represents the goal location.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Gazebo</label><label for="__tabbed_1_2">RViz</label></div>
@@ -947,8 +919,7 @@
 <p><img alt="task1_gazebo" src="../../assets/gazebo.png" /></p>
 </div>
 <div class="tabbed-block">
-<p><img alt="rviz" src="../../../getting-started-tutorials/assets/rviz.png" />
-<!-- <img alt="task1_rviz" src="../assets/task1_rviz.png" /> --></p>
+<p><img alt="rviz" src="../../../getting-started-tutorials/assets/rviz.png" /></p>
 </div>
 </div>
 </div>
@@ -969,158 +940,46 @@
 </div>
 <p>The default route is <code>world1</code>, but you can select the second and third route option (<code>world2</code> and <code>world3</code>) by passing the argument in the <code>ros2 launch</code> command as follows:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">## world2</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py<span class="w"> </span>world:<span class="o">=</span>world2
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task_launch.py<span class="w"> </span>world:<span class="o">=</span>world2
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">## world3</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py<span class="w"> </span>world:<span class="o">=</span>world3
-</code></pre></div>
-<h3 id="getting-the-gps-goal-location">Getting the GPS goal location<a class="headerlink" href="#getting-the-gps-goal-location" title="Permanent link">&para;</a></h3>
-<p>To obtain the GPS goal location for this task, regardless of the route option, you use <abbr title="Robot Operating System">ROS</abbr> <a href="https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters.html" target="_blank">parameters</a> in a node. 
-    Here is an example of how to obtain the goal location as a <abbr title="Robot Operating System">ROS</abbr> parameter:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="ch">#!/usr/bin/env python3</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kn">import</span> <span class="nn">rclpy</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="k">class</span> <span class="nc">GoalLocation</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s2">&quot;goal_location&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>        <span class="c1"># Declare goal latitude and longitude parameters</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">declare_parameter</span><span class="p">(</span><span class="s2">&quot;goal_latitude&quot;</span><span class="p">,</span> <span class="n">rclpy</span><span class="o">.</span><span class="n">Parameter</span><span class="o">.</span><span class="n">Type</span><span class="o">.</span><span class="n">DOUBLE</span><span class="p">)</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">declare_parameter</span><span class="p">(</span><span class="s2">&quot;goal_longitude&quot;</span><span class="p">,</span> <span class="n">rclpy</span><span class="o">.</span><span class="n">Parameter</span><span class="o">.</span><span class="n">Type</span><span class="o">.</span><span class="n">DOUBLE</span><span class="p">)</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>        <span class="c1"># Get goal location from world coordinates yaml file</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>        <span class="n">goal_lat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_parameter</span><span class="p">(</span><span class="s2">&quot;goal_latitude&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>        <span class="n">goal_long</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_parameter</span><span class="p">(</span><span class="s2">&quot;goal_longitude&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>        <span class="c1"># Print goal location</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>            <span class="s2">&quot;goal location: </span><span class="si">%f</span><span class="s2"> </span><span class="si">%f</span><span class="s2">&quot;</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>            <span class="o">%</span> <span class="p">(</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>                <span class="n">goal_lat</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>                <span class="n">goal_long</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>            <span class="p">)</span>
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>        <span class="p">)</span>
-<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>
-<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>
-<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
-<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>
-<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>    <span class="n">goal_location</span> <span class="o">=</span> <span class="n">GoalLocation</span><span class="p">()</span>
-<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">goal_location</span><span class="p">)</span>
-<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>
-<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>    <span class="n">goal_location</span><span class="o">.</span><span class="n">destroy_node</span><span class="p">()</span>
-<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
-<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>
-<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>
-<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>    <span class="n">main</span><span class="p">()</span>
-</code></pre></div>
-<p>The goal location parameter values are obtained from provided <code>.yaml</code> files, which vary depending on the route chosen, and these files are passed as arguments when the node is run as follows:
-<code>ros2 run &lt;package_name&gt; &lt;executable_name&gt; --ros-args --params-file &lt;file_name&gt;</code></p>
-<p>For instance, choosing <code>route1</code> for the navigation task, the following sample command will be executed:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ros2<span class="w"> </span>run<span class="w"> </span>&lt;your-package-name&gt;<span class="w"> </span>task1_solution.py<span class="w"> </span>--ros-args<span class="w"> </span>--params-file<span class="w"> </span>~/ros2_ws/src/parc_robot_bringup/config/route1_world_coordinates.yaml
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>An <a href="https://www.redhat.com/sysadmin/linux-path-absolute-relative" target="_blank">absolute file path</a> was used to locate the parameter file. A relative file path can also be used
-if the command is called inside the <code>config</code> directory where the coordinate files are located. However, specifying the absolute file path is recommended to avoid path errors.</p>
-</div>
-<p>Similarly, the GPS coordinates of the pegs on the farmland can be obtained as a parameter if you need it for localization. To obtain the coordinates for peg A, for instance, the <code>goal_latitude</code> and
-<code>goal_longitude</code> parameters from the previous code snippet are replaced with <code>peg_a_latitude</code> and <code>peg_a_longitude</code> respectively.</p>
-<p>For reference purposes, considering <code>route1</code>, the corresponding world coordinates are available in the file <a href="https://github.com/PARC-Robotics/PARC2024-Engineers-League/blob/main/parc_robot_bringup/config/route1_world_coordinates.yaml" target="_blank">route1_world_coordinates.yaml</a>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Please <strong>DO NOT</strong> use the cartesian coordinates of the goal location and pegs provided by Gazebo or the world file in any way. You will be penalized if you do.</p>
-</div>
-<h3 id="converting-gps-to-cartesian">Converting GPS to Cartesian<a class="headerlink" href="#converting-gps-to-cartesian" title="Permanent link">&para;</a></h3>
-<p>Our module, <strong>gps2cartesian</strong>, provides a convenient way to convert GPS locations to x-y Cartesian coordinates. By using the Gazebo world origin as the GPS reference origin (0, 0) in Cartesian coordinates, the <strong>gps_to_cartesian()</strong> function calculates the Cartesian coordinates of any desired GPS location passed as a parameter to the function. Here is an example of how to use the module to get the cartesian coordinate of the robot with respect to the reference origin:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="ch">#!/usr/bin/env python3</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1">## Install the geographiclib 2.0 module for this code to work.</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1">## To install geographiclib 2.0, copy the line below to your terminal.</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1">## pip install geographiclib</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1">## Any of the PARC competition tasks must be running for this code to work.</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="kn">import</span> <span class="nn">rclpy</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="kn">from</span> <span class="nn">sensor_msgs.msg</span> <span class="kn">import</span> <span class="n">NavSatFix</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="kn">from</span> <span class="nn">parc_robot_bringup.gps2cartesian</span> <span class="kn">import</span> <span class="n">gps_to_cartesian</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="k">class</span> <span class="nc">GPSGoal</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s2">&quot;gps_goal&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>        <span class="c1"># Subscribe to the gps topic once</span>
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">gps_sub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span>
-<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>            <span class="n">NavSatFix</span><span class="p">,</span> <span class="s2">&quot;/gps/fix&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">gps_callback</span><span class="p">,</span> <span class="mi">1</span>
-<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>        <span class="p">)</span>
-<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>
-<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>    <span class="k">def</span> <span class="nf">gps_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gps</span><span class="p">):</span>
-<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>
-<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>        <span class="c1"># Get the cartesian coordinates from the GPS coordinates</span>
-<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>        <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">gps_to_cartesian</span><span class="p">(</span><span class="n">gps</span><span class="o">.</span><span class="n">latitude</span><span class="p">,</span> <span class="n">gps</span><span class="o">.</span><span class="n">longitude</span><span class="p">)</span>
-<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>
-<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>        <span class="c1"># Print cartesian coordinates</span>
-<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
-<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>            <span class="s2">&quot;The translation from the origin (0, 0) to the gps location provided: </span><span class="si">%.3f</span><span class="s2"> </span><span class="si">%.3f</span><span class="s2">&quot;</span>
-<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>            <span class="o">%</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>        <span class="p">)</span>
-<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>
-<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>
-<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
-<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>
-<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>    <span class="n">gps_goal</span> <span class="o">=</span> <span class="n">GPSGoal</span><span class="p">()</span>
-<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">gps_goal</span><span class="p">)</span>
-<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>
-<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>    <span class="n">gps_goal</span><span class="o">.</span><span class="n">destroy_node</span><span class="p">()</span>
-<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
-<a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>
-<a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a>
-<a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-<a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>    <span class="n">main</span><span class="p">()</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task_launch.py<span class="w"> </span>world:<span class="o">=</span>world3
 </code></pre></div>
 <h3 id="preparing-your-solution">Preparing your Solution<a class="headerlink" href="#preparing-your-solution" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p>Your solution should be prepared as <abbr title="Robot Operating System">ROS</abbr> packages to be saved in your solution folder. Create a node executable file in your <abbr title="Robot Operating System">ROS</abbr> package which runs ALL the code you need in your solution. Name this node file: <code>task1_solution.py</code>.</p>
+<p>Your solution should be prepared as <abbr title="Robot Operating System">ROS</abbr> packages to be saved in your solution folder. Create a node executable file in your <abbr title="Robot Operating System">ROS</abbr> package which runs ALL the code you need in your solution. Name this node file: <code>task_solution.py</code>.</p>
 </li>
 <li>
-<p>Hence, your solution to Task 1 should be run by calling the following commands:</p>
+<p>Hence, your solution should be run by calling the following commands:</p>
 </li>
 </ul>
 <p>In one terminal:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task_launch.py
 </code></pre></div>
 <p>Or </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py<span class="w"> </span>world:<span class="o">=</span>world2
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task_launch.py<span class="w"> </span>world:<span class="o">=</span>world2
 </code></pre></div>
 <p>Or</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py<span class="w"> </span>world:<span class="o">=</span>world3
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task_launch.py<span class="w"> </span>world:<span class="o">=</span>world3
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Please wait until both the world and robot models have finished spawning. This process may take longer than usual, especially when running the program for the first time.</p>
 </div>
 <p>In another terminal:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ros2<span class="w"> </span>run<span class="w"> </span>&lt;your-package-name&gt;<span class="w"> </span>task1_solution.py<span class="w"> </span>--ros-args<span class="w"> </span>--params-file<span class="w"> </span>&lt;absolute-path-to-route-world-coordinates-yaml-file&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ros2<span class="w"> </span>run<span class="w"> </span>&lt;your-package-name&gt;<span class="w"> </span>task_solution.py&gt;
 </code></pre></div>
+<p>Launch files can also be used in your solution.</p>
 <h2 id="task-rules">Task Rules<a class="headerlink" href="#task-rules" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>The time limit to complete the task is <strong>8 minutes (480 seconds)</strong>.</p>
+<p>The time limit to complete the task for <strong>each</strong> world is <strong>12 minutes (720 seconds)</strong>.</p>
 </li>
 <li>
 <p>The task is ONLY complete when ANY part of the robot is inside the green circle (goal location marker) after following the pre-defined path as shown above.</p>
 </li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Ensure you DO NOT provide a solution with hard-coded positions for the robot to move to because in evaluation, the robot&rsquo;s initial position would be randomized. </p>
-</div>
 <h2 id="autonomy-evaluation">Autonomy Evaluation<a class="headerlink" href="#autonomy-evaluation" title="Permanent link">&para;</a></h2>
 <p>Scoring for this task would be based on the following criteria:</p>
 <table>
@@ -1145,7 +1004,7 @@ if the command is called inside the <code>config</code> directory where the coor
 <tr>
 <td>3</td>
 <td><strong>Final travel distance to goal</strong></td>
-<td>Shortest travel distance from robot (measured from robot center) through the crop rows to the goal which is calculated at the time limit [8 minutes] <strong>(Smaller is better)</strong></td>
+<td>Shortest travel distance from robot (measured from robot center) through the crop rows to the goal which is calculated at the time limit [12 minutes] <strong>(Smaller is better)</strong></td>
 </tr>
 <tr>
 <td>4</td>

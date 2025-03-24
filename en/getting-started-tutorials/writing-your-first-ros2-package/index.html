@@ -964,12 +964,13 @@ this should be your folder structure:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>We need to update the <code>setup.py</code> file in the <abbr title="Robot Operating System">ROS</abbr> 2 package to include our new program. Add the following line in the<code>console_scripts</code> section of the <code>setup.py</code> file:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">entry_points</span><span class="o">=</span><span class="p">{</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">entry_points</span><span class="o">=</span><span class="p">{</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>        <span class="s1">&#39;console_scripts&#39;</span><span class="p">:</span> <span class="p">[</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>                <span class="s1">&#39;move_robot = test_publisher.robot_publisher:main&#39;</span><span class="p">,</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>        <span class="p">],</span>
 <a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">},</span>
 </code></pre></div>
+<code>move_robot</code>is the <abbr title="Robot Operating System">ROS</abbr> 2 executable node, <code>test_publisher</code> is the name of the created Python <abbr title="Robot Operating System">ROS</abbr> 2 package, <code>robot_publisher</code> is the Python file we just created and <code>main</code> is the function called from the Python file.</p>
 </div>
 <p>Run the following commands to compile the code,</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">cd</span><span class="w"> </span>~/ros2_ws
@@ -977,11 +978,11 @@ this should be your folder structure:</p>
 </code></pre></div>
 <p>To see it working, first run the robot in simulation by running the following command in one terminal,</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">source</span><span class="w"> </span>~/ros2_ws/install/setup.bash
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task_launch.py
 </code></pre></div>
 <p>And run the following commands in another terminal to run this new program,</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">source</span><span class="w"> </span>~/ros2_ws/install/setup.bash
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>ros2<span class="w"> </span>run<span class="w"> </span>test_publisher<span class="w"> </span>robot_publisher.py
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>ros2<span class="w"> </span>run<span class="w"> </span>test_publisher<span class="w"> </span>move_robot
 </code></pre></div>
 <p>If you have set up everything well, you should see the robot moving in Gazebo as below,</p>
 <p><img alt="publisher demo" src="../assets/getting_started_demo.gif" /></p>

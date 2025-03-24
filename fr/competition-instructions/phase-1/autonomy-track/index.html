@@ -630,20 +630,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#obtenir-la-position-de-lobjectif-gps" class="md-nav__link">
-    Obtenir la position de l'objectif GPS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#conversion-du-gps-en-cartesien" class="md-nav__link">
-    Conversion du GPS en cartésien
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#preparer-votre-solution" class="md-nav__link">
     Préparer votre Solution
   </a>
@@ -877,20 +863,6 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#obtenir-la-position-de-lobjectif-gps" class="md-nav__link">
-    Obtenir la position de l'objectif GPS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#conversion-du-gps-en-cartesien" class="md-nav__link">
-    Conversion du GPS en cartésien
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#preparer-votre-solution" class="md-nav__link">
     Préparer votre Solution
   </a>
@@ -933,12 +905,12 @@
 
 <h1 id="piste-dautonomie">Piste D&rsquo;autonomie<a class="headerlink" href="#piste-dautonomie" title="Permanent link">&para;</a></h1>
 <h2 id="description-generale">Description Générale<a class="headerlink" href="#description-generale" title="Permanent link">&para;</a></h2>
-<p><img alt="task1_simulation" src="../../assets/task1_sim.gif" /></p>
+<p><img alt="task1_simulation" src="../../assets/task_sim.gif" /></p>
 <p>Les robots agricoles doivent être capables de se déplacer à travers les cultures et les terres agricoles, notamment en se déplaçant de manière autonome dans les rangs de maïs sur terrain accidenté. Cette tâche consiste à atteindre l&rsquo;extrémité d&rsquo;un rang, à effectuer un virage et à revenir dans les rangs adjacents jusqu&rsquo;à l&rsquo;objectif. Les équipes doivent développer un logiciel pour guider le robot le long d&rsquo;un <a href="#explorer-plusieurs-mondes">chemin prédéfini</a> au sein des rangs, de sa position de départ à son objectif.</p>
 <h2 id="instructions-pour-la-tache">Instructions pour la tâche<a class="headerlink" href="#instructions-pour-la-tache" title="Permanent link">&para;</a></h2>
 <h3 id="lancement-de-la-tache">Lancement de la tâche<a class="headerlink" href="#lancement-de-la-tache" title="Permanent link">&para;</a></h3>
 <p>Dans un nouveau terminal, exécutez le fichier de lancement suivant pour lancer le robot dans Gazebo et RViz :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task_launch.py
 </code></pre></div>
 <p>Vous devriez voir l&rsquo;affichage ci-dessous dans Gazebo et RViz respectivement. À droite, le robot et à gauche, le cercle vert qui représente l&rsquo;emplacement cible.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Gazebo</label><label for="__tabbed_1_2">RViz</label></div>
@@ -968,158 +940,48 @@
 </div>
 <p>La route par défaut est <code>world1</code>, mais vous pouvez sélectionner les deuxième et troisième options de route (<code>world2</code> et <code>world3</code>) en passant l&rsquo;argument dans la commande <code>ros2 launch</code> comme suit :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">## monde2</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py<span class="w"> </span>​​world:<span class="o">=</span>world2
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task_launch.py<span class="w"> </span>​​world:<span class="o">=</span>world2
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="c1">## monde3</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py<span class="w"> </span>​​world:<span class="o">=</span>world3
-</code></pre></div>
-<h3 id="obtenir-la-position-de-lobjectif-gps">Obtenir la position de l&rsquo;objectif GPS<a class="headerlink" href="#obtenir-la-position-de-lobjectif-gps" title="Permanent link">&para;</a></h3>
-<p>Pour obtenir l&rsquo;emplacement de l&rsquo;objectif GPS pour cette tâche, quelle que soit l&rsquo;option d&rsquo;itinéraire, vous utilisez les <a href="https://docs.ros.org/en/humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters.html" target="_blank">paramètres</a> <abbr title="Robot Operating System">ROS</abbr> dans un nœud.
-   Voici un exemple de la façon d&rsquo;obtenir l&rsquo;emplacement de l&rsquo;objectif en tant que paramètre <abbr title="Robot Operating System">ROS</abbr>:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="ch">#!/usr/bin/env python3</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kn">import</span> <span class="nn">rclpy</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="k">class</span> <span class="nc">GoalLocation</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s2">&quot;goal_location&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>        <span class="c1"># Déclarer les paramètres de latitude et de longitude de l&#39;objectif</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">declare_parameter</span><span class="p">(</span><span class="s2">&quot;goal_latitude&quot;</span><span class="p">,</span> <span class="n">rclpy</span><span class="o">.</span><span class="n">Parameter</span><span class="o">.</span><span class="n">Type</span><span class="o">.</span><span class="n">DOUBLE</span><span class="p">)</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">declare_parameter</span><span class="p">(</span><span class="s2">&quot;goal_longitude&quot;</span><span class="p">,</span> <span class="n">rclpy</span><span class="o">.</span><span class="n">Parameter</span><span class="o">.</span><span class="n">Type</span><span class="o">.</span><span class="n">DOUBLE</span><span class="p">)</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>        <span class="c1"># Obtenir l&#39;emplacement de l&#39;objectif à partir du fichier yaml de coordonnées mondiales</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>        <span class="n">goal_lat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_parameter</span><span class="p">(</span><span class="s2">&quot;goal_latitude&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>        <span class="n">goal_long</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_parameter</span><span class="p">(</span><span class="s2">&quot;goal_longitude&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>        <span class="c1"># Imprimer l&#39;emplacement de l&#39;objectif</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>            <span class="s2">&quot;goal location: </span><span class="si">%f</span><span class="s2"> </span><span class="si">%f</span><span class="s2">&quot;</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>            <span class="o">%</span> <span class="p">(</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>                <span class="n">goal_lat</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>                <span class="n">goal_long</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>            <span class="p">)</span>
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>        <span class="p">)</span>
-<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>
-<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>
-<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
-<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>
-<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>    <span class="n">goal_location</span> <span class="o">=</span> <span class="n">GoalLocation</span><span class="p">()</span>
-<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">goal_location</span><span class="p">)</span>
-<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>
-<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>    <span class="n">goal_location</span><span class="o">.</span><span class="n">destroy_node</span><span class="p">()</span>
-<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
-<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>
-<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>
-<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>    <span class="n">main</span><span class="p">()</span>
-</code></pre></div>
-Les valeurs des paramètres d&rsquo;emplacement de l&rsquo;objectif sont obtenues à partir des fichiers <code>.yaml</code> fournis, qui varient en fonction de l&rsquo;itinéraire choisi, et ces fichiers sont transmis comme arguments lorsque le nœud est exécuté comme suit:
-<code>ros2 run &lt;nom_du_paquet&gt; &lt;nom_de_l'exécutable&gt; --ros-args --params-file &lt;nom_de_fichier&gt;</code></p>
-<p>Par exemple, en choisissant <code>route1</code> pour la tâche de navigation, l&rsquo;exemple de commande suivant sera exécuté:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ros2<span class="w"> </span>run<span class="w"> </span>&lt;votre-nom-de-paquet&gt;<span class="w"> </span>task1_solution.py<span class="w"> </span>--ros-args<span class="w"> </span>--params-file<span class="w"> </span>~/ros2_ws/src/parc_robot_bringup/config/route1_world_coordinates.yaml
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Un <a href="https://www.redhat.com/sysadmin/linux-path-absolute-relative" target="_blank">chemin de fichier absolu</a> a été utilisé pour localiser le fichier de paramètres. Un chemin de fichier relatif peut également être utilisé si la commande est appelée dans le répertoire de <code>config</code> où se trouvent les fichiers de coordonnées. 
-Cependant, il est recommandé de spécifier le chemin absolu du fichier pour éviter les erreurs de chemin.</p>
-</div>
-<p>De même, les coordonnées GPS des piquets sur les terres agricoles peuvent être obtenues comme paramètre si vous en avez besoin pour la localisation. 
-Pour obtenir les coordonnées du piquet A, par exemple, les paramètres <code>goal_latitude</code> et <code>goal_longitude</code> de l&rsquo;extrait de code précédent sont remplacés respectivement par <code>peg_a_latitude</code> et <code>peg_a_longitude</code>.</p>
-<p>A titre de référence, en considérant la <code>route1</code>, les coordonnées mondiales correspondantes sont disponibles dans le fichier <a href="https://github.com/PARC-Robotics/PARC2024-Engineers-League/blob/main/parc_robot_bringup/config/route1_world_coordinates.yaml" target="_blank">route1_world_coordinates.yaml</a>.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Veuillez <strong>NE PAS</strong> utiliser les coordonnées cartésiennes de l&rsquo;emplacement du but et des piquets fournis par Gazebo ou le fichier mondial de quelque manière que ce soit. Vous serez pénalisé si vous le faites.</p>
-</div>
-<h3 id="conversion-du-gps-en-cartesien">Conversion du GPS en cartésien<a class="headerlink" href="#conversion-du-gps-en-cartesien" title="Permanent link">&para;</a></h3>
-<p>Notre module, <strong>gps2cartesian</strong>, fournit un moyen pratique de convertir des emplacements GPS en coordonnées cartésiennes x-y. En utilisant l&rsquo;origine mondiale du Gazebo comme origine de référence GPS (0, 0) en coordonnées cartésiennes, la fonction <strong>gps_to_cartesian()</strong> calcule les coordonnées cartésiennes de toute position GPS souhaitée transmise en paramètre à la fonction. Voici un exemple d&rsquo;utilisation du module pour obtenir la coordonnée cartésienne du robot par rapport à l&rsquo;origine de référence:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="ch">#!/usr/bin/env python3</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="c1">## Installez le module geographiclib 2.0 pour que ce code fonctionne.</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="c1">## Pour installer geographiclib 2.0, copiez la ligne ci-dessous sur votre terminal.</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1">## pip install geographiclib</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="c1">## L&#39;une des tâches de compétition PARC doit être en cours d&#39;exécution pour que ce code fonctionne.</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="kn">import</span> <span class="nn">rclpy</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="kn">from</span> <span class="nn">rclpy.node</span> <span class="kn">import</span> <span class="n">Node</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="kn">from</span> <span class="nn">sensor_msgs.msg</span> <span class="kn">import</span> <span class="n">NavSatFix</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="kn">from</span> <span class="nn">parc_robot_bringup.gps2cartesian</span> <span class="kn">import</span> <span class="n">gps_to_cartesian</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="k">class</span> <span class="nc">GPSGoal</span><span class="p">(</span><span class="n">Node</span><span class="p">):</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="s2">&quot;gps_goal&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>        <span class="c1"># Abonnez-vous une fois au sujet GPS</span>
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">gps_sub</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span>
-<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>            <span class="n">NavSatFix</span><span class="p">,</span> <span class="s2">&quot;/gps/fix&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">gps_callback</span><span class="p">,</span> <span class="mi">1</span>
-<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>        <span class="p">)</span>
-<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>
-<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>    <span class="k">def</span> <span class="nf">gps_callback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gps</span><span class="p">):</span>
-<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>
-<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>        <span class="c1"># Récupérer les coordonnées cartésiennes à partir des coordonnées GPS</span>
-<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>        <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">gps_to_cartesian</span><span class="p">(</span><span class="n">gps</span><span class="o">.</span><span class="n">latitude</span><span class="p">,</span> <span class="n">gps</span><span class="o">.</span><span class="n">longitude</span><span class="p">)</span>
-<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>
-<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>        <span class="c1"># Imprimer les coordonnées cartésiennes</span>
-<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
-<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>            <span class="s2">&quot;La traduction de l&#39;origine (0,0) à l&#39;emplacement GPS fourni est: </span><span class="si">%.3f</span><span class="s2"> </span><span class="si">%.3f</span><span class="s2">&quot;</span>
-<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>            <span class="o">%</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
-<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>        <span class="p">)</span>
-<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>
-<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>
-<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
-<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>
-<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>    <span class="n">gps_goal</span> <span class="o">=</span> <span class="n">GPSGoal</span><span class="p">()</span>
-<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">spin</span><span class="p">(</span><span class="n">gps_goal</span><span class="p">)</span>
-<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>
-<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>    <span class="n">gps_goal</span><span class="o">.</span><span class="n">destroy_node</span><span class="p">()</span>
-<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>    <span class="n">rclpy</span><span class="o">.</span><span class="n">shutdown</span><span class="p">()</span>
-<a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>
-<a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a>
-<a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-<a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>    <span class="n">main</span><span class="p">()</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task_launch.py<span class="w"> </span>​​world:<span class="o">=</span>world3
 </code></pre></div>
 <h3 id="preparer-votre-solution">Préparer votre Solution<a class="headerlink" href="#preparer-votre-solution" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
-<p>Votre solution doit être préparée sous forme de packages <abbr title="Robot Operating System">ROS</abbr> à enregistrer dans votre dossier de solutions. Créez un fichier exécutable de nœud dans votre package <abbr title="Robot Operating System">ROS</abbr> qui exécute TOUT le code nécessaire à votre solution. Nommez ce fichier : <code>task1_solution.py</code>.</p>
+<p>Votre solution doit être préparée sous forme de packages <abbr title="Robot Operating System">ROS</abbr> à enregistrer dans votre dossier de solutions. Créez un fichier exécutable de nœud dans votre package <abbr title="Robot Operating System">ROS</abbr> qui exécute TOUT le code nécessaire à votre solution. Nommez ce fichier : <code>task_solution.py</code>.</p>
 </li>
 <li>
-<p>Ainsi, votre solution à la tâche 1 doit être exécutée en appelant les commandes suivantes :</p>
+<p>Par conséquent, votre solution doit être exécutée en appelant les commandes suivantes :</p>
 </li>
 </ul>
 <p>Dans un terminal :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task_launch.py
 </code></pre></div>
 <p>Ou</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py<span class="w"> </span>​​world:<span class="o">=</span>world2
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task_launch.py<span class="w"> </span>​​world:<span class="o">=</span>world2
 </code></pre></div>
 <p>Ou</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py<span class="w"> </span>​​world:<span class="o">=</span>world3
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task_launch.py<span class="w"> </span>​​world:<span class="o">=</span>world3
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Veuillez patienter jusqu&rsquo;à ce que les modèles du monde et du robot soient générés. Ce processus peut prendre plus de temps que d&rsquo;habitude, surtout lors de la première exécution du programme.</p>
 </div>
 <p>Dans un autre terminal:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ros2<span class="w"> </span>run<span class="w"> </span>&lt;le-nom-de-votre-colis&gt;<span class="w"> </span>task1_solution.py<span class="w"> </span>--ros-args<span class="w"> </span>--params-file<span class="w"> </span>&lt;chemin-absolu-vers-la-route-coordonnées-mondiales-fichier-yaml&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ros2<span class="w"> </span>run<span class="w"> </span>&lt;le-nom-de-votre-colis&gt;<span class="w"> </span>task_solution.py&gt;
 </code></pre></div>
+<p>Les fichiers de lancement peuvent également être utilisés dans votre solution.</p>
 <h2 id="regles-de-tache">Règles de Tâche<a class="headerlink" href="#regles-de-tache" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>Le délai pour terminer la tâche est de <strong>8 minutes (480 secondes)</strong>.</p>
+<ul>
+<li>Le temps limite pour terminer la tâche pour <strong>chaque</strong> monde est de <strong>12 minutes (720 secondes)</strong>.</li>
+</ul>
 </li>
 <li>
 <p>La tâche est terminée UNIQUEMENT lorsqu&rsquo;UNE partie du robot se trouve à l&rsquo;intérieur du cercle vert (marqueur d&rsquo;emplacement de l&rsquo;objectif) après avoir suivi le chemin prédéfini comme indiqué ci-dessus.</p>
 </li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Assurez-vous de NE PAS fournir de solution avec des positions codées en dur vers lesquelles le robot doit se déplacer, car lors de l&rsquo;évaluation, la position initiale du robot serait randomisée.</p>
-</div>
 <h2 id="evaluation-de-lautonomie">Évaluation de l&rsquo;autonomie<a class="headerlink" href="#evaluation-de-lautonomie" title="Permanent link">&para;</a></h2>
 <p>La notation de cette tâche repose sur les critères suivants :</p>
 <table>
@@ -1144,7 +1006,7 @@ Pour obtenir les coordonnées du piquet A, par exemple, les paramètres <code>go
 <tr>
 <td>3</td>
 <td><strong>Distance finale jusqu&rsquo;à l&rsquo;objectif</strong></td>
-<td>Distance la plus courte entre le robot (mesurée depuis son centre) et l&rsquo;objectif à travers les rangs de culture, calculée à la limite de temps [8 minutes] <strong>(Plus petite, mieux c&rsquo;est)</strong></td>
+<td>Distance la plus courte entre le robot (mesurée depuis son centre) et l&rsquo;objectif à travers les rangs de culture, calculée à la limite de temps [12 minutes] <strong>(Plus petite, mieux c&rsquo;est)</strong></td>
 </tr>
 <tr>
 <td>4</td>

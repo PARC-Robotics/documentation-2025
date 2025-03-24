@@ -969,13 +969,14 @@
 <h2 id="compiler-et-executer">Compiler et exécuter<a class="headerlink" href="#compiler-et-executer" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Nous devons mettre à jour le fichier « setup.py » du package <abbr title="Robot Operating System">ROS</abbr> 2 pour inclure notre nouveau programme. Ajoutez la ligne suivante dans la section <code>console_scripts</code> du fichier <code>setup.py</code> :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">entry_points</span><span class="o">=</span><span class="p">{</span>
+<p>Nous devons mettre à jour le fichier <code>setup.py</code> du package <abbr title="Robot Operating System">ROS</abbr> 2 pour inclure notre nouveau programme. Ajoutez la ligne suivante dans la section <code>console_scripts</code> du fichier <code>setup.py</code> :</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="n">entry_points</span><span class="o">=</span><span class="p">{</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>        <span class="s1">&#39;console_scripts&#39;</span><span class="p">:</span> <span class="p">[</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>                <span class="s1">&#39;move_robot = test_publisher.robot_publisher:main&#39;</span><span class="p">,</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>        <span class="p">],</span>
 <a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">},</span>
 </code></pre></div>
+<code>move_robot</code> est le nœud exécutable <abbr title="Robot Operating System">ROS</abbr> 2, <code>test_publisher</code> est le nom du package Python <abbr title="Robot Operating System">ROS</abbr> 2 créé, <code>robot_publisher</code> est le fichier Python que nous venons de créer et <code>main</code> est la fonction appelée à partir du fichier Python.</p>
 </div>
 <p>Exécutez les commandes suivantes pour compiler le code :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nb">cd</span><span class="w"> </span>~/ros2_ws
@@ -983,11 +984,11 @@
 </code></pre></div>
 <p>Pour voir le fonctionnement, exécutez d&rsquo;abord le robot en simulation en exécutant la commande suivante dans un terminal :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nb">source</span><span class="w"> </span>~/ros2_ws/install/setup.bash
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task1_launch.py
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>ros2<span class="w"> </span>launch<span class="w"> </span>parc_robot_bringup<span class="w"> </span>task_launch.py
 </code></pre></div>
 <p>Et exécutez les commandes suivantes dans un autre terminal pour exécuter ce nouveau programme :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">source</span><span class="w"> </span>~/ros2_ws/install/setup.bash
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>ros2<span class="w"> </span>run<span class="w"> </span>test_publisher<span class="w"> </span>robot_publisher.py
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>ros2<span class="w"> </span>run<span class="w"> </span>test_publisher<span class="w"> </span>move_robot
 </code></pre></div>
 <p>Si vous avez bien configuré tout, vous devriez voir le robot se déplacer dans Gazebo comme ci-dessous.</p>
 <p><img alt="publisher demo" src="../assets/getting_started_demo.gif" /></p>
