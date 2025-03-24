@@ -67,4 +67,7 @@ Les équipes qui choisissent la voie de la conception doivent suivre les étapes
     * Une vidéo de simulation de mouvement montrant l'outil en fonctionnement. Veuillez vous assurer que la vidéo ne dépasse pas 1 minute et ne pèse pas plus de 50 Mo.
     * Un rapport de conception expliquant votre approche de conception, les considérations prises en compte, les composants de l'outil et son principe de fonctionnement. Le rapport de conception doit inclure le pays de l'équipe et les noms des membres de l'équipe, en commençant par le chef d'équipe.
 
+
+<!-- https://github.com/PARC-Robotics/PARC2025-Engineers-League/blob/main/resources/PARC-Eng-League-Agreement.pdf -->
+
 * Compressez le dossier contenant les fichiers listés ci-dessus et téléchargez-le sur le formulaire de soumission de solution (À FOURNIR).

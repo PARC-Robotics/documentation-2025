@@ -68,4 +68,7 @@ Teams that opt for the design track should follow these steps to submit their wo
     * A motion simulation video showing the implement in operation. Please ensure that the video is not be more than 1 minute long and less than 50 MB in size.
     * Design report which explains your design approach, considerations made, implement components and its working principle. The design report should include the team country and names of team members,starting with the team leader.
 
+
+<!-- https://github.com/PARC-Robotics/PARC2025-Engineers-League/blob/main/resources/PARC-Eng-League-Agreement.pdf -->
+
 * Zip the folder with the files listed above and upload the folder on the solution submission form (TO BE PROVIDED).

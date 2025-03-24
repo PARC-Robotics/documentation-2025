@@ -6,9 +6,19 @@ Applying fertilizers to crops enhance their nutrient intake, providing essential
 
 With precision agriculture in mind, teams are to design a fertilizer implement (a sprayer or spreader for instance) for precise and sustainabile fertilizer application. The implement should be adaptable to different terrains and crop types. The solution should demonstrate the potential autonomous technology to transform agriculture and boost productivity.
 
+<!-- With precision agriculture in mind, teams are to design a fertilizer implement (a sprayer or spreader for instance) that can be integrated with the **PARC AgRobot**.
+
+
+
+for precise and sustainabile fertilizer application. The implement should be adaptable to different terrains and crop types. The solution should demonstrate the potential autonomous technology to transform agriculture and boost productivity. -->
+
 <!-- Review last two sentences  -->
 
 <!-- ## Design Specifications
+
+* The implement should be light enough to be pulled by robot or mounted on the base. The **PARC AgRobot** uses the AgileX Scout 2.0 ground robot as the base
+
+
 
 
 scout 2.0 specs https://global.agilex.ai/products/scout-2-0 -->
@@ -40,13 +50,10 @@ The design track will be evaluated based on the following criteria:
 <!-- | 6  | **Structural integrity**  | Ensure the implement can withstand harsh conditions common in large fields. | -->
 <!-- | 8  | **Scalability** | Determine if the design can be adapted for different field sizes.| -->
 
-<!-- | 5  | **FEM Analysis**  | Evaluates the ability to apply fertilizers precisely (through sensor or controller mechanisms). | -->
-
 <!-- | 4 | **Cost-Effectiveness** | Shortest travel distance from robot (measured from robot center) through the crop rows to the goal which is calculated at the time limit [8 minutes] **(Smaller is better)** -->
 
 <!-- Part of deliverables | 6  | **Design Report**  | Document explaining the design approach, components, implement working principle and considerations made. | -->
 
-<!-- Any more information we can add? -->
 
 !!! note
     Teams that qualify for Real World Phase of the competition will have to present and demonstrate a prototype of their final design. Therefore, it is encouraged that teams
