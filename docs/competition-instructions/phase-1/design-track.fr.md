@@ -4,11 +4,19 @@
 
 L'application d'engrais aux cultures améliore leur absorption en nutriments, leur fournissant des nutriments essentiels comme l'azote, le phosphore et le potassium, indispensables à leur croissance. En améliorant la santé et le rendement des cultures, les engrais jouent un rôle essentiel dans l'augmentation de la productivité agricole et contribuent à la sécurité alimentaire mondiale en garantissant un approvisionnement alimentaire stable à une population croissante.
 
-Dans une optique d'agriculture de précision, les équipes doivent concevoir un outil de fertilisation (pulvérisateur ou épandeur, par exemple) permettant une application précise et durable de l'engrais. Cet outil doit être adaptable à différents terrains et types de cultures. La solution doit démontrer le potentiel de la technologie autonome pour transformer l'agriculture et accroître la productivité.
+Dans une optique d'agriculture de précision, les équipes doivent concevoir un outil de fertilisation (un pulvérisateur ou un épandeur par exemple) intégrable au **PARC AgRobot**. Cet outil devra s'adapter à différents terrains et types de cultures. La solution devra démontrer le potentiel de la technologie autonome pour transformer l'agriculture et accroître la productivité.
 
-<!-- Review last two sentences -->
+## Spécifications de Conception
 
-<!-- ## Spécifications de Conception -->
+* L'outil doit être suffisamment léger pour être tiré par un robot ou fixé sur sa base. Le **PARC AgRobot** est construit à partir du robot terrestre AgileX Scout 2.0 et dispose d'une charge utile de **50 kg**. Les spécifications du robot sont disponibles dans le manuel [ici](https://indrorobotics.ca/wp-content/uploads/2024/07/SCOUT2.0-USER-MANUAL-3.0.pdf); les dimensions se trouvent à la fin du manuel.
+
+<p align="center">
+    <img title='AgileX Scout 2.0' src=../../assets/agilex_scout_2.png width=300>
+</p>
+
+* L'outil doit pouvoir fonctionner à la vitesse maximale du robot, soit **1,5 m/s**.
+
+* L'outil peut fonctionner passivement grâce aux mouvements du robot ou grâce à un système électromécanique pouvant impliquer des capteurs, des actionneurs et/ou des moteurs.
 
 ## Consignes de Conception
 

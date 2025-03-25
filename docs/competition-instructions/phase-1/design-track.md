@@ -4,24 +4,19 @@
 
 Applying fertilizers to crops enhance their nutrient intake, providing essential nutrients like nitrogen, phosphorus, and potassium that are crucial for plant growth. By improving crop health and yield, fertilizers play a vital role in boosting agricultural productivity and contributing to global food security by ensuring a stable supply of food for an expanding population.
 
-With precision agriculture in mind, teams are to design a fertilizer implement (a sprayer or spreader for instance) for precise and sustainabile fertilizer application. The implement should be adaptable to different terrains and crop types. The solution should demonstrate the potential autonomous technology to transform agriculture and boost productivity.
+With precision agriculture in mind, teams are to design a fertilizer implement (a sprayer or spreader for instance) that can be integrated with the **PARC AgRobot**. The implement should be adaptable to different terrains and crop types. The solution should demonstrate the potential autonomous technology to transform agriculture and boost productivity.
 
-<!-- With precision agriculture in mind, teams are to design a fertilizer implement (a sprayer or spreader for instance) that can be integrated with the **PARC AgRobot**.
+## Design Specifications
 
+* The implement should be light enough to be pulled by robot or mounted on its base. The **PARC AgRobot** is built using the AgileX Scout 2.0 ground robot and has a payload of **50 kg**. The robot specifications are available in the manual [here](https://indrorobotics.ca/wp-content/uploads/2024/07/SCOUT2.0-USER-MANUAL-3.0.pdf); the dimensions are at the end of the manual.
 
+<p align="center">
+    <img title='AgileX Scout 2.0' src=../../assets/agilex_scout_2.png width=300>
+</p>
 
-for precise and sustainabile fertilizer application. The implement should be adaptable to different terrains and crop types. The solution should demonstrate the potential autonomous technology to transform agriculture and boost productivity. -->
-
-<!-- Review last two sentences  -->
-
-<!-- ## Design Specifications
-
-* The implement should be light enough to be pulled by robot or mounted on the base. The **PARC AgRobot** uses the AgileX Scout 2.0 ground robot as the base
-
-
-
-
-scout 2.0 specs https://global.agilex.ai/products/scout-2-0 -->
+* The implement should be able to operate at the maximum speed of the robot which is **1.5 m/s**. 
+  
+* The implement can work passively using the robot's motion or using an electromechanical system which could involve sensors, actuators and/or motors.
 
 ## Design Guidelines
 
