@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
          <loc>https://parc-robotics.github.io/documentation-2025/faq/</loc>
-         <lastmod>2025-03-24</lastmod>
+         <lastmod>2025-03-25</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://parc-robotics.github.io/documentation-2025/en/faq/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://parc-robotics.github.io/documentation-2025/fr/faq/"/>
@@ -10,7 +10,7 @@
     </url>
     <url>
          <loc>https://parc-robotics.github.io/documentation-2025/rules-and-regulations/</loc>
-         <lastmod>2025-03-24</lastmod>
+         <lastmod>2025-03-25</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://parc-robotics.github.io/documentation-2025/en/rules-and-regulations/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://parc-robotics.github.io/documentation-2025/fr/rules-and-regulations/"/>
@@ -18,7 +18,7 @@
     </url>
     <url>
          <loc>https://parc-robotics.github.io/documentation-2025/competition-instructions/team-naming-conventions/</loc>
-         <lastmod>2025-03-24</lastmod>
+         <lastmod>2025-03-25</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://parc-robotics.github.io/documentation-2025/en/competition-instructions/team-naming-conventions/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://parc-robotics.github.io/documentation-2025/fr/competition-instructions/team-naming-conventions/"/>
@@ -26,7 +26,7 @@
     </url>
     <url>
          <loc>https://parc-robotics.github.io/documentation-2025/competition-instructions/what-to-submit/</loc>
-         <lastmod>2025-03-24</lastmod>
+         <lastmod>2025-03-25</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://parc-robotics.github.io/documentation-2025/en/competition-instructions/what-to-submit/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://parc-robotics.github.io/documentation-2025/fr/competition-instructions/what-to-submit/"/>
@@ -34,7 +34,7 @@
     </url>
     <url>
          <loc>https://parc-robotics.github.io/documentation-2025/competition-instructions/phase-1/autonomy-track/</loc>
-         <lastmod>2025-03-24</lastmod>
+         <lastmod>2025-03-25</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://parc-robotics.github.io/documentation-2025/en/competition-instructions/phase-1/autonomy-track/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://parc-robotics.github.io/documentation-2025/fr/competition-instructions/phase-1/autonomy-track/"/>
@@ -42,7 +42,7 @@
     </url>
     <url>
          <loc>https://parc-robotics.github.io/documentation-2025/competition-instructions/phase-1/design-track/</loc>
-         <lastmod>2025-03-24</lastmod>
+         <lastmod>2025-03-25</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://parc-robotics.github.io/documentation-2025/en/competition-instructions/phase-1/design-track/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://parc-robotics.github.io/documentation-2025/fr/competition-instructions/phase-1/design-track/"/>
@@ -50,7 +50,7 @@
     </url>
     <url>
          <loc>https://parc-robotics.github.io/documentation-2025/competition-instructions/phase-1/how-to-submit/</loc>
-         <lastmod>2025-03-24</lastmod>
+         <lastmod>2025-03-25</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://parc-robotics.github.io/documentation-2025/en/competition-instructions/phase-1/how-to-submit/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://parc-robotics.github.io/documentation-2025/fr/competition-instructions/phase-1/how-to-submit/"/>
@@ -58,7 +58,7 @@
     </url>
     <url>
          <loc>https://parc-robotics.github.io/documentation-2025/competition-instructions/phase-1/introduction/</loc>
-         <lastmod>2025-03-24</lastmod>
+         <lastmod>2025-03-25</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://parc-robotics.github.io/documentation-2025/en/competition-instructions/phase-1/introduction/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://parc-robotics.github.io/documentation-2025/fr/competition-instructions/phase-1/introduction/"/>
@@ -66,7 +66,7 @@
     </url>
     <url>
          <loc>https://parc-robotics.github.io/documentation-2025/competition-instructions/phase-2/introduction/</loc>
-         <lastmod>2025-03-24</lastmod>
+         <lastmod>2025-03-25</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://parc-robotics.github.io/documentation-2025/en/competition-instructions/phase-2/introduction/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://parc-robotics.github.io/documentation-2025/fr/competition-instructions/phase-2/introduction/"/>
@@ -74,23 +74,15 @@
     </url>
     <url>
          <loc>https://parc-robotics.github.io/documentation-2025/getting-started-tutorials/getting-started-with-ros/</loc>
-         <lastmod>2025-03-24</lastmod>
+         <lastmod>2025-03-25</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://parc-robotics.github.io/documentation-2025/en/getting-started-tutorials/getting-started-with-ros/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://parc-robotics.github.io/documentation-2025/fr/getting-started-tutorials/getting-started-with-ros/"/>
          
     </url>
     <url>
-         <loc>https://parc-robotics.github.io/documentation-2025/getting-started-tutorials/setting-up-with-docker/</loc>
-         <lastmod>2025-03-24</lastmod>
-         <changefreq>daily</changefreq>
-         <xhtml:link rel="alternate" hreflang="en" href="https://parc-robotics.github.io/documentation-2025/en/getting-started-tutorials/setting-up-with-docker/"/>
-         <xhtml:link rel="alternate" hreflang="fr" href="https://parc-robotics.github.io/documentation-2025/fr/getting-started-tutorials/setting-up-with-docker/"/>
-         
-    </url>
-    <url>
          <loc>https://parc-robotics.github.io/documentation-2025/getting-started-tutorials/setting-up-your-pc/</loc>
-         <lastmod>2025-03-24</lastmod>
+         <lastmod>2025-03-25</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://parc-robotics.github.io/documentation-2025/en/getting-started-tutorials/setting-up-your-pc/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://parc-robotics.github.io/documentation-2025/fr/getting-started-tutorials/setting-up-your-pc/"/>
@@ -98,7 +90,7 @@
     </url>
     <url>
          <loc>https://parc-robotics.github.io/documentation-2025/getting-started-tutorials/setting-up-your-workspace/</loc>
-         <lastmod>2025-03-24</lastmod>
+         <lastmod>2025-03-25</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://parc-robotics.github.io/documentation-2025/en/getting-started-tutorials/setting-up-your-workspace/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://parc-robotics.github.io/documentation-2025/fr/getting-started-tutorials/setting-up-your-workspace/"/>
@@ -106,7 +98,7 @@
     </url>
     <url>
          <loc>https://parc-robotics.github.io/documentation-2025/getting-started-tutorials/writing-your-first-ros2-package/</loc>
-         <lastmod>2025-03-24</lastmod>
+         <lastmod>2025-03-25</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://parc-robotics.github.io/documentation-2025/en/getting-started-tutorials/writing-your-first-ros2-package/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://parc-robotics.github.io/documentation-2025/fr/getting-started-tutorials/writing-your-first-ros2-package/"/>
@@ -114,7 +106,7 @@
     </url>
     <url>
          <loc>https://parc-robotics.github.io/documentation-2025/introduction/</loc>
-         <lastmod>2025-03-24</lastmod>
+         <lastmod>2025-03-25</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://parc-robotics.github.io/documentation-2025/en/introduction/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://parc-robotics.github.io/documentation-2025/fr/introduction/"/>
@@ -122,7 +114,7 @@
     </url>
     <url>
          <loc>https://parc-robotics.github.io/documentation-2025/introduction/how-to-register/</loc>
-         <lastmod>2025-03-24</lastmod>
+         <lastmod>2025-03-25</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://parc-robotics.github.io/documentation-2025/en/introduction/how-to-register/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://parc-robotics.github.io/documentation-2025/fr/introduction/how-to-register/"/>
@@ -130,7 +122,7 @@
     </url>
     <url>
          <loc>https://parc-robotics.github.io/documentation-2025/introduction/important-dates/</loc>
-         <lastmod>2025-03-24</lastmod>
+         <lastmod>2025-03-25</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://parc-robotics.github.io/documentation-2025/en/introduction/important-dates/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://parc-robotics.github.io/documentation-2025/fr/introduction/important-dates/"/>
@@ -138,7 +130,7 @@
     </url>
     <url>
          <loc>https://parc-robotics.github.io/documentation-2025/resources-and-support/additional-resources/</loc>
-         <lastmod>2025-03-24</lastmod>
+         <lastmod>2025-03-25</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://parc-robotics.github.io/documentation-2025/en/resources-and-support/additional-resources/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://parc-robotics.github.io/documentation-2025/fr/resources-and-support/additional-resources/"/>
@@ -146,7 +138,7 @@
     </url>
     <url>
          <loc>https://parc-robotics.github.io/documentation-2025/resources-and-support/additional-transform-resources/</loc>
-         <lastmod>2025-03-24</lastmod>
+         <lastmod>2025-03-25</lastmod>
          <changefreq>daily</changefreq>
          <xhtml:link rel="alternate" hreflang="en" href="https://parc-robotics.github.io/documentation-2025/en/resources-and-support/additional-transform-resources/"/>
          <xhtml:link rel="alternate" hreflang="fr" href="https://parc-robotics.github.io/documentation-2025/fr/resources-and-support/additional-transform-resources/"/>
