@@ -16,8 +16,6 @@ With precision agriculture in mind, teams are to design a fertilizer implement (
 
 * The 3D model of the AgileX Scout 2.0 robot is available [here](https://github.com/PARC-Robotics/PARC2025-Engineers-League/blob/main/resources/SCOUT_v2.0.STEP){target=_blank}. Click on the **Download raw file** button to download the 3D model of Scout 2.0 in the **.STEP** format.
 
-* [Jazzy - Getting Started with ROS 2](https://www.youtube.com/playlist?list=PLNWNEEf8BvG6z60R4r9_wQ6Ekmqj-BmFr){target=_blank}
-
 <p align="center">
     <img title='Download AgileX Scout 2.0 model' src=../../assets/download_agilex_scout_2.png width=800>
 </p>
