@@ -61,7 +61,7 @@ Les équipes qui choisissent la voie de la conception doivent suivre les étapes
 
 * Créez un dossier et incluez les fichiers suivants :
     * 3 dessins de chaque pièce de votre outil de fertilisation avec leurs dimensions.
-    * Des rendus 3D de la conception finale de l'outil. Exportez-les au format **.stp** ou **.step** (fichier STEP).
+    * Rendus 3D de la conception finale de l'outil. Exportation au format STEP, avec l'extension **.stp**, **.step** ou **.STEP**.
     * Des plans d'assemblage 3D des pièces de l'outil.
     * Une nomenclature des pièces d'assemblage de l'outil.
     * Une vidéo de simulation de mouvement montrant l'outil en fonctionnement. Veuillez vous assurer que la vidéo ne dépasse pas 1 minute et ne pèse pas plus de 50 Mo.

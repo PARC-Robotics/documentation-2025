@@ -8,10 +8,18 @@ With precision agriculture in mind, teams are to design a fertilizer implement (
 
 ## Design Specifications
 
-* The implement should be light enough to be pulled by robot or mounted on its base. The **PARC AgRobot** is built using the AgileX Scout 2.0 ground robot and has a payload of **50 kg**. The robot specifications are available in the manual [here](https://indrorobotics.ca/wp-content/uploads/2024/07/SCOUT2.0-USER-MANUAL-3.0.pdf); the dimensions are at the end of the manual.
+* The implement should be light enough to be pulled by robot or mounted on its base. The **PARC AgRobot** is built using the AgileX Scout 2.0 ground robot and has a payload of **50 kg**. The robot specifications are available in the manual [here](https://indrorobotics.ca/wp-content/uploads/2024/07/SCOUT2.0-USER-MANUAL-3.0.pdf){target=_blank}; the dimensions are at the end of the manual.
 
 <p align="center">
     <img title='AgileX Scout 2.0' src=../../assets/agilex_scout_2.png width=300>
+</p>
+
+* The 3D model of the AgileX Scout 2.0 robot is available [here](https://github.com/PARC-Robotics/PARC2025-Engineers-League/blob/main/resources/SCOUT_v2.0.STEP){target=_blank}. Click on the **Download raw file** button to download the 3D model of Scout 2.0 in the **.STEP** format.
+
+* [Jazzy - Getting Started with ROS 2](https://www.youtube.com/playlist?list=PLNWNEEf8BvG6z60R4r9_wQ6Ekmqj-BmFr){target=_blank}
+
+<p align="center">
+    <img title='Download AgileX Scout 2.0 model' src=../../assets/download_agilex_scout_2.png width=800>
 </p>
 
 * The implement should be able to operate at the maximum speed of the robot which is **1.5 m/s**. 
@@ -21,6 +29,7 @@ With precision agriculture in mind, teams are to design a fertilizer implement (
 ## Design Guidelines
 
 * Teams are to use CAD software --- like Fusion 360, SolidWorks, or FreeCAD --- to design the fertilizer implement.
+* 3D renderings of the implement should be exported as a STEP file, that is, .stp, .step or .STEP
 * Designs can be inspired by existing fertilizer machinery but optimized for precision and adaptability. 
 
 <!-- Add more guidelines -->

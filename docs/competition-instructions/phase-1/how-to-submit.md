@@ -62,7 +62,7 @@ Teams that opt for the design track should follow these steps to submit their wo
 
 * Create a folder and include these files: 
     * 3 View drawings of each part of your fertilizer implement with dimensional information.
-    * 3D renderings of final implement design. This should be exported as a **.stp** or **.step** (STEP file).
+    * 3D renderings of final implement design. This should be exported as a STEP file, that is, with the **.stp**, **.step** or **.STEP** file extension.
     * 3D assembly drawings of the implement parts.
     * Bill of materials of the implement assembly parts.
     * A motion simulation video showing the implement in operation. Please ensure that the video is not be more than 1 minute long and less than 50 MB in size.

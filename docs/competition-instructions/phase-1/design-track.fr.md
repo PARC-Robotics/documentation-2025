@@ -8,10 +8,16 @@ Dans une optique d'agriculture de précision, les équipes doivent concevoir un 
 
 ## Spécifications de Conception
 
-* L'outil doit être suffisamment léger pour être tiré par un robot ou fixé sur sa base. Le **PARC AgRobot** est construit à partir du robot terrestre AgileX Scout 2.0 et dispose d'une charge utile de **50 kg**. Les spécifications du robot sont disponibles dans le manuel [ici](https://indrorobotics.ca/wp-content/uploads/2024/07/SCOUT2.0-USER-MANUAL-3.0.pdf); les dimensions se trouvent à la fin du manuel.
+* L'outil doit être suffisamment léger pour être tiré par un robot ou fixé sur sa base. Le **PARC AgRobot** est construit à partir du robot terrestre AgileX Scout 2.0 et dispose d'une charge utile de **50 kg**. Les spécifications du robot sont disponibles dans le manuel [ici](https://indrorobotics.ca/wp-content/uploads/2024/07/SCOUT2.0-USER-MANUAL-3.0.pdf){target=_blank}; les dimensions se trouvent à la fin du manuel.
 
 <p align="center">
     <img title='AgileX Scout 2.0' src=../../assets/agilex_scout_2.png width=300>
+</p>
+
+* Le modèle 3D du robot AgileX Scout 2.0 est disponible [ici](https://github.com/PARC-Robotics/PARC2025-Engineers-League/blob/main/resources/SCOUT_v2.0.STEP){target=_blank}. Cliquez sur le bouton **Download raw file** pour télécharger le modèle 3D de Scout 2.0 au format **.STEP**.
+
+<p align="center">
+    <img title='Télécharger le modèle AgileX Scout 2.0' src=../../assets/download_agilex_scout_2.png width=800>
 </p>
 
 * L'outil doit pouvoir fonctionner à la vitesse maximale du robot, soit **1,5 m/s**.
