@@ -84,7 +84,7 @@ Les fichiers de lancement peuvent également être utilisés dans votre solution
 
 ## Règles de Tâche
 
-* * Le temps limite pour terminer la tâche pour **chaque** monde est de **12 minutes (720 secondes)**.
+* * Le temps limite pour terminer la tâche pour **chaque** monde est de **10 minutes (600 secondes)**.
 
 * La tâche est terminée UNIQUEMENT lorsqu'UNE partie du robot se trouve à l'intérieur du cercle vert (marqueur d'emplacement de l'objectif) après avoir suivi le chemin prédéfini comme indiqué ci-dessus.
 

@@ -82,7 +82,7 @@ Launch files can also be used in your solution.
 
 ## Task Rules
 
-* The time limit to complete the task for **each** world is **12 minutes (720 seconds)**.
+* The time limit to complete the task for **each** world is **10 minutes (600 seconds)**.
 
 * The task is ONLY complete when ANY part of the robot is inside the green circle (goal location marker) after following the pre-defined path as shown above.
 
