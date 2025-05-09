@@ -22,7 +22,7 @@ cd ~/ros2_ws/src
 Dans le même terminal (ou un nouveau), copiez-collez les lignes suivantes :
 ```sh
 cd ~/ros2_ws/src
-git clone https://github.com/PARC-Robotics/PARC2024-Engineers-League.git .
+git clone https://github.com/PARC-Robotics/PARC2025-Engineers-League.git .
 ```
 
 ## Étape 3: Installer les dépendances
