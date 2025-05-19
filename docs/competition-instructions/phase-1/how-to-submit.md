@@ -52,9 +52,7 @@ Follow these submission steps:
 
 3. Create simple short video demos of your solution. This can be done by taking a screen recording of your solution running in Gazebo. Please ensure the videos are less than 200 MB in size.
 
-4. Zip your solution folder and upload the folder and the videos on the solution submission form (TO BE PROVIDED).
-
-<!-- 4. Zip your solution folder and upload the folder and the videos on the [solution submission form](https://forms.gle/GwE7Tzm9FpYzUVQX9). -->
+4. Zip your solution folder and upload the folder and the videos on the [solution submission form](https://docs.google.com/forms/d/e/1FAIpQLSdqVseAQhc7G2XDFTknJeDg-ume0ozUMdaQVdp-J3gDF75vjQ/viewform?usp=header){target=_blank}.
 
 ## Design Track
 
@@ -70,4 +68,4 @@ Teams that opt for the design track should follow these steps to submit their wo
 
 * Teams are expected to read and sign this [agreement](https://github.com/PARC-Robotics/PARC2025-Engineers-League/blob/main/resources/PARC-Eng-League-Agreement.pdf) which outlines the terms regarding intellectual property (IP) rights and the use of the work submitted. This document should also be included the submission folder.
 
-* Zip the folder with the files listed above --- in **.zip**, **.tar**, or **.tar.gz** format --- and upload the folder on the solution submission form (TO BE PROVIDED).
+* Zip the folder with the files listed above --- in **.zip**, **.tar**, or **.tar.gz** format --- and upload the folder on the [solution submission form](https://docs.google.com/forms/d/e/1FAIpQLSdqVseAQhc7G2XDFTknJeDg-ume0ozUMdaQVdp-J3gDF75vjQ/viewform?usp=header){target=_blank}.

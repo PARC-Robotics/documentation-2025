@@ -51,9 +51,7 @@ Suivez ces étapes de soumission :
 
 3. Créez de courtes vidéos de démonstration de votre solution. Vous pouvez le faire en enregistrant votre solution en cours d'exécution dans Gazebo. Assurez-vous que la taille des vidéos est inférieure à 200 Mo.
 
-4. Compressez votre dossier de solution et téléchargez le dossier et les vidéos sur le formulaire de soumission de solution (À FOURNIR)
-
-<!-- 4. Compressez votre dossier de solution et téléchargez le dossier et les vidéos sur le [formulaire de soumission de solution](https://forms.gle/GwE7Tzm9FpYzUVQX9). -->
+4. Compressez votre dossier de solution et téléchargez le dossier et les vidéos sur le [formulaire de soumission de solution](https://docs.google.com/forms/d/e/1FAIpQLSdqVseAQhc7G2XDFTknJeDg-ume0ozUMdaQVdp-J3gDF75vjQ/viewform?usp=header){target=_blank}.
 
 ## Piste de Conception
 
@@ -69,4 +67,4 @@ Les équipes qui choisissent la voie de la conception doivent suivre les étapes
 
 * Les équipes sont tenues de lire et de signer cet [accord](https://github.com/PARC-Robotics/PARC2025-Engineers-League/blob/main/resources/PARC-Eng-League-Agreement.pdf) qui décrit les conditions relatives aux droits de propriété intellectuelle (PI) et à l'utilisation des travaux soumis. Ce document doit également être inclus dans le dossier de soumission.
 
-* Compressez le dossier contenant les fichiers listés ci-dessus --- au format **.zip**, **.tar** ou **.tar.gz** --- et téléchargez le dossier sur le formulaire de soumission de solution (À FOURNIR).
+* Compressez le dossier contenant les fichiers listés ci-dessus --- au format **.zip**, **.tar** ou **.tar.gz** --- et téléchargez le dossier sur le [formulaire de soumission de solution](https://docs.google.com/forms/d/e/1FAIpQLSdqVseAQhc7G2XDFTknJeDg-ume0ozUMdaQVdp-J3gDF75vjQ/viewform?usp=header){target=_blank}.
