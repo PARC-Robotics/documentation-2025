@@ -876,7 +876,7 @@
 <p><strong>RGB Camera (x2):</strong> Two side-facing RGB cameras are provided at the left and right side of the robot. These cameras are suspended via an overhang and gives top-view of the farmland. The topics published by these cameras have group names which are <code>/left_camera/</code> and <code>/right_camera/</code>.</p>
 </li>
 <li>
-<p><strong>ZED 2i Camera:</strong> This is a stereo camera at the front of the robot base. It publishes all the <code>/zed2/</code> topics including point cloud data(<code>/zed2/point_cloud/cloud_registered</code>)</p>
+<p><strong>ZED 2i Camera:</strong> This is a stereo camera at the front of the robot base. It publishes topics on <code>/zed2_camera_center/image_raw</code> and <code>/zed2_depth_camera/depth_image</code> for the raw and depth images, and on <code>/zed2_depth_camera/points</code> for the 3D point cloud. There are topics for compressed images which use lower bandwidth compared to the standard raw and depth image. These are <code>/zed2_camera_center/image_raw/compressed</code> and <code>/zed2_camera_center/image_raw/theora</code>, with similar topics for the depth image as well.</p>
 </li>
 <li>
 <p><strong>GPS:</strong> For localization, we provided a GPS sensor which simulates a GNSS (Global Navigation Satellite System). It publishes the <code>/gps/fix</code> topic.</p>
