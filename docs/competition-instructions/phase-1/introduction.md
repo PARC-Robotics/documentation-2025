@@ -16,7 +16,7 @@ The **PARC AgRobot** is an unmanned ground vehicle (UGV) equipped with different
 
 * **RGB Camera (x2):** Two side-facing RGB cameras are provided at the left and right side of the robot. These cameras are suspended via an overhang and gives top-view of the farmland. The topics published by these cameras have group names which are `/left_camera/` and `/right_camera/`.
 
-* **ZED 2i Camera:** This is a stereo camera at the front of the robot base. It publishes all the `/zed2/` topics including point cloud data(`/zed2/point_cloud/cloud_registered`)
+* **ZED 2i Camera:** This is a stereo camera at the front of the robot base. It publishes topics on `/zed2_camera_center/image_raw` and `/zed2_depth_camera/depth_image` for the raw and depth images, and on `/zed2_depth_camera/points` for the 3D point cloud. There are topics for compressed images which use lower bandwidth compared to the standard raw and depth image. These are `/zed2_camera_center/image_raw/compressed` and `/zed2_camera_center/image_raw/theora`, with similar topics for the depth image as well.
 
 * **GPS:** For localization, we provided a GPS sensor which simulates a GNSS (Global Navigation Satellite System). It publishes the `/gps/fix` topic.
 

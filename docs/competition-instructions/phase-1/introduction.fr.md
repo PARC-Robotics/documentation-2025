@@ -16,7 +16,7 @@ Le PARC AgRobot est un véhicule terrestre sans pilote (UGV) équipé de différ
 
 * **RGB Camera (x2):** Deux caméras RVB latérales sont installées à gauche et à droite du robot. Suspendues à un surplomb, elles offrent une vue aérienne des terres agricoles. Les sujets publiés par ces caméras sont nommés « /left_camera/ » et `/right_camera/`.
 
-* **ZED 2i Camera:** Il s'agit d'une caméra stéréo située à l'avant de la base du robot. Elle publie tous les sujets `/zed2/`, y compris les données de nuages ​​de points (`/zed2/point_cloud/cloud_registered`).
+* **ZED 2i Camera:** Il s'agit d'une caméra stéréo située à l'avant de la base du robot. Il publie des sujets sur `/zed2_camera_center/image_raw` et `/zed2_depth_camera/depth_image` pour les images brutes et de profondeur, et sur `/zed2_depth_camera/points` pour le nuage de points 3D. Il existe des sujets pour les images compressées qui utilisent une bande passante inférieure à celle des images brutes et de profondeur standard. Il s'agit de `/zed2_camera_center/image_raw/compressed` et `/zed2_camera_center/image_raw/theora`, avec des sujets similaires pour l'image de profondeur.
 
 * **GPS:** Pour la localisation, nous avons fourni un capteur GPS qui simule un GNSS (système satellite de navigation global). Il publie le sujet `/gps/fix`.
 
